@@ -1,0 +1,200 @@
+
+:root {
+  --swiper-navigation-color: var(--#{$prefix}gray-1000);
+}
+
+.swiper-theme-container {
+  position: relative;
+  .swiper-nav{
+    margin-top: 0;
+    cursor: pointer;
+    [class*=swiper-]{
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      transition: opacity 0.4s ease-in-out;
+      border-radius: 50%;
+      z-index: 1;
+
+      @include hover-focus {
+        opacity: 1;
+      }
+    }
+  }
+  @include hover-focus { .swiper-nav { [class*=swiper-] { opacity: 0.8; } } }
+
+
+  &.theme-slider, 
+  &.hotel-slider, 
+  &.nokia-slider, 
+  &.shop-slider, 
+  &.swiper-slider{
+    .swiper-nav{
+      [class*=swiper-] {
+        width: 3.125rem;
+        height: 3.125rem;
+        // color: var(--#{$prefix}gray-1000);
+        background-color: var(--#{$prefix}gray-200) !important;
+        margin: 0;
+        @include hover-focus {
+          background-color: var(--#{$prefix}white);
+          color: var(--#{$prefix}gray-700);
+        }
+      }
+      .swiper-button-prev{ 
+        left: -3rem;
+        @include media-breakpoint-up(lg){
+          left: -4rem;
+        }
+        [dir='rtl'] & {
+          left: unset;
+          right: -3rem;
+        }
+      }
+      .swiper-button-next{ 
+        right: -3rem;
+        @include media-breakpoint-up(lg){
+          right: -4rem;
+        }
+        [dir='rtl'] & {
+          right: unset;
+          left: -3rem;
+        }
+      }
+      
+    }
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+      font-family: swiper-icons;
+      font-size: $font-size-base;
+      font-weight: $font-weight-bolder;
+      text-transform: none !important;
+      letter-spacing: 0;
+      line-height: 1;
+    }
+  }
+
+  &.hotel-slider, 
+  &.product-slider,
+  &.shop-slider, 
+  &.swiper-slider{
+    .swiper-nav{
+      .swiper-button-prev { 
+        left: 0;
+      }
+      .swiper-button-next { 
+        right: 0; 
+      }
+    }
+  } 
+
+  &.home-slider, 
+  &.product-slider{
+    .swiper-nav{
+      [class*=swiper-] {
+        background-color: transparent ;
+        width: 2.5rem;
+        height: 2.5rem;
+        color: $black;
+        margin: -1.25rem 0 0;
+      }
+      .swiper-button-prev::after, .swiper-button-next::after{
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+    }
+    // .swiper-pagination-horizontal{
+    //   position: relative;
+    //   background-color: $white;
+    // }
+    // .swiper-pagination-bullets{
+    //   &.swiper-pagination-horizontal{
+    //     padding-top: 0.7rem;
+    //     padding-bottom: 0.3rem;
+    //     bottom: 0rem;
+    //   }
+    // }
+
+    // .swiper-pagination-bullet{
+    //   width: 11px;
+    //   height: 11px;
+    //   background-color: var(--#{$prefix}gray-600);
+    //   transition: background-color 0.4s ease-in-out;
+    //   margin: 0px 6px !important;
+    // }
+    // .swiper-pagination-bullet-active{
+    //   background-color: rgba($black, 0.9);
+    // }
+  }
+
+  &.product-slider{
+    .swiper-button-next:after, .swiper-button-prev:after{
+      font-size: 1.5rem;
+    }
+    .swiper-thumbs img{
+      padding:2px;
+      border: 1px solid var(--#{$prefix}gray-400);
+      border-radius: var(--#{$prefix}border-radius-sm);
+      margin-bottom: 6px;
+      opacity: 0.7;
+      display: block;
+      height: auto;
+    }
+    .swiper-slide-thumb-active img{
+      opacity: 1;
+      border-color: var(--#{$prefix}gray-900);
+    }
+  }
+
+  &.hotel-slider{
+    .swiper-nav{
+    .swiper-button-prev{ 
+        left: 0;
+      }
+      .swiper-button-next{ right: 0 }
+    }
+    .swiper-pagination-bullet{
+      width: 50px;
+      height: 2px;
+      border-radius: 3px;
+      background-color: #D6D6D6;
+      transition: background-color 0.4s ease-in-out;
+      margin: 5px 7px;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #FF9500;
+    }
+  }
+
+
+  &.nokia-slider{
+    .swiper-pagination-bullets{
+      margin-top: 10px;
+      bottom: 0;
+      top: 100%;
+
+    }
+  }
+
+  &.shop-slider, 
+  &.swiper-slider{
+    .swiper-pagination-bullet{
+      background-color: #D6D6D6;
+      margin: 5px 7px;
+    }
+    .swiper-pagination-bullet-active{
+      background-color: #FF3B30;
+    }
+  }
+
+  &.nokia-slider, 
+  &.shop-slider,
+  &.swiper-slider{
+    .swiper-pagination-bullet{
+      width: 10px;
+      height: 10px;
+      transition: background-color 0.4s ease-in-out;
+    }
+  }
+}

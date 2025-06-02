@@ -1,0 +1,653 @@
+mixin ShopBreadcrumb 
+  .bg-200.border.border-bottom.border-300.shop-breadcrumb 
+    .container.py-1 
+      nav(aria-label="breadcrumb" style="--posh-breadcrumb-divider: '/';")
+        ol.breadcrumb 
+          li.breadcrumb-item 
+            a(href="#!")  Home 
+          li.breadcrumb-item 
+            a(href="#!")  Women's Tops 
+          li.breadcrumb-item 
+            a(href="#!")  Model 
+          li.breadcrumb-item 
+            a(href="#!")  48-20
+          li.breadcrumb-item.active(aria-current="page")  Products 
+
+mixin ShopCommonSection
+  +Section(container).pt-0.pb-4
+    h5.text-uppercase.py-3.mb-0.text-1100 Recommendations for you
+    .row 
+      .col-12 
+        hr.my-0.text-danger
+        hr.my-0.text-danger
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-2.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;25.28
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;40.50
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 152 orders
+
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-3.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;15.20 
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;20.50
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 852 orders
+      
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-4.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;21.25 
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;30.50
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 472 orders
+      
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-5.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;54.25 
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;90.55
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 262 orders
+      
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-6.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;28.94
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;30.58
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 612 orders
+
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-7.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;22.25
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;44.50
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 702 orders
+
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-8.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;27.21 
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;35.50
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 482 orders
+
+      a.col-6.col-md-4.col-lg-3.mb-4(href="#!")
+        .card.rounded-0.border-200 
+          img.card-img-top(src=`${CWD}assets/images/shop/shop-recommendations-10.jpg`, alt="")
+          .card-footer.border-top-0.p-2.flex-1 
+            .row.align-items-center.mt-3 
+              .col 
+                h5.fs-9.d-inline-block.mb-0 US &dollar;20.25 
+                h6 
+                  del.text-600.fs-10.d-inline-block &dollar;40.50
+              .col-5 
+                h6.text-end.fw-normal.d-inline-block.text-1100 802 orders
+  +Section(container).bg-100.py-0.text-center
+    .row
+      .col-md-6.col-lg-3.py-5.px-2.px-xl-4
+        span.d-block.mb-3.fs-4.text-danger.icon-Dollar 
+        h5.fw-normal  174 Layouts 
+        p.mb-0.text-700.fs-10 Optimized for every screen size down to a single pixel.
+
+      .col-md-6.col-lg-3.py-5.px-2.px-xl-4
+        span.d-block.mb-3.fs-4.text-danger.icon-Plane-2 
+        h5.fw-normal  Multiverse Use
+        p.mb-0.text-700.fs-10 Finally, you can now create multiverse websites effortlessly.
+
+      .col-md-6.col-lg-3.py-5.px-2.px-xl-4
+        span.d-block.mb-3.fs-4.text-danger.icon-Credit-Card2
+        h5.fw-normal  Excellent Support
+        p.mb-0.text-700.fs-10 A dedicated support team to handle any of your issues.
+      
+      .col-md-6.col-lg-3.py-5.px-2.px-xl-4
+        span.d-block.mb-3.fs-4.text-danger.icon-Security-Check
+        h5.fw-normal  Refund Policy
+        p.mb-0.text-700.fs-10 If you are not satisfied, just let us know. We will refund you right away.
+      .col-12 
+        hr.text-300
+
+  +Section(container).py-5.bg-100
+    .row 
+      .col-lg-6.pe-lg-8.pb-5.pb-lg-0 
+        h5 Latest Trends, Styles &amp; Promotions. Are you on the list?
+        form(method="POST" onsubmit="return false;")
+          .input-group
+            input.form-control.bg-white(type="email" name="email" placeholder="Enter your email") 
+            button.btn.btn-danger(type="button")  Sign up!
+        
+        .fs-10.my-2.text-800  By entering your email address, you agree to receive Charlotte Russe offers, promotions, and other commercial messages. You may unsubscribe at any time. Review our
+          a(href="#!")  Privacy Policy.
+        
+        .d-flex.flex-wrap.align-items-center.mt-5
+          a.d-inline-block.me-2(href="#!")
+            img(src=`${CWD}assets/images/app-google.png`, alt="")
+          a.d-inline-block(href="#!")
+            img(src=`${CWD}assets/images/app-apple.png`, alt="")
+          .d-flex.align-items-center
+            a.p-2.text-800.fs-8.ms-0.ms-sm-3.ms-lg-0.ms-xl-3(href="#!")
+              span.fab.fa-instagram
+            a.p-2.text-800.fs-8(href="#!")
+              span.fab.fa-facebook-f(style="font-size: 18px" data-fa-transform="grow-1 up-1")
+            a.p-2.text-800.fs-8(href="#!")
+              span.fab.fa-twitter(style="font-size: 19px") 
+        p.fs-10.mt-1.text-900.mb-0 &copy; 2017 Posh. All rights reserved.
+    
+      .col-md-4.col-lg-2.pb-5.pb-md-0.fs-10 
+        h6.text-1000.text-uppercase Company 
+        hr.mt-3.short.text-400
+        a.link-800.d-block.p-1(href="#!")  About Us 
+        a.link-800.d-block.p-1(href="#!")  Careers
+        a.link-800.d-block.p-1(href="#!")  Privacy Policy 
+        a.link-800.d-block.p-1(href="#!")  Terms of Use 
+        a.link-800.d-block.p-1(href="#!")  CA Transparency
+        a.link-800.d-block.p-1(href="#!")  Community 
+
+      .col-md-4.col-lg-2.pb-5.pb-md-0.fs-10 
+        h6.text-1000.text-uppercase Customer Support
+        hr.mt-3.short.text-400
+        a.link-800.d-block.p-1(href="#!")  Customer Service 
+        a.link-800.d-block.p-1(href="#!")  Contact Us
+        a.link-800.d-block.p-1(href="#!")  Track Order 
+        a.link-800.d-block.p-1(href="#!")  Shipping Info 
+        a.link-800.d-block.p-1(href="#!")  Returns &amp; Exchanges
+        a.link-800.d-block.p-1(href="#!")  Affiliate Program
+
+      .col-md-4.col-lg-2.fs-10 
+        h6.text-1000.text-uppercase Quicklinks
+        hr.mt-3.short.text-400
+        a.link-800.d-block.p-1(href="#!")  FAQs
+        a.link-800.d-block.p-1(href="#!")  Size Chart
+        a.link-800.d-block.p-1(href="#!")  Find a Store 
+        a.link-800.d-block.p-1(href="#!")  Site Map
+        a.link-800.d-block.p-1(href="#!")  Gift Cards
+
+
+mixin ProductCard(product)
+  .row.align-items-center.border.border-300.mb-3.mx-0.py-3
+    .col-sm-3 
+      img.w-100(src=`${CWD}${product.image}`, alt="")
+    .col-sm-5.text-1100 
+      p  #{product.intro} 
+      .text-info 
+        - for (var i = 0; i<product.diamond; i++)
+          span.far.fa-gem.me-1(data-fa-transform="down-1")
+        span.text-700.fs-10 #{product.store} 
+      if product.topBrand 
+        .text-danger 
+          span.fas.fa-certificate.me-1(style="width:13px;") 
+          a.link-700.fs-10(href="#!") Top Brand 
+    .col-sm-4 
+      p.lead.text-warning.fw-semi-bold US &dollar;#{product.price} 
+        span.text-700.fs-10.fw-normal / price 
+      p.text-1100 Shipping: US $3.81 / piece via POSH Standard Shipping 
+
+      .text-warning 
+        - for (var j = 0; j <product.star; j++)
+          span.fas.fa-star.me-1(style="width:15px;")
+      .fs-10 
+        a.link-700(href="#!") Feedback(#{product.feedback})
+        |  | 
+        a.link-700(href="#!")  Orders (#{product.orders})
+      .mt-2
+        a.link-700.fs-10(href="#!")
+          span.fas.fa-heart.me-1 
+          | Add to Wish 
+
+mixin ProductList 
+  - 
+    var products = [
+      {
+        image: 'assets/images/shop/shop-product-01.jpg',
+        intro: "ElaCentelha Brand Dress Summer Women High Quality Dress Casual Women's Dresses",
+        diamond: 4,
+        store: 'COLROVIE Official Store',
+        topBrand: true,
+        price: '42.19',
+        star: 5,
+        feedback: '155',
+        orders: '187'
+      },
+      {
+        image: 'assets/images/shop/shop-product-02.jpg',
+        intro: "2017 New Women Bodycon Mini Club Party Red Dresses Drop Ship",
+        diamond: 4,
+        store: 'Sheinside Official Store',
+        price: '45.22',
+        star: 2,
+        feedback: '132',
+        orders: '213'
+      },
+      {
+        image: 'assets/images/shop/shop-product-03.jpg',
+        intro: "Sheinside Stiped Plunge Scalloped Sheath Casual Ladies Shirt",
+        diamond: 2,
+        store: 'Amber Boutique',
+        price: '40.48',
+        star: 4,
+        feedback: '152',
+        orders: '683'
+      },
+      {
+        image: 'assets/images/shop/shop-product-04.jpg',
+        intro: "Stylish Women Party Green Dress, Femme Spring short Sleeve t-shirt Solid",
+        diamond: 4,
+        store: 'ElaCentelha Official Store',
+        price: '38.09',
+        star: 3,
+        feedback: '251',
+        orders: '546'
+      }
+    ]
+
+  each product in products 
+    +ProductCard(product)
+
+
+
+mixin ProductGridCard(product)
+  .col-6.col-md-4.mb-4.align-self-stretch
+    .card.rounded-0.h-100.border-300
+      a(href="#!") 
+        img.card-img-top(src=product.image, alt="")
+      .card-body.p-2
+        a.link-1100(href="#!") 
+          p.mt-3 #{product.intro}
+        h5.fs-9.d-inline-block.mb-0.text-warning US &dollar;#{product.price}
+        .my-2
+          a.link-1100(href="#!") 
+            .d-inline-block.text-warning 
+              - for (var j = 0; j <product.star; j++)
+                span.fas.fa-star.me-1(style="width:15px;")
+          .d-inline-block.fs-10
+            a.link-700(href="#!") (#{product.feedback})
+            |  | 
+            a.link-700(href="#!") Orders (#{product.orders})
+          .mt-2 
+            a.link-700.fs-10(href="#!")
+              span.fas.fa-heart.me-1 
+              | Add to Wish 
+
+
+
+mixin ProductGrid 
+  - 
+    var gridProducts = [
+      {
+        image: `${CWD}assets/images/shop/shop-product-01.jpg`,
+        intro: "ElaCentelha Brand Dress Summer Women High Quality Dress Casual Women's Dresses",
+        price: '20.25',
+        star: 5,
+        feedback: '155',
+        orders: '187'
+      },
+      {
+        image: `${CWD}assets/images/shop/shop-product-02.jpg`,
+        intro: "2017 New Women Bodycon Mini Club Party Red Dresses Drop Ship",
+        price: '25.28',
+        star: 4,
+        feedback: '162',
+        orders: '245'
+      },
+      {
+        image: `${CWD}assets/images/shop/shop-product-03.jpg`,
+        intro: "Sheinside Stiped Plunge Scalloped Sheath Casual Ladies Shirt",
+        price: '15.20',
+        star: 3,
+        feedback: '172',
+        orders: '213'
+      },
+      {
+        image: `${CWD}assets/images/shop/shop-product-04.jpg`,
+        intro: "Sylish Women Party Green Dress, Femme Spring short Sleeve t-shirt Solid",
+        price: '21.25',
+        star: 4,
+        feedback: '126',
+        orders: '648'
+      },
+      {
+        image: `${CWD}assets/images/shop/shop-product-05.jpg`,
+        intro: "Shintimes Tank Top vetement Sexy Queen Custom femme 11 Colors Vest Cotton",
+        price: '54.25',
+        star: 5,
+        feedback: '212',
+        orders: '562'
+      },
+      {
+        image: `${CWD}assets/images/shop/shop-product-06.jpg`,
+        intro: "2017 Solid Adult Casual Cotton Acrylic Rushed New Fashion Female Hat",
+        price: '28.94',
+        star: 2,
+        feedback: '314',
+        orders: '487'
+      }
+    ]
+
+  .row.mt-3
+    .col-12
+      .border-2.border-top.border-danger
+    each product in gridProducts 
+      +ProductGridCard(product)
+
+
+
+mixin ProductDetailsBreadcrumb 
+  .bg-200.border.border-bottom.border-300.shop-breadcrumb 
+    .container.py-1 
+      nav(aria-label="breadcrumb" style="--posh-breadcrumb-divider: '/';")
+        ol.breadcrumb 
+          li.breadcrumb-item 
+            a(href="#!")  Home 
+          li.breadcrumb-item 
+            a(href="#!")  Men's Watches 
+          li.breadcrumb-item 
+            a(href="#!")  Model 
+          li.breadcrumb-item 
+            a(href="#!")  48-20
+          li.breadcrumb-item.active(aria-current="page")  Chrono Leather 
+
+mixin ProductSlider 
+  .col-lg-4.order
+    .swiper-theme-container.product-slider(data-swiper-theme-container)
+      .swiper(data-swiper!={
+        effect:'fade',
+        spaceBetween: 5,
+        loop: true,
+        loopedSlides: 5,
+        thumb: {
+          spaceBetween: 5,
+          slidesPerView: 5,
+          loop: true,
+          freeMode: true,
+          grabCursor: true,
+          loopedSlides: 5, 
+          centeredSlides: true,
+          slideToClickedSlide: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+        },
+        slideToClickedSlide: true,
+      })
+        .swiper-wrapper
+          .swiper-slide
+            img.w-100(src=`${CWD}assets/images/shop/shop-watch-01.jpg`, alt="")
+          .swiper-slide
+            img.w-100(src=`${CWD}assets/images/shop/shop-watch-02.jpg`, alt="")
+          .swiper-slide
+            img.w-100(src=`${CWD}assets/images/shop/shop-watch-03.jpg`, alt="")
+          .swiper-slide
+            img.w-100(src=`${CWD}assets/images/shop/shop-watch-04.jpg`, alt="")
+
+          .swiper-nav
+            .swiper-button-next
+            .swiper-button-prev
+
+mixin ProductDescription 
+  .col.ps-lg-8.order-lg-1
+    .text-warning.mb-2
+      - for(var i = 0; i <3; i++)
+        span.fas.fa-star.me-1(style="width:15px") 
+      i.fas.fa-star-half-alt.me-1(style="width:15px") 
+      span.far.fa-star.me-0(style="width:15px")  
+      a.fs-10(href="#!") &nbsp;118 customer reviews 
+    h1.fs-6 TIME TELLER , 37 MM
+    .badge.text-bg-warning #1 Best Seller 
+    .mt-3.pb-3.mb-3.border-bottom.border-300 
+      span.fs-7 $49.99 
+      | &amp; 
+      strong FREE Shipping. 
+    p.text-success.fw-semi-bold.mb-0 In Stock
+    h6.text-700.mb-3 SKU: A045-1041-00
+    p
+      strong Want it Saturday, July 29?
+      |  Order within 12 hrs 43 mins and choose 
+      strong Saturday Delivery 
+      |  at checkout.
+      a(href="#!")  Details 
+      | Ships from and sold by Amazon Digital Services LLC. Gift-wrap available. 
+    form.mb-4.d-flex
+      .form-group.me-3.mb-md-0.d-md-flex.align-items-md-center 
+        label.mb-md-0(for="exampleColorName") Color 
+        select#exampleColorName.form-select.ms-md-2(name="color" style="min-width: 7.5rem;")
+          option(value="black") Black    
+          option(value="white") White 
+
+      .form-group.mb-md-0.d-md-flex.align-items-md-center 
+        label.mb-md-0(for="exampleQuantityInput") Quantity 
+        select#exampleQuantityInput.ms-md-2.form-select(name="quantity" style="min-width: 3.125rem;")
+          option(value="1") 1    
+          option(value="2") 2 
+          option(value="3") 3    
+          option(value="4") 4
+          option(value="5") 5  
+    a.btn.btn-danger(href=`${CWD}pages/shop-cart.html`) Add to Cart 
+
+    #accordionExample.accordion.mt-5
+      .accordion-item 
+        h5#headingOne.accordion-header
+          button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne") What is a dog?
+        #collapseOne.accordion-collapse.collapse(aria-labelledby="headingOne" data-bs-parent="#accordionExample")
+          .accordion-body.fw-light 
+            p A dog is a type of domesticated animal. Known for its loyalty and faithfulness, it can be found as a welcome guest in many households across the world.
+
+      .accordion-item 
+        h5#headingTwo.accordion-header
+          button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo") What kinds of dogs are there?
+        #collapseTwo.accordion-collapse.collapse.show(aria-labelledby="headingTwo" data-bs-parent="#accordionExample")
+          .accordion-body.fw-light 
+            p There are many breeds of dogs. Each breed varies in size and temperament. Owners often select a breed of dog that they find to be compatible with their own lifestyle and desires from a companion.
+      
+      .accordion-item 
+        h5#headingThree.accordion-header
+          button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="true" aria-controls="collapseThree") How do you acquire a dog?
+        #collapseThree.accordion-collapse.collapse(aria-labelledby="headingThree" data-bs-parent="#accordionExample")
+          .accordion-body.fw-light 
+            p Three common ways for a prospective owner to acquire a dog is from pet shops, private owners, or shelters.
+            p A pet shop may be the most convenient way to buy a dog. Buying a dog from a private owner allows you to assess the pedigree and upbringing of your dog before choosing to take it home. Lastly, finding your dog from a shelter, helps give a good home to a dog who may not find one so readily.
+
+    ul.mt-6
+      li.mb-4 Echo Dot (2nd Generation) is a hands-free, voice-controlled device that uses Alexa to play music, control smart home devices, make calls, send and receive messages, provide information, read the news, set alarms, read audiobooks from Audible, and more
+      li.mb-4 Connects to speakers or headphones through Bluetooth or 3.5 mm stereo cable to play music from Amazon Music, Spotify, Pandora, iHeartRadio, and TuneIn
+      li.mb-4 Introducing Alexa calling and messaging, a new way to be together with family and friends. Just ask Alexa to call or message anyone with an Echo, Echo Dot, or the Alexa App.
+      li.mb-4 Controls lights, fans, TVs, switches, thermostats, garage doors, sprinklers, locks, and more with compatible connected devices from WeMo, Philips Hue, Sony, Samsung SmartThings, Nest, and others
+      li.mb-4 Hears you from across the room with 7 far-field microphones for hands-free control, even in noisy environments or while playing music
+      li.mb-4 Includes a built-in speaker so it can work on its own as a smart alarm clock in the bedroom, an assistant in the kitchen, or anywhere you might want a voice-controlled computer; Amazon Echo is not required to use Echo Dot
+      li.mb-4 Always getting smarter and adding new features, plus thousands of skills like Uber, Domino's, DISH, and more
+
+
+mixin ProductDetails 
+  +ProductDetailsBreadcrumb
+  +Section(container).py-5
+    .row 
+      +ProductDescription
+      +ProductSlider 
+  +ShopCommonSection
+
+
+
+
+mixin CartBreadcrumb 
+  .bg-200.border.border-bottom.border-300.shop-breadcrumb 
+    .container.py-1 
+      nav(aria-label="breadcrumb" style="--posh-breadcrumb-divider: '/';")
+        ol.breadcrumb 
+          li.breadcrumb-item 
+            a(href="#!")  Home 
+          li.breadcrumb-item 
+            a(href="#!")  Women's Clothing 
+          li.breadcrumb-item 
+            a(href="#!")  Tops 
+          li.breadcrumb-item.active(aria-current="page")  Cart 
+
+mixin CartSection 
+  +Section(container).pt-0
+    .row 
+      .col-12 
+        h1.fs-7.pt-6.pb-4 Your Shopping Cart
+      
+      .col-lg-9 
+        .row
+          .col-md-6.col-lg-12 
+            .row.border.border-300.py-3.mb-3.mx-0 
+              .col-lg-3 
+                img.w-100(src=`${CWD}assets/images/shop/shop-product-01.jpg`, alt="")
+              .col-lg-6 
+                h5.fs-9.text-1100 Details
+                hr.text-300
+
+                a(href="#!")
+                  p.text-1100.fs-10.fw-light  ElaCentelha Brand Dress Summer Women High Quality Embroidery Patchwork Hollow Out Dress Casual Short Sleeve Slim Women's Dresses
+                
+                .row.fs-10 
+                  .col-3 
+                    span.fw-semi-bold.me-3 Color : 
+                  .col 
+                    | Black tassel dress 
+                .row.fs-10 
+                  .col-3 
+                    span.fw-semi-bold.me-3 Size : 
+                  .col 
+                    | M
+
+                .row.align-items-center 
+                  label.col-3.mb-0(for="exampleQuantityInput1")  Quantity :
+                  .col-3
+                    select#exampleQuantityInput1.form-select.d-inline-block(style="width: 60px; height:auto;")
+                      option(value="1") 1
+                      option(value="2") 2 
+                      option(value="3") 3 
+                      option(value="4") 4 
+                      option(value="5") 5 
+                  .col 
+                    p.fs-10.mb-0.fw-semi-bold.text-700 US &dollar;38
+                      span.fw-normal / price
+
+              .col-lg-3 
+                h5.fs-9.text-1100 Price 
+                hr.text-300
+                p.mb-0 US &dollar;38
+                a.link-danger.fs-10(href="#!")  Remove
+          
+          .col-md-6.col-lg-12 
+            .row.border.border-300.py-3.mb-3.mx-0 
+              .col-lg-3 
+                img.w-100(src=`${CWD}assets/images/shop/shop-product-02.jpg`, alt="")
+              .col-lg-6 
+                h5.fs-9.text-1100 Details
+                hr.text-300
+
+                a(href="#!")
+                  p.text-1100.fs-10.fw-light  2017 New Women Sexy Spaghetti Strap Rayon HL Elastic Celebrity Bandage Dress Bodycon Mini Club Party Dresses Drop Ship HL8675
+                
+                .row.fs-10 
+                  .col-3 
+                    span.fw-semi-bold.me-3 Color : 
+                  .col 
+                    | Black tassel dress 
+                .row.fs-10 
+                  .col-3 
+                    span.fw-semi-bold.me-3 Size : 
+                  .col 
+                    | M
+
+                .row.align-items-center 
+                  label.col-3.mb-0(for="exampleQuantityInput2")  Quantity :
+                  .col-3
+                    select#exampleQuantityInput2.form-select.d-inline-block(style="width: 60px; height:auto;")
+                      option(value="1") 1
+                      option(value="2") 2 
+                      option(value="3") 3 
+                      option(value="4") 4 
+                      option(value="5") 5 
+                  .col 
+                    p.fs-10.mb-0.fw-semi-bold.text-700 US &dollar;42
+                      span.fw-normal / price
+
+              .col-lg-3 
+                h5.fs-9.text-1100 Price 
+                hr.text-300
+                p.mb-0 US &dollar;42
+                a.link-danger.fs-10(href="#!")  Remove
+           
+      .col
+        .row
+          .col-12.border.border-300.align-self-start
+            p.fw-semi-bold.my-3.text-1100 You have 2 items in cart
+            hr.text-300
+            .form-check.mb-4.text-1100 
+              label.form-check-label 
+                input.form-check-input.me-2(type="checkbox" checked)
+                | Gift wrap for &dollar;2
+            
+            .row.text-1100 
+              .col-8 
+                p.mb-0 Sub Total: 
+              .col-4.text-end 
+                p.mb-0 &dollar;42 
+              
+              .col-8 
+                p.mb-0 Gift wrap: 
+              .col-4.text-end 
+                p.mb-0 &dollar;2 
+              
+              .col-12 
+                hr.text-300.my-2 
+              
+              .col-8 
+                p.mb-0 Total: 
+              .col-4.text-end 
+                p.mb-0 &dollar;44
+              
+              .col-8 
+                p.mb-0 Shipping: 
+              .col-4.text-end 
+                p.mb-0 &dollar;16 
+
+              .col-12 
+                hr.text-300.mt-2 
+              
+              .col-8 
+                p.fw-semi-bold.text-warning Payable Total: 
+              .col-4.text-end 
+                p.fw-semi-bold.text-warning &dollar;60
+
+          .col-12.px-0 
+            a.btn.btn-danger.w-100.d-block.mt-3(href="#!")  Purchase 
+
+
+mixin Cart 
+  +CartBreadcrumb 
+  +CartSection
+  +ShopCommonSection

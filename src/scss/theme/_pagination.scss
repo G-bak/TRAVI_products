@@ -1,0 +1,18 @@
+.page-link{
+  line-height: 1.25;
+  margin-left: -1px;
+}
+
+.blog-pagination{
+  .page-link{
+    color: var(--#{$prefix}primary);
+    padding: 0.75rem 1.5rem;
+    font-size: 1.25rem;
+  }
+  .active {
+    .page-link{
+      background-color: var(--#{$prefix}primary);
+      color: $white;
+    }
+  }
+}

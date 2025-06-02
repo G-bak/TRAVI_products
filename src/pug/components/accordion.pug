@@ -1,0 +1,24 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Accordion 
+
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var footer = false
+  - var pageTitle = 'Accordion'
+
+append component
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/accordion/`,
+    name: pageTitle,
+  })
+
+  +ComponentCard({
+    prismTitle: 'HTML',
+    prismTitleClass: 'mt-5',
+  }).mt-5
+    +AccordionExample

@@ -1,0 +1,101 @@
+mixin DesignTool 
+  +Section(container)
+    .row.justify-content-center 
+      .col-xl-8.text-center 
+        h1.fs-6.mb-3.fw-normal The Ultimate Design Tool
+        p.text-500.lead.mb-6 With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.
+
+    .row 
+      .col-lg-4.text-center.text-lg-start.mb-5.mb-lg-0 
+        img(src=`${CWD}assets/images/header-03.jpg`, alt="")
+        h5.mb-0.mt-4 Why choose Posh 
+        p.lead.text-800 Future proof with Bootstrap 5
+        p.text-600.fs-10 The one single reason of choosing Posh is that it's future proof, built with Bootstrap 5. And the possibilities are limitless. 
+      
+      .col-lg-4.text-center.text-lg-start.mb-5.mb-lg-0 
+        img(src=`${CWD}assets/images/generic-05.jpg`, alt="")
+        h5.mb-0.mt-4 Leave your footprints 
+        p.lead.text-800 Renovate the way you design
+        p.text-600.fs-10 Posh intends to help people do more and leave lasting, meaningful experiences for their clients and their audiences. 
+      
+      .col-lg-4.text-center.text-lg-start.mb-5.mb-lg-0 
+        img(src=`${CWD}assets/images/header-07.jpg`, alt="")
+        h5.mb-0.mt-4 Cover your needs 
+        p.lead.text-800 Make any layouts you imagine
+        p.text-600.fs-10 Whether you're building a landing page for your mobile app or an elegant, corporate website, Posh has layouts that cover your needs.
+      
+  hr.text-300
+
+
+mixin Customizations 
+  +Section(container)
+    .row.justify-content-center 
+      .col-xl-8.text-center 
+        h1.fs-6.mb-3.fw-normal Easy Customizations 
+        p.text-500.lead.mb-5 The indented codes and well documentation will make your life easy to shape your future.
+        hr.short.mx-auto.text-400.mb-6
+
+        img(src=`${CWD}assets/images/macbook.jpg`, alt="")
+
+    .row.justify-content-center.mt-6 
+      .col-xl-9
+        .row 
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Money-2.text-primary
+              | 100+ Layouts 
+
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Add-UserStar.text-primary
+              | 2088  Premium Icons 
+          
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Monitor-Analytics.text-primary
+              | Tons of Features
+          
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Big-Data.link-primary
+              | Crafted with Bootstrap 5
+          
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Copyright.text-primary
+              | 250+ Styled Components 
+
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Hello.text-primary
+              | Retina Ready
+
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Big-Data.link-primary
+              | Pixel Perfect Design
+
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Copyright.text-primary
+              | Detailed Documentation 
+          
+          .col-md-4.p-3 
+            .d-flex.align-items-center
+              span.me-3.fs-6.icon-Hello.text-primary
+              | Dedicated Support
+
+
+mixin Banner 
+  +Section({image: `${CWD}assets/images/team-officespace.jpg`, className: 'overlay overlay-1'}, container)
+    .row 
+      .col 
+        h6.mb-2.text-uppercase.ls-2.text-white Let's get you started
+        h5.text-white Start building beautiful pages easily with Posh 
+      .col-md-5.col-lg-4.mt-4.mt-md-0 
+        a.btn.btn-primary(href="#!")  Try Posh 
+
+          
+
+
+          

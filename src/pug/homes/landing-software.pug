@@ -1,0 +1,24 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/LandingSoftware
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var footer = false
+  
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    width: "70",
+    logo: 'posh-logo-primary.png'
+  }).navbar-semi-transparent.sticky-top.top-0
+
+
+append content
+
+  +LandingForSoftware 
+  +LandingSoftwareFooter

@@ -1,0 +1,433 @@
+mixin Navbar 
+  section.bg-1100.fs-10.fw-semi-bold.py-2.sticky-top.text-400.top-0.left-0 
+    .container 
+      .row.align-items-center
+        .col-auto.px-0
+          a.mb-md-0.fs-10.fw-700.text-uppercase.text-200(href=`${CWD}`)  #poshcamp  
+        
+        .col.text-end 
+          a.p-2.link-400(href="#!")
+            span.fab.fa-facebook-f(style="font-size:11px" data-fa-transform="up-1")
+
+          a.p-2.link-400(href="#!")
+            span.fab.fa-twitter(style="font-size:11px")
+
+          a.p-2.link-400(href="#!")
+            span.fab.fa-behance(style="font-size:12px") 
+          a.btn.btn-outline-danger.btn-xs.text-uppercase.ms-3.ls-2(href='https://themewagon.com/themes/posh/')  Get It Now
+
+
+mixin HeroSection 
+  +Section({image:`${CWD}assets/images/confernece-banner.jpg`, className: 'overlay overlay-1'}, container).text-center.p-0
+    .row.justify-content-center.min-vh-100.align-items-center 
+      .col-lg-8 
+        h1.fs-5.fs-sm-4.mb-3.text-white   PoshCamp 2018
+        h3.text-center.text-200.fs-7.mb-5.fw-light.px-6   1000+ Sites, One Single Template
+        .row.justify-content-center.align-items-center 
+          .col-5.col-xl-4.text-end 
+            p.mb-0.fw-light.text-white January 17–19, 2018
+          .col-1.text-center.align-self-stretch
+            .d-inline-block.h-100.border-end.border-dashed.border-white.border-opacity-75
+          .col-5.col-xl-4
+            p.mb-0.fw-light.text-white.text-start 
+              | Hosted by Poshcamp 
+              br
+              | Washington
+        a.btn.btn-danger.btn-sm-lg.mt-5.text-uppercase.ls-2(href="#!") Buy Tickets
+
+mixin Banner 
+  +Section(container).bg-1100.text-center
+    .row.justify-content-center 
+      .col-lg-10
+        h3.text-200   Make Beautiful Multiverse Websites
+        h5.fw-normal.text-400   Create pages Legolikely, Save weeks of Work
+      
+      .col-xl-8 
+        p.mt-4.text-400.fw-light   Posh comes with 174 built in layouts. Rigorously tested and optimized for phones, tabs, laptops and all other devices. You can change it, reform it, renovate it and make any design you wish. Just start and make anything you want. Anything you can think of. 
+
+        a.mt-4.btn.btn-link.link-danger.ls-2.text-uppercase(href="#!") &rarr; Get It Now
+
+
+mixin SpeakerLooper({image, name, position})
+
+  .col-sm-6.col-md-4.col-lg-3.p-4 
+    img(src=`${CWD}assets/images/portraits/${image}` alt='').img-fluid
+    h5.fs-9.mt-3.mb-1
+      a.link-1100(href="#!")= name 
+    .text-uppercase.fs-10.text-600= position
+
+mixin Speakers 
+  -
+    var speakerList = [
+      {
+        image: 'portrait-01.jpg',
+        name: 'Matt Stauffer',
+        position: 'Creator of Laravel'
+      },
+      {
+        image: 'portrait-02.jpg',
+        name: 'Jeffrey Way',
+        position: 'Founder of Laracasts'
+      },
+      {
+        image: 'portrait-03.jpg',
+        name: 'Laura Elizabeth',
+        position: 'Developer / Surfer'
+      },
+      {
+        image: 'portrait-04.jpg',
+        name: 'Evan You',
+        position: 'Creator of Vue.js'
+      },
+      {
+        image: 'portrait-05.jpg',
+        name: 'Michele Hansen',
+        position: 'Partner at Tighten'
+      },
+      {
+        image: 'portrait-06.jpg',
+        name: 'Nils Adermann',
+        position: 'Co-Creator of Composer'
+      },
+      {
+        image: 'portrait-07.jpg',
+        name: 'Justin Jackson',
+        position: 'Maker'
+      },
+      {
+        image: 'portrait-08.jpg',
+        name: 'Freek Van der Herten',
+        position: 'Developer at Spatie'
+      },
+      {
+        image: 'portrait-09.jpg',
+        name: 'Sean Larkin',
+        position: 'Webpack Core Team'
+      },
+      {
+        image: 'portrait-10.jpg',
+        name: 'Adam Wathan',
+        position: 'UI / UX Designer'
+      },
+      {
+        image: 'portrait-11.jpg',
+        name: 'Tom Schlick',
+        position: 'Sr. Engineer at RunMyBusiness'
+      },
+      {
+        image: 'portrait-12.jpg',
+        name: 'Mathias Hansen',
+        position: 'Lead Engineer at VideoBlocks'
+      },
+      {
+        image: 'portrait-13.jpg',
+        name: 'Maxime Locqueville',
+        position: 'Product at The Motley Fool'
+      },
+      {
+        image: 'portrait-14.jpg',
+        name: 'You',
+        position: 'Submit your talk'
+      }
+    ]
+
+  +Section(container)
+    .text-center
+      h3.text-1100.mb-4 Speakers
+      hr.short.text-400.mb-5.mx-auto
+    .row
+      each speakers in speakerList
+        +SpeakerLooper(speakers)
+
+mixin Schedule 
+  +Section(container).bg-1100.overflow-hidden
+    .text-center
+      h3.text-200.mb-4 Schedule
+      hr.short.text-800.mb-5.mx-auto
+
+    .home-conference.row.justify-content-center 
+      .col-12.col-xl-8 
+        .tabs(data-tabs) 
+          .nav-bar.nav-bar-center.text-uppercase.text-400.mb-5
+            .nav-bar-item.active.fs-10.fs-md-9
+              span.d-none.d-md-block Sunday,&nbsp; 
+              | July 9
+            
+            .nav-bar-item.fs-10.fs-md-9
+              span.d-none.d-md-block Monday,&nbsp;  
+              | July 10
+            
+            .nav-bar-item.fs-10.fs-md-9
+              span.d-none.d-md-block Tuesday,&nbsp;  
+              | July 11
+            
+          .tab-contents
+            .tab-content.text-center.active
+              img(src=`${CWD}assets/images/conference-teamwok.jpg` alt='Generic placeholder image').mb-5
+              p.text-300.fw-semi-bold 4PM - 8PM
+              p.text-300.fw-semi-bold.mb-1 311 Sw Washington Street
+              h6.text-300.mb-4.fw-normal Just a short walk from the Armory!
+              p.px-xl-8.text-700 Responsive in Design | Elegant in Style
+              a.btn.btn-link.link-danger.text-uppercase.ls-2(href='https://themewagon.com/themes/posh/') &rarr; Get It Now!
+
+            .tab-content.text-300
+              .row
+                .col-5.fw-semi-bold 7:30 - 9:00
+                .col Registration/Breakfast
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 9:00 - 9:30
+                .col Mike Grabowski
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 9:30 - 10:00
+                .col Brent Vatne
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 10:00 - 10:30
+                .col Break
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 10:30 - 11:00
+                .col Richard Threlkeld
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 11:00 - 11:30
+                .col Poornima Venkatakrishnan
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 11:30 - 12:00
+                .col Ben Ilegbodu
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 12:00 - 1:30
+                .col Lunch
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 1:30 - 2:00
+                .col Nader Dabit
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 2:00 - 2:30
+                .col Naoufal Kadhom
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 2:30 - 3:00
+                .col Kyle Poole &amp; Thomas Bruketta
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 3:00 - 4:00
+                .col Break
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 4:00 - 4:30
+                .col Javier Cuevas
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 4:30 - 5:00
+                .col Ken Wheeler
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 5:00 - 7:30
+                .col Chain React Happy Hour
+                .col-12
+                  hr.mt-2.mb-4.text-900
+            
+            .tab-content.text-300
+              .row
+                .col-5.fw-semi-bold 7:30 - 9:00
+                .col Breakfast
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 9:00 - 9:30
+                .col Peggy Rayzis
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 9:30 - 10:00
+                .col Eric Baer
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 10:00 - 10:30
+                .col Break
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 10:30 - 11:00
+                .col Ram Narasimhan
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 11:00 - 11:30
+                .col Leland Richardson
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 11:30 - 12:00
+                .col Kevin Old
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 12:00 - 1:30
+                .col Lunch
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 1:30 - 2:00
+                .col Panel
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 2:00 - 2:30
+                .col Harry Tormey
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 2:30 - 3:00
+                .col Alex Kotliarskyi
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 3:00 - 4:00
+                .col Break
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 4:00 - 4:30
+                .col Doug Lowder
+                .col-12
+                  hr.mt-2.mb-4.text-900
+              .row
+                .col-5.fw-semi-bold 4:30 - 5:00
+                .col Chris Ball
+                .col-12
+                  hr.mt-2.mb-4.text-900
+
+mixin VideoSection 
+  +Section({image: `${CWD}assets/images/conference-video-bacground.jpg`, className: 'overlay overlay-1'}, container)
+    .row.text-center.align-items-center.justify-content-center.py-lg-8 
+      .col-lg-8 
+        h3.fw-light.text-200.fs-sm-5.mb-4  Create Uncountable Layouts Effortlessly
+        a.text-white(href='#!' data-bigpicture!={vimeoSrc:'222284151'} data-start='34' data-end='345')
+          img(src=`${CWD}assets/images/icons/icon-play.svg` alt="Generic placeholder image" width=80)
+
+mixin Sponsors 
+
+  +Section(container).bg-1100
+    .row 
+      .col-12.mb-5
+        h5.fw-normal.ls-2.text-uppercase.ls.text-200.fs-9 Platinum Sponsors
+        hr.text-1000.mb-4.mt-3
+        a(href='#!').ms-0.me-5.mb-5.d-inline-block
+          img(src=`${CWD}assets/images/partners/partner-squarespace.png` alt="Generic placeholder image" width='320')
+      .col-12.mb-5
+        h5.fw-normal.ls-2.text-uppercase.ls.text-200.fs-9 Gold Sponsors
+        hr.text-1000.mb-4.mt-3
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-nativebase.png` alt="Generic placeholder image" width='230')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-formidable.png` alt="Generic placeholder image" width='229')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-moduscreate.png` alt="Generic placeholder image" width='230')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#')
+          img(src=`${CWD}assets/images/partners/partner-bugsnag.png` alt="Generic placeholder image" width='215')
+      .col-12.mb-5
+        h5.fw-normal.ls-2.text-uppercase.ls.text-200.fs-9 Silver Sponsors
+        hr.text-1000.mb-4.mt-3
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-amazon.png` alt="Generic placeholder image" width='130')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-reactnative.png` alt="Generic placeholder image" width='108')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-gudog.png` alt="Generic placeholder image" width='121')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-rangle.io.png` alt="Generic placeholder image" width='133')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-businessoregon.png` alt="Generic placeholder image" width='130')
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-healthsparq.png` alt="Generic placeholder image" width='126')
+
+      .col-12
+        h5.fw-normal.ls-2.text-uppercase.ls.text-200.fs-9 Silver Sponsors
+        hr.text-1000.mb-4.mt-3
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-echobind.png` alt="Generic placeholder image" width="110")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-salesforce.png` alt="Generic placeholder image" width="90")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-capitalone.png` alt="Generic placeholder image" width="110")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-instrument.png` alt="Generic placeholder image" width="113")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-paypal.png` alt="Generic placeholder image" width="102")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-qlik.png` alt="Generic placeholder image" width="176")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-callstack.png` alt="Generic placeholder image" width="110")
+        a.ms-0.me-5.mb-5.d-inline-block(href='#!')
+          img(src=`${CWD}assets/images/partners/partner-major.png` alt="Generic placeholder image" width="60")
+
+mixin Venue 
+  +Section(container)
+    .row 
+      .col-lg-6.pe-lg-5
+        h3.mb-4 Venue
+        p.fs-8.text-900.mb-4.fw-light 
+          | Posh is the 
+          span.text-900.fw-normal Best Template 
+          | in the market you can find. It's built with Bootstrap 5 and all other state of the earth cutting edge frontend technologies. 
+        
+        p.text-800.mb-6.mb-lg-0.fw-light  It is packed with tremendous amount of well designed elements and detailed documentation of each of them. Use the sample codes and add any of these elements in your project.
+
+      .col-lg-6 
+        .googlemap(data-gmap data-latlng='25.1413179,55.1853793' data-scrollwheel='false' data-icon=`${CWD}assets/images/hotel-icon.png` data-zoom='10' data-theme='Default' style="min-height: 300px")
+          .marker-content.py-3
+            h5 Burj Al Arab
+            p
+              | Jumeira Road, Umm Suqeim 3
+              br
+              | Dubai - United Arab Emirates
+
+mixin Hotels
+  +Section(container).bg-1100
+    .row.justify-content-center.text-center.mb-4
+      .col-md-6
+        h3.text-400 Hotels
+        p.fs-8.text-600.mb-4.fw-light 5 Responsive breakpoints make Posh optimized to every screen size Pixel perfectly
+    .row
+      .col-lg-4.px-4.pb-5.pb-lg-0
+        img.mb-3.w-100(src=`${CWD}assets/images/hotel-05.jpg` alt="Generic placeholder image")
+        a.fw-semi-bold.text-capitalize.link-200.fs-9.pb-1.d-inline-block(href='#!') Hotel Novotel New York Times Square
+        p.text-capitalize.text-500.mb-0 0.3 mile from venue
+        p.text-600 4-star hotel
+        a.btn.btn-outline-danger.text-uppercase.ls-2.btn-sm(href='#') See Price + Book &rarr;
+
+      .col-lg-4.px-4.pb-5.pb-lg-0
+        img.mb-3.w-100(src=`${CWD}assets/images/hotel-04.jpg` alt="Generic placeholder image")
+        a.fw-semi-bold.text-capitalize.link-200.fs-9.pb-1.d-inline-block(href='#!') Sheraton Times Square
+        p.text-capitalize.text-500.mb-0 0.4 mile from venue
+        p.text-600 5-star hotel
+        a.btn.btn-outline-danger.text-uppercase.ls-2.btn-sm(href='#') See Price + Book &rarr;
+
+      .col-lg-4.px-4
+        img.mb-3.w-100(src=`${CWD}assets/images/hotel-06.jpg` alt="Generic placeholder image")
+        a.fw-semi-bold.text-capitalize.link-200.fs-9.pb-1.d-inline-block(href='#') Hilton Garden Inn Times Square
+        p.text-capitalize.text-500.mb-0 0.2 mile  from venue
+        p.text-600 3-star hotel
+        a.btn.btn-outline-danger.text-uppercase.ls-2.btn-sm(href='#') See Price + Book &rarr;

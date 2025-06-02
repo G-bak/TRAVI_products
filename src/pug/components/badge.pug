@@ -1,0 +1,28 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Badges
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Badge'
+
+append component 
+
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/badge/`,
+    name: pageTitle,
+  })
+
+  +ComponentCard({
+    title: 'Default Badges',
+    prismClass:'mt-4'
+  }).mb-6
+    +DefaultBadgesExample
+
+  +ComponentCard({
+    title: 'Pill Badges',
+    prismClass:'mt-4'
+  })
+    +PillBadgesExample

@@ -1,0 +1,78 @@
+extends ../layouts/LayoutComponent
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Cards'
+
+append component 
+
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/card/`,
+    name: pageTitle,
+  })
+
+  .row.gy-6
+    .col-md-6
+      .card
+        a(href="#!") 
+          img.card-img-top(src=`${CWD}assets/images/generic-05.jpg`, alt="Generic placeholder image")
+        .card-body 
+          a(href="#!").link-1100
+            h5.fs-8.fw-semi-bold.text-1000 Career Monogamy: The Awkward Tech Sin of Longevity 
+          p.card-text.text-1000 The Slack message was 
+            a(href="#!") #genuine 
+            | and brief, “congrats on 20 years!” My name had apparently been listed on…
+        .card-footer.bg-100
+          .d-flex.align-items-center 
+            img.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/01.jpg`, alt="Generic placeholder image" style="max-width: 50px")
+            div
+              a(href='#!').link-1000
+                h6.mb-0.text-1100 Media heading
+              span.fs-10.text-1000 May 23 &middot; 6 min read
+    .col-md-6 
+      .card
+        a(href="#!")
+          img.card-img-top(src=`${CWD}assets/images/blog-05.jpg`, alt="Generic placeholder image")
+        .card-body 
+          a(href="#!").link-1100
+            h5.fs-8.fw-semi-bold.text-1000 Career Monogamy: The Awkward Tech Sin of Longevity 
+          hr.text-300
+          .d-flex.align-items-center 
+            img.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/04.jpg`, alt="Generic placeholder image" style="max-width: 50px")
+            div
+              a(href='#!').link-1000
+                h6.mb-0.text-1100 Media heading
+              span.fs-10.text-1000 May 23 &middot; 6 min read
+    .col-md-6
+      .card
+        .card-header.bg-100
+          .d-flex.py-2.align-items-center 
+            img.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/03.jpg`, alt="Generic placeholder image" style="max-width: 50px")
+            div
+              a(href='#!').link-1000
+                h6.mb-0.text-1100 Cuberto
+              span.fs-10.text-1000 May 23 &middot; 6 min read
+        .card-body 
+          a(href="#!").link-1000
+            h5.fs-8.fw-semi-bold.text-1000 Functionality vs Emotions in Mobile Interface Animation
+          p.card-text.text-1000 Let’s start off by pointing out that we’ll be talking about the practical applications of 
+            a(href="#!") #animation 
+            | in terms of the effort and expediency…
+
+        .card-footer.bg-100
+          .py-2.px-0 
+            .row 
+              .col
+                a.link-1000(href="#!")
+                  span.fa.fa-heart.me-1.text-danger 
+                  | 84
+
+              .col.text-end 
+                a.link-1000(href="#!")
+                   span.fa.fa-share-alt.me-1 
+                   | 7
+
+          

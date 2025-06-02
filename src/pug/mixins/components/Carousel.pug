@@ -1,0 +1,38 @@
+mixin CarouselSlider(parentId, indicator)
+  if indicator 
+    .carousel-indicators
+      each item,index in sliderImages 
+        button(class=`${index==0 ? 'active' : ''}` type="button" data-bs-target=parentId data-bs-slide-to=index aria-current="true" aria-label=`Slide ${index + 1}` )
+  .carousel-inner
+    each item,index in sliderImages 
+      .carousel-item(class=`${index==0 ? 'active' : ''}`)
+        = '\n' 
+        img(src=`${CWD}${item.imageSrc}` alt="").w-100.d-block
+        = '\n'
+  
+  button.carousel-control-prev(type="button" data-bs-target=parentId data-bs-slide='prev')
+    = '\n'
+    span.carousel-control-prev-icon(aria-hidden='true')
+    = '\n'
+    span.visually-hidden Previous
+    = '\n'
+  
+  button.carousel-control-next(type="button" data-bs-target=parentId data-bs-slide='next')
+    = '\n'
+    span.carousel-control-next-icon(aria-hidden='true')
+    = '\n'
+    span.visually-hidden Next
+    = '\n'
+
+
+mixin CarouselBasicExample 
+  #carouselExample.carousel.slide
+    +CarouselSlider('#carouselExample', false)
+
+mixin CarouselWithIndicatorExample 
+  #carouselExampleIndicators.carousel.slide
+    +CarouselSlider('#carouselExampleIndicators', true)
+
+mixin CarouselAutoPlayExample 
+  #carouselExampleAutoPlaying.carousel.slide(data-bs-ride="carousel")
+    +CarouselSlider('#carouselExampleAutoPlaying', true)

@@ -1,0 +1,17 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Filter
+
+prepend styles 
+
+prepend scripts
+  script(src=`${CWD}vendors/isotope-layout/isotope.pkgd.min.js`) 
+  script(src=`${CWD}vendors/isotope-packery/packery-mode.pkgd.min.js`)
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`)
+  script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`) 
+
+
+append variables
+  - var pageTitle = 'Filter'
+
+append component 
+  +Filters

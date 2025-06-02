@@ -1,0 +1,119 @@
+
+
+
+
+mixin NavbarBrand(config)
+  - var config = Object.assign(config)
+  a(href=`${CWD}`).navbar-brand&attributes(attributes)
+    if config.image
+      +Logo(config.logo, config.width)
+    else
+      span.ls-sm(class=`${config.color}`) #{config.name}
+
+mixin NavbarToggleIcon(config)
+  = '\n'
+  button.btn.navbar-toggler-humburger-icon&attributes(attributes)
+    span.navbar-toggle-icon
+      span.toggle-line
+  = '\n'
+
+
+//------navbar-standard-design------//
+
+mixin navbarTopMenus(vars)
+  ul.navbar-nav.navbar-nav-top.justify-content-end.flex-1.me-lg-n2(data-top-nav-dropdowns)
+    each item,index in sitemap 
+      li.nav-item.dropdown 
+        if item.label
+          - var label = item.label
+          a.nav-link.dropdown-toggle(href="#!" role='button' data-bs-toggle='dropdown' data-bs-auto-close='outside' aria-haspopup='true' aria-expanded='false')
+            +cleanText(label)
+            span.fas.fa-chevron-down.dropdown-toggle-icon
+          
+          if item.pages 
+            if item.megaMenu 
+              +TopNavMegaMenu(item)
+            else 
+              +TopNavItem(item)
+
+mixin TopNavItem(config)
+
+  ul.dropdown-menu.navbar-dropdown-caret 
+    each page in config.pages 
+      if page.pages 
+        +TopNavLooper(page)
+      else
+        +TopNavDropdownItem(page)
+
+mixin TopNavLooper(config)
+
+  li.dropdown
+    a.dropdown-item.dropdown-toggle(id=config.name href='#' data-bs-toggle='dropdown' data-bs-auto-close='outside')
+      .dropdown-item-wrapper
+        span
+          +cleanText(config.name) 
+        span.fas.fa-chevron-right.dropdown-indicator-icon.d-none.d-lg-block 
+        span.fas.fa-chevron-down.dropdown-indicator-icon.d-lg-none 
+    ul.dropdown-menu 
+      each item in config.pages 
+        +TopNavDropdownItem(item)
+
+mixin TopNavDropdownItem(page)
+  li 
+    +TopNavDropdownLink({
+      url: page.pages ? `#${page.name}` : `${page.path}`,
+      text: `${page.name}`,
+      hasHash: page.pages ? false : true,
+      isDisabled: page.disabled,
+      depth: 0
+    })
+
+mixin TopNavDropdownLink(config)
+  - var config = Object.assign({}, config);
+  - var { url, text, hasHash, isDisabled, depth } = config; 
+  - var href = hasHash ? text!=='modal' ? `${CWD}${url}.html` : `${CWD}${url}` : url ;
+
+  a.dropdown-item(href=href class=`${isDisabled ? 'nav-link-disable' :  href.includes(`${pathName}.html`) ? 'active' : ''}`)
+    .dropdown-item-wrapper
+      +cleanText(text)
+        
+
+
+mixin TopNavMegaMenu(config)
+  .dropdown-menu.navbar-dropdown-caret.dropdown-menu-card.py-0.overflow-hidden 
+    .border-0
+      .row 
+        .col.d-none.d-lg-block.position-relative
+          .bg-holder.overlay.overlay-1(style=`background-image:url('${CWD}assets/images/megamenu.jpg')`)
+          .row.justify-content-center.h-100.py-9.position-relative 
+            .col-6.align-self-center 
+                p.fs-8.lh-lg  Detailed and organised components
+                a.btn.btn-outline-white.btn-sm(href="#") Start Creating 
+
+        .col-lg-6 
+          .row.justify-lg-content-center.py-3.py-lg-5.ps-lg-5.g-0
+            - var group1 = [];
+            - var group2 = [];
+            - var group3 = [];
+            
+            - group1.push(config.pages.slice(0,11))
+            - group2.push(config.pages.slice(11,22))
+            - group3.push(config.pages.slice(22,33))  
+
+            each group in [group1, group2, group3]
+              .col-6.col-sm-4
+                each item,index in group
+                  +TopNavMegaMenuIitemsLooper(item)
+
+mixin TopNavMegaMenuIitemsLooper(config)
+  each item in config
+    if item.pages
+      +TopNavMegaMenuIitemsLooper(item)
+    else
+      +TopNavMegaMenuItems(item)
+                    
+mixin TopNavMegaMenuItems(config)
+  - var path= config.path
+  - var href = `${CWD}${path}.html`
+  a.dropdown-link.d-block(href=href class=href.includes(`${pathName}.html`) ? 'active' : '')
+    +cleanText(config.name)

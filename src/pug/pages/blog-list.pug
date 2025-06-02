@@ -1,0 +1,21 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Blogs
+
+prepend styles 
+
+prepend scripts 
+  script(src=`${CWD}vendors/isotope-layout/isotope.pkgd.min.js`) 
+  script(src=`${CWD}vendors/isotope-packery/packery-mode.pkgd.min.js`)
+  script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`) 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    width: '80',
+    logo: 'posh-logo.png'
+  }).bg-white
+
+append content
+  +RecentBlogs

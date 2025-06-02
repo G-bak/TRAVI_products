@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------- */
+/*                                   Navbar                                   */
+/* -------------------------------------------------------------------------- */
+
+:root{
+  --#{$prefix}top-nav-height: 4.3125rem;
+}
+
+.navbar{
+  .nav-link {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+    line-height: $line-height-xl;
+    border: 1px solid transparent;
+  }
+  // Initial hover color for all navbar dropdown item
+  .dropdown-item {
+    font-weight: $font-weight-semi-bold;
+    line-height: 18.0046px;
+    letter-spacing: 0.12003px;
+    transition: all 0.2s ease-in-out;
+    @include hover-focus {
+      background-color: transparent;
+      color: var(--#{$prefix}gray-1100) !important;
+      
+    }
+  }
+
+}
+
+.navbar-brand {
+  font-weight: $navbar-brand-font-weight;
+  padding-right: 5px;
+  line-height: 1.5;
+}

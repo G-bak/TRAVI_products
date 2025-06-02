@@ -1,0 +1,18 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Portfolio
+
+prepend styles 
+
+prepend scripts 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    width: '70',
+    logo: 'posh-logo-white.png'
+  }).bg-1100.navbar-dark
+
+append content
+  +PortfolioDetails

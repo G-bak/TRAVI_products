@@ -1,0 +1,20 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/About
+
+prepend styles 
+
+prepend scripts 
+
+append variables
+  - var footer = true
+  
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    logo: 'posh-logo.png'
+  }).bg-white
+
+append content
+  +MainContent

@@ -1,0 +1,9 @@
+.table {
+  margin-bottom: 4rem;
+}
+
+table:not(.table-dark) {
+  th {
+    background-color: var(--#{$prefix}gray-200) !important;
+  }
+}

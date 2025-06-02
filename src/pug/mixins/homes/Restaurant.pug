@@ -1,0 +1,288 @@
+mixin Restaurant 
+  section.p-0 
+    .swiper-theme-container.home-slider(data-swiper-theme-container)
+      .swiper(data-swiper!={
+        effect: 'fade',
+        loop:true,
+        autoplay: {
+          delay: 5000,
+          disableOnInterection: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true
+        }
+      })
+        .swiper-wrapper 
+          .swiper-slide
+            .position-relative
+              .bg-holder.overlay(style=`background-image:url('${CWD}assets/images/restaurant-header-01.jpg');`)
+              .container 
+                .row.min-vh-100.align-items-center.justify-content-center 
+                  .col-xl-5.col-lg-7.col-6
+                    img(src=`${CWD}assets/images/banner-restaurant-01.png`, alt="")
+                     
+          .swiper-slide
+            .position-relative
+              .bg-holder.overlay(style=`background-image:url('${CWD}assets/images/restaurant-header-02.jpg');`)
+              .container 
+                .row.min-vh-100.align-items-center.align-items-center.justify-content-center  
+                  .col-xl-5.col-lg-7.col-6
+                    img(src=`${CWD}assets/images/banner-restaurant-01.png`, alt="")
+
+          .swiper-slide
+            .position-relative
+              .bg-holder.overlay(style=`background-image:url('${CWD}assets/images/restaurant-header-03.jpg');`)
+              .container 
+                .row.min-vh-100.align-items-center.align-items-center.justify-content-center  
+                  .col-xl-5.col-lg-7.col-6
+                    img(src=`${CWD}assets/images/banner-restaurant-01.png`, alt="")
+        .swiper-nav
+          .swiper-button-next 
+          .swiper-button-prev
+
+  +Section(container).bg-100
+    .row.justify-content-center 
+      .col-lg-5 
+        img(src=`${CWD}assets/images/restaurant-welcome.png`, alt="")
+        .row.justify-content-end 
+          .col-8 
+            p.text-700.mb-5.mb-lg-0.font-sans-serif With meticulously restored and discreetly modernised features, Posh is The ultimate in sophistication. Colaborated with Bootstrap 5; Highly Customizable Posh's visual style is simple but glamorous.
+
+      .col-lg-5.offset-lg-1 
+        p.fs-300.fs-8.dropcap.font-sans-serif Posh is the Best Template in the market you can find. It's built with the best CSS framework - Bootstrap and all other state of the earth cutting edge frontend technologies. Packed with tremendous amount of well designed elements and detailed documentation of each of them, Posh is perfect for starters.
+        p.fs-300.fs-8.font-sans-serif It is a multiverse template with modularity at core that empowers you to make sites in a blink with minimum or no coding. Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS at all.
+        img.mt-4(src=`${CWD}assets/images/restaurant-signature.png`, alt="" width="180")
+
+  +Section({image: `${CWD}assets/images/restaurant-big-01.jpg`, className: 'overlay'}, container)
+    .row.justify-content-center.py-9  
+      .col-lg-8.text-center.text-uppercase.text-white.lh-f2.font-sans-serif
+        .fs-5 not the kind of
+        .fs-5.fs-lg-3 barbecue
+        .fs-5.fs-lg-3 you have
+        .fs-5.fs-lg-3 at home
+
+  +Section(container)
+    .row.g-0
+      .col-lg-6.pe-lg-6.pb-3.overflow-hidden 
+        h3.mb-4.font-sans-serif Combos &amp; BBQ ribs
+        .row.border-bottom.border-top.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 The smoke haus threesome
+            small Pulled pork, slow cooked brisket and pastrami
+
+          .col-3.text-end 
+            span &euro;20.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 The haus rib platter
+            small &frac12; pork sheet ribs, &frac12; baby back ribs and 1 bone Jacob’s ladder
+
+          .col-3.text-end 
+            span  &euro;23.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 Steak &amp; ribs
+            small 8oz Rump Steak and &frac12; pork sheet ribs
+
+          .col-3.text-end 
+            span  &euro;20.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 Kansas chicken &amp; ribs
+            small A whole kansas chicken breast with &frac12; a rack of pork sheet ribs
+
+          .col-3.text-end 
+            span  &euro;23.95
+
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 Jacob’s ladder
+
+          .col-6.text-end 
+            small  &frac12; (2 bones) - 
+            span &euro;15.95
+            br
+            small  Full (4 bones) - 
+            span &euro;23.95
+        h6.mt-3.text-warning All combos &amp; ribs come with skin on fries &amp; slaw
+      .col-lg-6.d-none-d-md-block.position-relative 
+        +Background({image: `${CWD}assets/images/restaurant-bbq.jpg`})
+
+    .row.g-0
+      .col-lg-6.d-none-d-md-block.position-relative 
+        +Background({image: `${CWD}assets/images/restaurant-burger.jpg`})
+
+      .col-lg-6.ps-lg-6.pt-5.pb-3.overflow-hidden 
+        h3.mb-4.font-sans-serif Burgers
+        .row.border-bottom.border-top.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 The smoke haus threesome
+            small Pulled pork, slow cooked brisket and pastrami
+
+          .col-3.text-end 
+            span &euro;20.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 The haus rib platter
+            small &frac12; pork sheet ribs, &frac12; baby back ribs and 1 bone Jacob’s ladder
+
+          .col-3.text-end 
+            span  &euro;23.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 Steak &amp; ribs
+            small 8oz Rump Steak and &frac12; pork sheet ribs
+
+          .col-3.text-end 
+            span  &euro;20.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 Kansas chicken &amp; ribs
+            small A whole kansas chicken breast with &frac12; a rack of pork sheet ribs
+
+          .col-3.text-end 
+            span  &euro;23.95
+
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-0 Jacob’s ladder
+
+          .col-6.text-end 
+            small  &frac12; (2 bones) - 
+            span &euro;15.95
+            br
+            small  Full (4 bones) - 
+            span &euro;23.95
+        h6.mt-3.text-warning All burgers come with skin on fries &amp; slaw
+      
+    .row.g-0
+      .col-lg-6.pe-lg-6.pt-5.overflow-hidden
+        h3.mb-4.font-sans-serif Steak &amp; Chicken
+        .row.border-bottom.border-top.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-1 Kansas Chicken
+            p.lh-1
+              small Chicken breast fried in our own herbs and spices, served with ranch dressing, fries &amp; slaw
+
+          .col-5.text-end 
+            span  &euro;10.95
+            br
+            small In a bun + &euro; 1.00
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-1 &frac12; Roast Chicken
+            p.lh-1
+              small &frac12; Roasted half chicken with either our own BBQ sauce or a dry rub, served with fries &amp; slaw
+
+          .col-3.text-end 
+            span  &euro;11.95
+        
+        .row.border-bottom.border-dashed.border-400.py-2.align-items-center
+          .col 
+            h5.font-sans-serif.mb-1 Chicken &amp; Waffles
+            p.lh-1
+              small Kansas chicken on sweet waffles with sweet sauce and ranch dressing
+
+          .col-3.text-end 
+            span  &euro;14.95
+
+      .col-lg-6.d-none-d-md-block.position-relative 
+        +Background({image: `${CWD}assets/images/restaurant-chicken.jpg`})
+
+  +Section(container).bg-1100
+    .row.justify-content-center.text-500 
+      .col-lg-5.col-xl-4.text-lg-end 
+        h4.mb-2.text-400.font-sans-serif Private Dining 
+        p.mb-4 
+          | We are here to make your special day a truly memorable one 
+          br
+          | (511) 447 - 7554
+
+        h4.mb-2.text-400.font-sans-serif Events
+        p.mb-4 
+          | Call now for booking
+          br
+          | (511) 447 - 9333
+
+      .col-1.text-center.d-none.d-md-block
+        .d-inline-block.border-end.border-dashed.h-100(style="border-right-color: #333 !important;")
+      
+      .col-lg-5.col-xl-4
+        h4.mb-2.text-400.font-sans-serif Reservations
+        p.mb-4 
+          | From Monday to Saturday from 09.00 a 18.00hrs  
+          br
+          | (511) 446 - 2512
+          br
+          | (511) 447 - 7554
+
+        h4.mb-2.text-400.font-sans-serif Lunch
+        p.mb-4 
+          | Monday to Saturday from 12:30 a.m. to 4:00 p.m.
+          br
+          | Sunday from 12:30 a.m. to 5:00 p.m.
+
+        h4.mb-2.text-400.font-sans-serif Dinner
+        p.mb-lg-4 
+          | Monday to Saturday from 7:00 a.m. to 11:00 p.m.
+          br
+          | Sunday from 6:00 a.m. to 11:00 p.m.
+
+  +Section(container)
+    .row
+      .col-lg-5 
+        h3.font-sans-serif.mb-4 Contact us 
+        p.text-800 
+          strong.text-1100 Posh Restaurant 
+          br
+          | 32-40 Wellington Street,
+          br
+          | Central, Hong Kong
+        
+        p.text-800 
+          strong.text-1100 Opening Hours 
+          br
+          | 11:00am - 11:30pm
+
+        p.text-800 
+          strong.text-1100 Takeaway Hotline 
+          br
+          | (852) 2523 2343
+
+        form.mt-5(data-form onsubmit="return false;")
+          .form-group
+            input.form-control(type="hidden" name="to" value="username@domain.extension")
+
+          .form-group
+            input.form-control(type="text" name="name" placeholder="Name" required)
+
+          .form-group
+            input.form-control(type="email" name="from" placeholder="Email" required)
+
+          .form-group
+            textarea.form-control(rows='8' name="message" placeholder="Write your massage...")
+          
+          .form-group.mb-lg-0
+            input.btn.btn-outline-dark.d-block.w-100(type="submit" name="submit" value="Send!")
+
+          .feedback.mt-3
+
+      .col
+        .googlemap.h-100(data-gmap data-latlng='34.9524207,-78.9512062' data-scrollwheel='false' data-icon=`${CWD}assets/images/restaurant-marker.png` data-zoom='17' data-theme='Default' style="min-height: 400px")
+          .marker-content.py-3
+            h5 POSH restaurant
+            p
+              | Chain serving pizzas with a variety of toppings.
+              br
+              | Alviso, CA 95002, USA
+
+
+        

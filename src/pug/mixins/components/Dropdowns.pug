@@ -1,0 +1,55 @@
+mixin SingleDropdown 
+  .dropdown 
+    button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Dropdown button 
+    ul.dropdown-menu 
+      li 
+        a.dropdown-item(href="#!")  Action 
+      li 
+        a.dropdown-item(href="#!")  Another action 
+      li 
+        a.dropdown-item(href="#!")  Something else here  
+
+mixin SplitDropdown 
+  .btn-group 
+    button.btn.btn-danger(type="button")  Split Dropdown 
+    button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+      span.visually-hidden Toggle Dropdown 
+    ul.dropdown-menu 
+      li 
+        a.dropdown-item(href="#!")  Action 
+      li 
+        a.dropdown-item(href="#!")  Another action
+      li 
+        a.dropdown-item(href="#!")  Something else here
+      li 
+        hr.dropdown-divider 
+      li 
+        a.dropdown-item(href="#!")  Separated link
+
+mixin SingleDropup 
+  .btn-group.dropup 
+    button.btn.btn-primary.dropdown-toggle(type="button" data-bs-toggle="dropdown" aria-expanded="false") Single Dropup 
+    ul.dropdown-menu 
+      li 
+        a.dropdown-item(href="#!")  Action 
+      li 
+        a.dropdown-item(href="#!")  Another action
+      li 
+        a.dropdown-item(href="#!")  Something else here 
+
+mixin SplitDropup 
+  .btn-group.dropup 
+    button.btn.btn-danger(type="button")  Split Dropdown 
+    button.btn.btn-danger.dropdown-toggle.dropdown-toggle-split(type="button" data-bs-toggle="dropdown" aria-expanded="false")
+      span.visually-hidden Toggle Dropdown 
+    ul.dropdown-menu 
+      li 
+        a.dropdown-item(href="#!")  Action 
+      li 
+        a.dropdown-item(href="#!")  Another action
+      li 
+        a.dropdown-item(href="#!")  Something else here
+      li 
+        hr.dropdown-divider 
+      li 
+        a.dropdown-item(href="#!")  Separated link

@@ -1,0 +1,280 @@
+mixin ShopMainSection 
+  section.p-0 
+    .swiper-theme-container.home-slider(data-swiper-theme-container)
+      .swiper(data-swiper!={
+        effect: 'fade',
+        loop:true,
+        
+      })
+        .swiper-wrapper 
+          .swiper-slide
+            section.text-white
+              .bg-holder(style=`background-image:url('${CWD}assets/images/shop/shop-banner-2.jpg');`)
+              .container 
+                .row.min-vh-50.align-items-center 
+                  .col-md-6.col-lg-5.col-xl-4
+                    .py-4.text-center.shop-slider-card 
+                      h6.text-uppercase.ls-2  Shirt &amp; Sweet 
+                      .fs-4.font-sans-serif.lh-2.my-4.text-1200 
+                        | All Shirts 
+                        br
+                        | 40% Off 
+                      a.link-1200(href="#!") 
+                        span.text-decoration-underline.fw-normal.font-sans-serif Shop Denim Shirts 
+                      p.fs-10.text-700.mb-0 Excludes clearance  
+          
+          .swiper-slide
+            section.text-white
+              .bg-holder(style=`background-image:url('${CWD}assets/images/shop/shop-banner-1.jpg');`)
+              .container 
+                .row.min-vh-50.align-items-center 
+                  .col-md-6.col-lg-5.col-xl-4
+                    .py-4.text-center.shop-slider-card 
+                      h6.text-uppercase.ls-2  Travel Fashion
+                      .fs-4.font-sans-serif.lh-2.my-4.text-1200 
+                        span.fs-5 All items
+                        br
+                        .fw-semi-bold $20 
+                        .fs-6 or less
+                      a.btn.btn-danger(href="#!") Shop Now
+        .swiper-nav
+          .swiper-button-next 
+          .swiper-button-prev
+  
+  +Section(container).text-center.d-none.d-sm-block.py-5.font-sans-serif 
+    .swiper-theme-container.theme-slider(data-swiper-theme-container)
+      .swiper(data-swiper!={
+        spaceBetween:100,
+        autoplay:true,
+        loop: true,
+        breakpoints:{
+          0:{slidesPerView: 1}, 
+          576:{slidesPerView: 2}, 
+          768:{slidesPerView: 3},
+          992:{slidesPerView:3},
+          1200:{slidesPerView: 4}
+        },
+      })
+        .swiper-wrapper 
+          .swiper-slide
+            a.link-1100(href="#!")
+              h4.mb-1.text-decoration-underline Bootstrap 5
+              h6.lead.text-800.mb-0.d-inline-block Starting at 
+              br
+              p.fs-6.fw-semi-bold.mb-0.lh-1.d-inline-block 
+                span.fs-9 &dollar;
+                | 15
+          .swiper-slide
+            a.link-1100(href="#!")
+              h4.mb-1.text-decoration-underline SASS
+              br 
+              p.fs-6.fw-semi-bold.mb-0.lh-1 
+                span.fs-9 &dollar;
+                | 18
+          
+          .swiper-slide
+            a.link-1100(href="#!")
+              h4.mb-1.text-decoration-underline Documentation
+              br
+              p.fs-6.fw-semi-bold.mb-0.lh-1 40% Off
+
+          .swiper-slide
+            a.link-1100(href="#!")
+              h4.mb-1.text-decoration-underline 100+ Layouts
+              h6.lead.text-800.mb-0.d-inline-block Starting at 
+              br
+              p.fs-6.fw-semi-bold.mb-0.lh-1.d-inline-block 
+                span.fs-9 &dollar;
+                | 10
+
+  +Section(container).py-4.pt-md-0
+    .row 
+      .col 
+        a(href="#!")
+          img(src=`${CWD}assets/images/shop/shop-add-1.jpg`, alt="") 
+      .col 
+        a(href="#!")
+          img(src=`${CWD}assets/images/shop/shop-add-2.jpg`, alt="") 
+  
+  +Section(container).pt-0.pb-4.text-center
+    .row.g-0.border.border-top-0.border-300
+      .col-12 
+        hr.my-0.text-danger
+        hr.my-0.text-danger
+      .col-md-4.col-lg-2.pb-3.pb-lg-0
+        a.link-uppercase(href="#!")
+          h5.p-3.mb-0.text-danger Women's Clothing 
+        .d-none.d-sm-block 
+          hr.mt-0.text-300
+          a.btn.btn-link.text-800.py-2(href="#!") Dresses 
+          a.btn.btn-link.text-800.py-2(href="#!") Blouses &amp; Shirts
+          a.btn.btn-link.text-800.py-2(href="#!") Jumpsuits
+          a.btn.btn-link.text-800.py-2(href="#!") Jackets 
+          a.btn.btn-link.text-800.py-2(href="#!") Trench Coats 
+          a.btn.btn-link.text-800.py-2(href="#!") Tops &amp; Tees
+          a.btn.btn-link.text-800.py-2(href="#!") Hoodies
+          a.btn.btn-link.text-800.py-2(href="#!") Bra &amp; Brief Sets 
+          a.btn.btn-link.text-800.py-2(href="#!") Pants &amp; Capris 
+      
+      .col-md-8.col-lg-4 
+        .swiper-theme-container.shop-slider(data-swiper-theme-container)
+          .swiper(data-swiper!={
+            loop: true,
+            autoplay:{
+              delay: 9000,
+              disableOnInterection: true,
+            },
+            effect:'fade',
+          })
+            .swiper-wrapper 
+              .swiper-slide
+                a.text-white(href="#!")
+                  .hoverbox 
+                    img(src=`${CWD}assets/images/shop/shop-women-slider-3.jpg`, alt="")
+                    .hoverbox-content.h-100.row.align-items-center
+                      .col-12.align-self-end
+                        .py-3.my-6(style='background-color: rgba(255, 59, 48, 0.8);')
+                          h3.text-white Petro Wear 
+                          hr.my-0
+                          h6.mt-2.text-white Get up to 60% off SheIn's summer collection
+              .swiper-slide
+                a.text-white(href="#!")
+                  .hoverbox 
+                    img(src=`${CWD}assets/images/shop/shop-women-slider-2.jpg`, alt="")
+                    .hoverbox-content.h-100.row.align-items-center
+                        .col-12.align-self-end
+                          .py-3.my-6(style='background-color: rgba(255, 59, 48, 0.8);')
+                            h3.text-white Must-have Dress 
+                            hr.my-0
+                            h6.mt-2.text-white Get up to 60% off SheIn's summer collection
+              .swiper-slide
+                a.text-white(href="#!")
+                  .hoverbox 
+                    img(src=`${CWD}assets/images/shop/shop-women-slider-1.jpg`, alt="")
+                    .hoverbox-content.h-100.row.align-items-center
+                        .col-12.align-self-end
+                          .py-3.my-6(style='background-color: rgba(255, 59, 48, 0.8);')
+                            h3.text-white Summer Loving
+                            hr.my-0
+                            h6.mt-2.text-white Get up to 60% off SheIn's summer collection
+              .swiper-pagination
+
+          .swiper-nav 
+            .swiper-button-next 
+            .swiper-button-prev
+
+      .col-lg-6 
+        .row.g-0.h-100.fw-semi-bold
+          a.link-700.card.col-6.col-md-4.border-200.rounded-0(href="#!")
+            .card-header.border-0.p-2.flex-1
+              small.pt-3.pb-2.d-block Best-sellers from Bosideng
+            img.w-100.card-img-top(src=`${CWD}assets/images/shop/shop-women-1.jpg`, alt="")
+          
+          a.link-700.card.col-6.col-md-4.border-200.rounded-0(href="#!")
+            .card-header.border-0.p-2.flex-1
+              small.pt-3.pb-2.d-block Accessories
+            img.w-100.card-img-top(src=`${CWD}assets/images/shop/shop-women-2.jpg`, alt="")
+
+          a.link-700.card.col-6.col-md-4.border-200.rounded-0(href="#!")
+            .card-header.border-0.p-2.flex-1
+              small.pt-3.pb-2.d-block Tops &amp; Tees
+            img.w-100.card-img-top(src=`${CWD}assets/images/shop/shop-women-3.jpg`, alt="")
+
+          a.link-700.card.col-6.col-md-4.border-200.rounded-0(href="#!")
+            .card-header.border-0.p-2.flex-1
+              small.pt-3.pb-2.d-block Jumpsuits &amp; Bodysuits
+            img.w-100.card-img-top(src=`${CWD}assets/images/shop/shop-women-4.jpg`, alt="")
+
+          a.link-700.card.col-6.col-md-4.border-200.rounded-0(href="#!")
+            .card-header.border-0.p-2.flex-1
+              small.pt-3.pb-2.d-block 3D T-shirts
+            img.w-100.card-img-top(src=`${CWD}assets/images/shop/shop-women-5.jpg`, alt="")
+
+          a.link-700.card.col-6.col-md-4.border-200.rounded-0(href="#!")
+            .card-header.border-0.p-2.flex-1
+              small.pt-3.pb-2.d-block Sunglasses
+            img.w-100.card-img-top(src=`${CWD}assets/images/shop/shop-women-6.jpg`, alt="")
+
+  +Section(container).pt-0.pb-4.text-center
+    .row.g-0.border.border-top-0.border-300
+      .col-12 
+        hr.my-0.text-danger
+        hr.my-0.text-danger
+      .col-lg-3.position-relative
+       .row.align-items-end.h-100
+        .bg-holder(style=`background-image:url('${CWD}assets/images/shop/shop-men-0.jpg')`) 
+        .col-12 
+          .m-3
+            .py-4(style="background-color: rgba(255,255,255,0.9);") 
+              a.link-uppercase(href="#!").text-danger
+                h5.p-3.mb-0.text-danger Charming Men
+              .d-none.d-sm-block 
+                hr.mt-0.text-300
+                a.btn.btn-link.text-800.py-2.d-block(href="#!") Long Sleeves
+                a.btn.btn-link.text-800.py-2.d-block(href="#!") Popular Jeans
+                a.btn.btn-link.text-800.py-2.d-block(href="#!") T-Shirts
+                a.btn.btn-link.text-800.py-2.d-block(href="#!") Outerwear
+      
+      .col-lg-9
+        .swiper-theme-container.shop-slider(data-swiper-theme-container)
+          .swiper(data-swiper!={
+            spaceBetween:30,
+            loop: true,
+            autoplay:{
+              delay: 9000,
+              disableOnInterection: true,
+            },
+            breakpoints:{
+              0:{slidesPerView: 1}, 
+              600:{slidesPerView: 2}, 
+              1000:{slidesPerView: 3},
+            },
+          })
+            .swiper-wrapper 
+              .swiper-slide
+                a(href="#!")
+                  img.mb-3(src=`${CWD}assets/images/shop/shop-men-1.jpg`, alt="")
+                  .mb-3 
+                    h6.text-900.mb-0 Men's Suit - Black 
+
+                    h5.d-inline-block.text-1100 &dollar;20.25
+                      del.text-600.fs-10  &dollar;40.50
+              .swiper-slide
+                a(href="#!")
+                  img.mb-3(src=`${CWD}assets/images/shop/shop-men-2.jpg`, alt="")
+                  .mb-3 
+                    h6.text-900.mb-0 Jeans - Blue
+
+                    h5.d-inline-block.text-1100 &dollar;29.22 
+                      del.text-600.fs-10  &dollar;50.50
+                  
+              .swiper-slide
+                a(href="#!")
+                  img.mb-3(src=`${CWD}assets/images/shop/shop-men-3.jpg`, alt="")
+                  .mb-3 
+                    h6.text-900.mb-0 Men's Suit - Collection
+
+                    h5.d-inline-block.text-1100 &dollar;27.25 
+                      del.text-600.fs-10  &dollar;39.50
+              
+              .swiper-slide
+                a(href="#!")
+                  img.mb-3(src=`${CWD}assets/images/shop/shop-men-4.jpg`, alt="")
+                  .mb-3 
+                    h6.text-900.mb-0 Denim Jacket - Jeans Blue
+
+                    h5.d-inline-block.text-1100 &dollar;28.25 
+                      del.text-600.fs-10  &dollar;48.50
+                  
+              .swiper-slide
+                a(href="#!")
+                  img.mb-3(src=`${CWD}assets/images/shop/shop-men-5.jpg`, alt="")
+                  .mb-3 
+                    h6.text-900.mb-0 Destroyed Jacket - Denim Blue
+
+                    h5.d-inline-block.text-1100 &dollar;22.22 
+                      del.text-600.fs-10  &dollar;44.50
+
+          .swiper-nav 
+            .swiper-button-next 
+            .swiper-button-prev

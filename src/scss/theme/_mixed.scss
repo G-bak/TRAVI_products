@@ -1,0 +1,29 @@
+
+[data-dismiss="dropdown"],
+[data-bs-offset-top],
+[data-bs-toggle="collapse"],
+[data-bs-toggle="tooltip"],
+[data-bs-toggle="popover"] {
+  * {
+    pointer-events: none;
+  }
+}
+
+
+/* -------------------------------------------------------------------------- */
+/*                                    Height                                  */
+/* -------------------------------------------------------------------------- */
+.content {
+  min-height: 100vh;
+  position: relative;
+}
+.navbar-top {
+  & + .content{
+    min-height: calc(100vh - $top-nav-height);
+  }
+}
+.footer{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}

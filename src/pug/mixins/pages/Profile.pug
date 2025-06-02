@@ -1,0 +1,206 @@
+mixin Hero 
+  +Section({image: `${CWD}assets/images/team-officespace.jpg`, className: 'overlay overlay-1'}, container).pb-4.pt-11
+    .row 
+      .col-lg-6 
+        .row.justify-content-center.align-items-end.text-center.text-md-start 
+          .col-8.col-md-4 
+            a(href='#!' data-bigpicture!={
+              imgSrc:`${CWD}assets/images/portraits/square/03.jpg`
+            })
+              img.img-thumbnail.rounded-1(src=`${CWD}assets/images/portraits/square/03.jpg` alt='' ) 
+          .col-12.col-md-8.mt-3.mt-md-0.text-white
+            h4.mb-0.text-white Alice Merriweather 
+            p.lead.mb-0 Interface Designer, Posh 
+            p.mb-0 Live at NY, USA 
+
+mixin ProfileInfo 
+  +Section(container).py-5
+    .row
+      .col-lg-7.col-xl-8 
+        p.lead.text-800 Alice Merriweather is a content marketing professional at Posh, an inbound marketing and sales platform that helps companies attract visitors, convert leads, and close customers. Previously, Rodney worked as a marketing manager for a tech software startup. He graduated with honors from Columbia University with a dual degree in Business Administration and Creative Writing.
+
+        h5.mt-6.mb-4  Photos
+        #image_gallery
+          .row.g-0 
+            .col.pe-1
+              a(href='#!' data-caption='caption' data-bigpicture!={
+                gallery: '#image_gallery',
+              } data-bp= `${CWD}assets/images/portfolio/wide-01.jpg` )
+                img.img-fluid(src=`${CWD}assets/images/portfolio/wide-01.jpg` alt='')
+            .col.ps-1
+              a(href='#!'  data-caption='caption' data-bigpicture!={
+                gallery: '#image_gallery'
+              }  data-bp=`${CWD}assets/images/portfolio/wide-02.jpg`)
+                img.img-fluid(src=`${CWD}assets/images/portfolio/wide-02.jpg` alt='' )
+          .row.mt-2.g-0 
+            .col.pe-1
+              a(href='#!' data-caption='caption' data-bigpicture!={
+                  gallery: '#image_gallery',
+                } data-bp= `${CWD}assets/images/portfolio/wide-03.jpg` )
+                  img.img-fluid(src=`${CWD}assets/images/portfolio/wide-03.jpg` alt='')
+            .col.px-1
+              a(href='#!'  data-caption='caption' data-bigpicture!={
+                gallery: '#image_gallery'
+              }  data-bp=`${CWD}assets/images/portfolio/wide-04.jpg`)
+                img.img-fluid(src=`${CWD}assets/images/portfolio/wide-04.jpg` alt='' )
+            .col.ps-1
+              a(href='#!'  data-caption='caption' data-bigpicture!={
+                gallery: '#image_gallery'
+              }  data-bp=`${CWD}assets/images/portfolio/wide-05.jpg`)
+                img.img-fluid(src=`${CWD}assets/images/portfolio/wide-05.jpg` alt='' )
+        h5.mt-6.mb-4 Recent Activities 
+        hr.text-300
+        .row.align-items-center 
+          .col-3.col-md-2.text-center
+            span.fs-5.text-800.icon-Speach-BubbleDialog 
+          .col 
+            h6.text-600 21st July, 2017
+            a(href="#!")  Posh redesigned the element page 
+            p.text-1000.fw-light  
+              | 250+ elements were redesigned 
+
+        hr.text-300
+        .row.align-items-center 
+          .col-3.col-md-2.text-center
+            span.fs-5.text-800.icon-Aa 
+          .col 
+            h6.text-600 14th July, 2017
+            a(href="#!")  Posh beta 0.7 was released. 
+            p.text-1000.fw-light  
+              | With 68 pages and many features Posh beta 0.7 was released. 
+
+        hr.text-300
+        .row.align-items-center 
+          .col-3.col-md-2.text-center
+            span.fs-5.text-800.icon-Heart 
+          .col 
+            h6.text-600 12th July, 2017
+            a(href="#!")  Some cool websites of stock photography.
+
+        hr.text-300
+        .row.align-items-center 
+          .col-3.col-md-2.text-center
+            span.fs-5.text-800.icon-Arrow-Mix 
+          .col 
+            h6.text-600 3rd July, 2017
+            a(href="#!")  Revamp the core modules of Posh. 
+            p.text-1000.fw-light  
+              | The core modules of Posh has been deleted and recoded to make the better version of it.
+
+        hr.text-300
+        .row.align-items-center 
+          .offset-3.offset-md-2.col.my-4
+            a.btn.btn-primary(href="#!")  View All 
+      
+      .col.ps-lg-5.mt-6.mt-lg-0 
+        .row 
+          .col-md-6.col-lg-12.mb-7
+            .mb-4
+              h6.text-uppercase.mb-0 Likes 
+              .fs-5.fw-thin.text-700 3676
+
+            .mb-4
+              h6.text-uppercase.mb-0 Followers 
+              .fs-5.fw-thin.text-700 9.8M
+            div
+              h6.text-uppercase.mb-0 Posts 
+              .fs-5.fw-thin.text-700 487
+          
+          .col-md-6.col-lg-12 
+            h5.mb-4 Friends 
+            .row.align-items-center.mb-3 
+              .col-4
+                img.img-thumbnail.rounded(src=`${CWD}assets/images/portraits/square/04.jpg`, alt="")
+              .col.ps-0 
+                a(href="#!")  Selena Rouse 
+                p.fs-10.text-800.mb-0 SVP, Marketing, Apple 
+            
+            .row.align-items-center.mb-3 
+              .col-4
+                img.img-thumbnail.rounded(src=`${CWD}assets/images/portraits/square/05.jpg`, alt="")
+              .col.ps-0 
+                a(href="#!")  Kelly Burgess
+                p.fs-10.text-800.mb-0 VP, Sales, Google
+              
+            .row.align-items-center.mb-3 
+              .col-4
+                img.img-thumbnail.rounded(src=`${CWD}assets/images/portraits/square/06.jpg`, alt="")
+              .col.ps-0 
+                a(href="#!")  Laura Smith
+                p.fs-10.text-800.mb-0 Content Manager, NY Times 
+
+            .row.align-items-center.mb-3 
+              .col-4
+                img.img-thumbnail.rounded(src=`${CWD}assets/images/portraits/square/01.jpg`, alt="")
+              .col.ps-0 
+                a(href="#!")  Nia Khalifa
+                p.fs-10.text-800.mb-0 Actress, The Big Bang Theory
+            
+            .row.align-items-center.mb-3 
+              .col-4
+                img.img-thumbnail.rounded(src=`${CWD}assets/images/portraits/square/02.jpg`, alt="")
+              .col.ps-0 
+                a(href="#!")  Mike Ross 
+                p.fs-10.text-800.mb-0 Associate, Pearson Hardman 
+
+mixin Settings 
+  +Section(container)
+    .row.justify-content-center 
+      .col-lg-3.text-center.text-lg-start 
+        a(href='#!' data-bigpicture!={
+          imgSrc:`${CWD}assets/images/portraits/square/03.jpg`
+        })
+          img.img-thumbnail.rounded(src=`${CWD}assets/images/portraits/square/03.jpg` alt='' width="320")
+        h5.mb-0.mt-3 Alice Merriweather
+        p.mb-0 Interface Designer, Posh
+        p.mb-0 Live at NY, USA
+        hr.text-300
+        .fs-10.fw-semi-bold 
+          a.d-block.mb-2(href=`${CWD}pages/profile.html`) Profile 
+          a.d-block.mb-2(href="#!") Email Notifications 
+          a.d-block.mb-2(href="#!") Billing Details 
+          a.d-block.mb-2(href="#!") Password 
+          a.link-danger.fw-normal.d-block.mb-2(href="#!") Delete Account    
+      .col-md-9.ps-lg-5 
+        .row
+          .col-lg-8.mt-5.mt-lg-0 
+            h4.text-black.mb-2 Profile 
+            p.text-900 With Posh you can make a web application too. That's what we mean by doing more with Posh.
+        form.mt-5.row 
+          .col-md-6 
+            input.form-control.mb-3(type="text" placeholder="First Name") 
+
+          .col-md-6 
+            input.form-control.mb-3(type="text" placeholder="Last Name") 
+
+          .col-12
+            input.form-control.mb-3(type="email" placeholder="Email") 
+
+          .col-12
+            input.form-control.mb-3(type="text" placeholder="Location") 
+
+          .col-12
+            input.form-control.mb-3(type="url" placeholder="Website")  
+          
+          .col-12 
+            textarea.form-control.mb-3(name="bio", rows="8" placeholder="Bio")
+
+          .col-12 
+            .form-group.form-check.form-switch.px-0 
+              input#checkbox1.form-check-input.d-block.float-none.ms-0(type="checkbox" name="checkbox1" role="switch")
+              small Allow my profile to be viewable by guests 
+          .col-12
+            input.mt-4.btn.btn-primary(type="submit" value="Save changes")
+
+mixin RecoveryForm 
+  section.py-0 
+    .container-fluid 
+      .row.justify-content-center.align-items-center.text-center.min-vh-100 
+        .col-sm-8.col-md-6.col-lg-5.col-xl-4 
+          h3.mb-3.fw-light Forgot Password?
+          p Enter your email associate with MailBluster.
+          form 
+            .input-group 
+              input.form-control(type="email" placeholder="Email")
+              span.input-group-btn 
+                button.btn.btn-primary(type="button")  Next 

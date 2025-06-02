@@ -1,0 +1,21 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Log-in
+
+prepend styles 
+
+prepend scripts 
+
+append variables 
+  - var footer = false
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:false,
+    name: "POSH",
+    color: "text-1100"
+  }).bg-white.fixed-top
+
+append content
+  +SimpleLoginForm

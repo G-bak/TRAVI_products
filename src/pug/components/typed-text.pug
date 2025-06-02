@@ -1,0 +1,29 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/TypedText
+
+prepend styles 
+
+prepend scripts
+  script(src=`${CWD}vendors/typed.js/typed.umd.js`)
+
+append variables
+  - var pageTitle = 'Typed text'
+
+append component
+  p 
+    | For detail documentation, 
+    a(href="https://github.com/mattboldt/typed.js" target="_blank") Typed.js documentation 
+      span.ms-1 &xrarr;
+  
+  +ComponentCard({
+    prismClass: 'mt-5'
+  }).mt-5
+    +TypedTextExample
+
+  +ComponentCard({
+    prismTitle: 'JavaScript',
+    prismClass: 'mt-2'
+  }).mt-5
+    script(src=`${CWD}vendors/typed.js/typed.umd.js`)
+
+  

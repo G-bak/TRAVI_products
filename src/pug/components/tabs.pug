@@ -1,0 +1,35 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Tabs
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Tabs'
+
+append component 
+  +ComponentCard({
+    title: 'Smart Tab',
+    description: 'Add class <code>.active</code> to <code>.nav-bar-item</code> and corresponding <code>.tab-content</code> which you want to show after page loading. Add <code>data-tabs</code> attribute in parants', 
+    prismClass: 'mt-5'
+  })
+    +SmartTabExample 
+
+  h4.mt-6 Position 
+  p 
+    | You can change both the tabs and contents position individually by adding positioning class to 
+    code .nav-bar 
+    | and 
+    code .tab-contents 
+    |  .
+
+  +ComponentCard({
+    subTitle: 'Left Align',
+    description:'Left align position is the default position. So no class is needed to add.', 
+    prismClass: 'mt-5'
+  }).mt-4
+    +LeftAlignTabExample
+  
+  +CenterAlighTabExample
+  +RightAlighTabExample

@@ -1,0 +1,31 @@
+mixin MainSection 
+  +Section(container).py-0.pt-sm-6
+    .row.bg-100.g-0 
+      .col-lg-6.py-10.position-relative 
+        .bg-holder(style=`background-image:url('${CWD}assets/images/careers-header.jpg'); z-index: 0; background-position:right;`)
+      .col-lg-6.py-4.ps-lg-6.py-lg-10 
+        h4 Graphic Design 
+        p.lead Posh offers a long range of niche site layouts from corporate to cooking recipe, from personal to software landing. 
+
+    .row.bg-100.g-0 
+      .col-lg-6.py-10.order-lg-1.position-relative 
+        .bg-holder(style=`background-image:url('${CWD}assets/images/digital-agency-header.jpg'); z-index: 0; background-position:right;`)
+      .col-lg-6.py-4.ps-lg-6.py-lg-10 
+        h4 Brand Marketing 
+        p.lead Launching a branding and marketing website is so easy with Posh. End your dealing with the bragging. 
+        
+    .row.bg-100.g-0 
+      .col-lg-6.py-10.position-relative 
+        .bg-holder(style=`background-image:url('${CWD}assets/images/careers-1.jpg'); z-index: 0;`)
+      .col-lg-6.py-4.ps-lg-6.py-lg-10 
+        h4 Digital Development
+        p.lead Bootstrap 5 elements are redesigned and fully packed with Posh. Make any layouts you can imagine.
+
+mixin BannerSection 
+  +Section(container)
+    .row.text-center.justify-content-center 
+      .col-xl-7 
+        h3.mb-2.fw-normal Get lifetime free updates
+        p.lead.text-700.mb-5 Each purchase comes with a six months priority support and lifetime updates.
+        a.btn.btn-primary(href="#!") Try Posh 
+        

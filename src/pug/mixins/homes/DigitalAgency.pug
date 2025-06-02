@@ -1,0 +1,186 @@
+mixin DigitalAgency 
+  +Section({image: `${CWD}assets/images/about-team-header.jpg`, className: 'overlay overlay-0', attrs:{'data-rellax-speed':'-5', 'data-parallax': 'data-parallax'}}, container).p-0.has-parallax
+    .row.min-vh-100.align-items-center.py-8 
+      .col-lg-8.col-xl-7
+        h1.fs-6.fs-md-4.mb-4.text-white.lh-f2  An award winning creative agency 
+        p.fs-md-7.fst-italic.mb-6.pe-xl-6.text-white.font-sans-serif.lh-2 No matter the task, you will be surprised seeing the final results of your creation and crave for more.
+        a(href="#!").btn.btn-outline-white Get started
+  
+  +Section(container).py-8
+    .row 
+      .col-md-8
+        h4.mb-0.text-1000 Hello! 
+        hr.short.my-3.text-400
+        p.text-700.lead This is POSH. Crafted with Bootstrap 5; Highly Customizable Posh's visual style is simple yet distinct. Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS at all. With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.
+      
+      .col-md-4.ps-lg-5.ps-xl-6.mt-5.mt-md-0 
+        h4.mb-0.text-1000 What we do 
+        hr.short.my-3.text-400
+        div 
+          a.py-1.d-block.fw-light.link-1100(href="#!") Branding &amp; Strategy 
+          a.py-1.d-block.fw-light.link-1100(href="#!") Web Design &amp; Development 
+          a.py-1.d-block.fw-light.link-1100(href="#!") Packaging Design
+          a.py-1.d-block.fw-light.link-1100(href="#!") Video &amp; Animation 
+          a.py-1.d-block.fw-light.link-1100(href="#!") Marketing, SEO and Social Media
+
+  section.p-0 
+    .container-fluid.px-0 
+      .row.g-0.font-sans-serif
+        .col-md-4.col-sm-6
+          a(href="#!")
+            .hoverbox
+              img(src=`${CWD}assets/images/portfolio/wide-01.jpg` alt="Generic placeholder image")
+              .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+                .col-sm-12
+                  .p-4
+                    h4.text-white.mb-0 Responsive  
+                    p Supports all screen size
+
+        .col-md-4.col-sm-6
+          a(href="#!")
+            .hoverbox
+              img(src=`${CWD}assets/images/portfolio/wide-02.jpg` alt="Generic placeholder image")
+              .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+                .col-sm-12
+                  .p-4
+                    h4.text-white.mb-0 Retina ready
+                    p Pixel perfect to every device
+
+        .col-md-4.col-sm-6
+          a(href="#!")
+            .hoverbox
+              img(src=`${CWD}assets/images/portfolio/wide-03.jpg` alt="Generic placeholder image")
+              .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+                .col-sm-12
+                  .p-4
+                    h4.text-white.mb-0 100+ Layouts
+                    p Tested and Optimized with perfection
+                
+        .col-md-4.col-sm-6
+          a(href="#!")
+            .hoverbox
+              img(src=`${CWD}assets/images/portfolio/wide-04.jpg` alt="Generic placeholder image")
+              .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+                .col-sm-12
+                  .p-4
+                    h4.text-white.mb-0 Premium Icons
+                    p Free for lifetime 
+
+        .col-md-4.col-sm-6
+          a(href="#!")
+            .hoverbox
+              img(src=`${CWD}assets/images/portfolio/wide-05.jpg` alt="Generic placeholder image")
+              .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+                .col-sm-12
+                  .p-4
+                    h4.text-white.mb-0 1000+ Features
+                    p Easy to deploy
+                
+        .col-md-4.col-sm-6
+          a(href="#!")
+            .hoverbox
+              img(src=`${CWD}assets/images/portfolio/wide-06.jpg` alt="Generic placeholder image")
+              .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+                .col-sm-12
+                  .p-4
+                    h4.text-white.mb-0 Detailed Documentation
+                    p With well indented code
+
+  +Section(container).py-8
+    .row
+      .col-md-12.text-center
+        h2 Latest News
+        p.text-700.fs-8.fw-light.fst-italic.font-sans-serif The latest news, thoughts and updates from the team.
+        hr.short.text-400.mb-7.mt-4.mx-auto
+    .row.row-cols-1.row-cols-lg-3.gx-0.gy-5.justify-content-center
+      .col
+        .card.h-100
+          a(href='#!').overflow-hidden
+            img.card-img-top(src=`${CWD}assets/images/careers-header.jpg`, alt='Card image cap')
+          .card-body
+            a(href='#!').link-1100
+              h5.fs-8.fw-semi-bold Career Monogamy: The Awkward Tech Sin of
+            p.card-text.text-800.fw-light Posh is the Best Template in the market you can find. Built with Bootstrap 5 and all other state of the earth cutting edge frontend technologies. 
+          .card-footer.border-top-0
+            .d-flex.align-items-center
+              img.d-flex.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/02.jpg`, alt='Generic placeholder image', style='max-width: 50px;')
+              .lh-1
+                a(href='#!').link-1100
+                  h6.mb-0 Matt Stauffer
+                  span.fs-10.text-700 May 23 &middot; 6 min read
+      .col
+        .card.h-100
+          a(href='#!').overflow-hidden
+            img.card-img-top(src=`${CWD}assets/images/generic-06.jpg`, alt='Card image cap')
+          .card-body
+            a(href='#!').link-1100
+              h5.fs-8.fw-semi-bold Functionality vs Emotions in Mobile Interface
+            p.card-text.text-800.fw-light It is packed with tremendous amount of well designed elements and detailed documentation of each of them. 
+
+          .card-footer.border-top-0
+            .d-flex.align-items-center
+              img.d-flex.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/03.jpg`, alt='Generic placeholder image', style='max-width: 50px;')
+              .lh-1
+                a(href='#!').link-1100
+                  h6.mb-0 Laura Elizabeth
+                  span.fs-10.text-700 May 28 &middot; 15 min read
+      .col
+        .card.h-100
+          a(href='#!').overflow-hidden
+            img.card-img-top(src=`${CWD}assets/images/about-team-header.jpg`, alt='Card image cap')
+
+          .card-body
+            a(href='#!').link-1100
+              h5.fs-8.fw-semi-bold How has social media shaped contemporary design?
+            p.card-text.text-800.fw-light A  multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.
+          .card-footer.border-top-0
+            .d-flex.align-items-center
+              img.d-flex.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/04.jpg`, alt='Generic placeholder image', style='max-width: 50px;')
+              .lh-1
+                a(href='#!').link-1100
+                  h6.mb-0 Michele Hansen
+                  span.fs-10.text-700 June 02 &middot; 4 min read
+  section.p-0 
+    .container-fluid.px-0
+      .row.align-items-center.align-items-stretch.mx-0
+        .col-xl-4.d-none.d-lg-block.position-relative
+          +Background({image: `${CWD}assets/images/digital-agency-testimonial.jpg`})
+        .col-xl-4.col-lg-6.bg-1000.text-white.px-0
+          img.mx-0.my-0(src=`${CWD}assets/images/book.jpg` alt="Generic placeholder image")
+          .px-4.py-7.col-10.offset-1
+            p.text-300.fs-7.fst-italic.pb-5.font-sans-serif "Whether you’re building a welcome mat for your SaaS or a clean, agency portfolio, Posh has your design needs covered."
+            hr.short.text-800
+            h6.text-300.fw-normal Graeme Dunn, InsideAsia Tours
+        .col-xl-4.col-lg-6.text-center.bg-1100
+          .row.align-items-center.py-5.py-lg-8
+            .col
+              h6.text-400.text-uppercase.fs-9 Featured on
+              hr.short.text-800.mb-6.mx-auto
+              
+              img.d-block.mx-auto.px-5.mb-5(src=`${CWD}assets/images/partners/fwa.png` alt="")
+              img.d-block.mx-auto.px-5.mb-5(src=`${CWD}assets/images/partners/awwwards.png` alt="")
+              img.d-block.mx-auto.px-5.mb-5(src=`${CWD}assets/images/partners/designawards.png` alt="")
+              img.d-block.mx-auto.px-5(src=`${CWD}assets/images/partners/webdesigner.png` alt="")
+
+  +Section(container).d-none.d-md-block.py-5.overflow-hidden
+    .row 
+      .col-12
+        .swiper-theme-container.theme-slider(data-swiper-theme-container)
+          .swiper(data-swiper!={
+            spaceBetween:100,
+            loop:true,
+            loopedSlides:5,
+            autoplay:true,
+            breakpoints:{
+              0:{slidesPerView: 2}, 
+              600:{slidesPerView: 4}, 
+              1000: {slidesPerView: 6}
+            }
+          })
+            .swiper-wrapper 
+              each item in partnersList 
+                .swiper-slide 
+                  img.rounded-sm.object-fit-cover(src=`${CWD}${item.imageSrc}` alt="Generic placeholder image")
+          .swiper-nav
+            .swiper-button-next 
+            .swiper-button-prev

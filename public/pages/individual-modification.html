@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>개별 수정</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/favicon2.ico">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicons/favicon-16x16.png"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicons/favicon2.ico">
+    <!-- <link rel="manifest" href="../assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../assets/images/favicons/mstile-150x150.png"> -->
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link href="../assets/fonts/iconsmind/iconsmind.css" rel="stylesheet">
+    <link href="../vendors/hamburgers/hamburgers.css" rel="stylesheet">
+    <link href="../assets/css/theme.css" rel="stylesheet" />
+    <link href="../assets/css/user.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+
+    <style>
+      .field-wrapper {
+        position: relative;
+      }
+      .remove-btn {
+        position: absolute;
+        top: -28%;
+        right: 0px;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: red;
+        font-size: 27px;
+        line-height: 1;
+        cursor: pointer;
+        padding: 0 !important;
+      }
+
+    </style>
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div data-layout="container">
+        <div class="content">
+          <nav class="navbar navbar-top navbar-expand-lg bg-1100 navbar-dark">
+            <div class="container px-lg-0 custom-max-width2"><a class="navbar-brand" href="../index.html">TRAVI</a>
+              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle navigation" data-hamburger-icon="data-hamburger-icon"><span class="hamburger hamburger--emphatic"><span class="hamburger-box"> <span class="hamburger-inner"></span></span></span></button>
+              <div class="collapse navbar-collapse w-100" id="navbarStandard">
+                <ul class="navbar-nav navbar-nav-top justify-content-end flex-1 me-lg-n2" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">사양표<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">일체형 비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">디지털 양변기
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">커피머신
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">등록<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/bidet-registration.html">
+                          <div class="dropdown-item-wrapper">비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/all-in-one-bidet-registration.html">
+                          <div class="dropdown-item-wrapper">일체형 비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/digital-toilet-registration.html">
+                          <div class="dropdown-item-wrapper">디지털 양변기
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/coffee-machine-registration.html">
+                          <div class="dropdown-item-wrapper">커피머신
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">수정<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>개별 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>일괄 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>그룹 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>가격 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">모델 비교<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">일체형 비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">디지털 양변기
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">커피머신
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">최재빈님<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/my-payment.html">
+                          <div class="dropdown-item-wrapper">내 결제
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/payment-history.html">
+                          <div class="dropdown-item-wrapper">결제 이력
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <a class="nav-link px-2" href="#"><i class="fas fa-sign-out-alt me-1"></i> 로그아웃</a>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- ============================================-->
+          <!-- <section> begin ============================-->
+          <section class="pb-5">
+
+            <div class="container px-lg-0 custom-max-width2">
+
+              <div class="row mb-4">
+                <div class="col">
+                  <nav class="mb-3" style="--posh-breadcrumb-divider: '»'" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item text-primary">Home</li>
+                      <li class="breadcrumb-item text-primary">Modification</li>
+                      <li class="breadcrumb-item text-primary">Individual</li>
+                      <li class="breadcrumb-item active" aria-current="page">Bidet</li>
+                    </ol>
+                  </nav>
+
+                  <!-- 타이틀 + 검색창 좌우 배치 -->
+                  <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+                    <h1 class="fs-5 fw-normal mb-3 mb-md-0">개별 수정</h1>
+                  </div>
+
+                  <hr class="text-300 mt-4" />
+                </div>
+              </div>
+
+              <section class="pt-0 pb-5">
+                <div class="container px-lg-0">
+                  <div class="row">
+                    <form id="editProductForm">
+                      <div class="modal-body">
+                        <div class="container-fluid">
+                          <div class="row">
+                            <!-- ✅ 모든 항목을 단일 열 라벨 + 입력창 수직 배치로 통일 -->
+                            <div class="col-md-12">
+                              <div class="row">
+                                <!-- 모델명 -->
+                                <div class="col-md-6 mb-3">
+                                  <label class="form-label">모델명</label>
+                                  <select id="productSelector" class="form-select">
+                                    <option selected disabled>모델명을 선택하세요</option>
+                                    <option value="1">비데 A</option>
+                                    <option value="2">디지털 양변기 B</option>
+                                    <option value="3">커피머신 C</option>
+                                  </select>
+                                </div>
+
+                                <!-- 이미지 업로드 영역 -->
+                                <div class="col-md-6 mb-3">
+                                  <label class="form-label">이미지</label>
+                                  <div id="edit_imageDropArea" style="border: 2px dashed #ccc; padding: 30px; text-align: center;">
+                                    <span id="edit_uploadText" class="text-600">이미지 수정은 관리자에게 문의하세요</span>
+                                  </div>
+                                </div>
+
+                                <!-- 기본 사양 -->
+                                <h6 class="text-uppercase text-warning pt-2">기본 사양</h6>
+                                <div class="col-md-6 mb-2"><label class="form-label">사이즈</label><input type="text" class="form-control" id="edit_size"></div>
+                                <div class="col-md-6 mb-2"><label class="form-label">무게</label><input type="text" class="form-control" id="edit_weight"></div>
+                                <div class="col-md-6 mb-2"><label class="form-label">정격 전압/주파수</label><input type="text" class="form-control" id="edit_voltage"></div>
+                                <div class="col-md-6 mb-2"><label class="form-label">온수 히터 용량</label><input type="text" class="form-control" id="edit_hot_water_capacity"></div>
+
+                                <!-- 주요 기능 -->
+                                <h6 class="text-uppercase text-warning pt-2">주요 기능</h6>
+                                <div class="col-md-4 mb-2"><label class="form-label">무선 리모컨</label><select class="form-select" id="edit_wireless_remote"><option value="false">-</option><option value="true">✓</option></select></div>
+                                <div class="col-md-4 mb-2"><label class="form-label">3단 노즐</label><select class="form-select" id="edit_nozzle_3ways"><option value="false">-</option><option value="true">✓</option></select></div>
+                                <div class="col-md-4 mb-2"><label class="form-label">노즐/튜브 살균</label><select class="form-select" id="edit_nozzle_sterilization"><option value="false">-</option><option value="true">✓</option></select></div>
+
+                                <!-- 세정 기능 -->
+                                <h6 class="text-uppercase text-warning pt-2">세정 기능</h6>
+                                <div class="col-md-4 mb-2"><label class="form-label">비데 움직임</label><select class="form-select" id="edit_bidet_move"><option value="false">-</option><option value="true">✓</option></select></div>
+                                <div class="col-md-4 mb-2"><label class="form-label">세정 움직임</label><select class="form-select" id="edit_cleaning_move"><option value="false">-</option><option value="true">✓</option></select></div>
+
+                                <!-- 편의 기능 -->
+                                <h6 class="text-uppercase text-warning pt-2">편의 기능</h6>
+                                <div class="col-md-4 mb-2"><label class="form-label">소프트 개폐</label><select class="form-select" id="edit_soft_open_close"><option value="false">-</option><option value="true">✓</option></select></div>
+                                <div class="col-md-4 mb-2"><label class="form-label">온풍 건조</label><select class="form-select" id="edit_warm_dry"><option value="false">-</option><option value="true">✓</option></select></div>
+
+                                <!-- 조작부 형태 -->
+                                <div class="col-md-4 mb-3"><label class="form-label">조작부 형태</label><select class="form-select" id="edit_controller_type"><option value="">선택</option><option value="TACT">TACT</option><option value="TOUCH">TOUCH</option><option value="REMOCON">REMOCON</option></select></div>
+
+                                <!-- 유지관리 -->
+                                <h6 class="text-uppercase text-warning pt-2">유지관리</h6>
+                                <div class="col-md-4 mb-2"><label class="form-label">노즐 자동 세척</label><select class="form-select" id="edit_self_cleaning_nozzle"><option value="false">-</option><option value="true">✓</option></select></div>
+
+                                <div class="col-md-4 mb-3"><label class="form-label">노즐 재질</label><select class="form-select" id="edit_nozzle_material"><option value="">선택</option><option value="Full Stainless">Full Stainless</option><option value="Plastic">Plastic</option></select></div>
+
+                                <div class="col-md-4 mb-3"><label class="form-label">탱크 형태</label><select class="form-select" id="edit_tank_type"><option value="">선택</option><option value="Storage Type">Storage Type</option><option value="Tankless Water Heater">Tankless Water Heater</option></select></div>
+
+                                <div class="col-md-4 mb-3"><label class="form-label">조작부 방수 등급</label><select class="form-select" id="edit_controller_waterproof"><option value="">선택</option><option value="false">-</option><option value="IPX4">IPX4</option><option value="IPX5">IPX5</option><option value="IPX6">IPX6</option><option value="IPX7">IPX7</option><option value="IPX8">IPX8</option></select></div>
+
+                                <div class="col-md-4 mb-3"><label class="form-label">본체 방수 등급</label><select class="form-select" id="edit_main_body_waterproof"><option value="">선택</option><option value="false">-</option><option value="IPX4">IPX4</option><option value="IPX5">IPX5</option><option value="IPX6">IPX6</option><option value="IPX7">IPX7</option><option value="IPX8">IPX8</option></select></div>
+
+                                <div class="col-md-4 mb-3"><label class="form-label">리모컨 방수 등급</label><select class="form-select" id="edit_remote_waterproof"><option value="">선택</option><option value="false">-</option><option value="IPX4">IPX4</option><option value="IPX5">IPX5</option><option value="IPX6">IPX6</option><option value="IPX7">IPX7</option><option value="IPX8">IPX8</option></select></div>
+
+                                <!-- 안전 기능 -->
+                                <h6 class="text-uppercase text-warning pt-2">안전 기능</h6>
+                                <div class="col-md-4 mb-2"><label class="form-label">착석 센서</label><select class="form-select" id="edit_seat_sensor"><option value="false">-</option><option value="true">✓</option></select></div>
+                                <div class="col-md-4 mb-2"><label class="form-label">절전 모드</label><select class="form-select" id="edit_power_saving"><option value="false">-</option><option value="true">✓</option></select></div>
+
+                                <!-- 가격 및 저장 -->
+                                <div class="col-md-6 mb-3">
+                                  <label class="form-label">가격</label>
+                                  <input type="text" class="form-control" id="edit_price">
+                                </div>
+
+                                <div class="col-md-2 mb-3">
+                                  <input type="hidden" id="edit_product_id">
+                                  <button type="submit" class="btn btn-success text-white mt-4">저장/결제</button>
+                                </div>
+
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </section>
+              
+            </div>
+            <!-- end of .container-->
+
+            <!-- 모달 추가 -->
+            <div class="modal fade" id="approvalModal" tabindex="-1" aria-labelledby="approvalModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="approvalModalLabel">결제 요청 대상 선택</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="mb-3">
+                      <label for="reportContent" class="form-label">보고 내용</label>
+                      <textarea id="reportContent" class="form-control" rows="3" placeholder="수정 요청에 대한 간단한 설명을 입력하세요"></textarea>
+                    </div>
+                    <label for="approverSelect" class="form-label">결제 요청 대상자</label>
+                    <select id="approverSelect" class="form-select">
+                      <option value="">선택하세요</option>
+                      <option value="manager1">홍길동 (팀장)</option>
+                      <option value="manager2">김영희 (개발 총괄)</option>
+                      <option value="manager3">이준호 (제품 기획)</option>
+                    </select>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">취소</button>
+                    <button type="button" class="btn btn-primary">요청 보내기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <!-- <section> close ============================-->
+          <!-- ============================================-->
+
+          <footer class="bg-1100 text-400 fs-10 fw-semi-bold py-3">
+            <div class="container px-lg-0 custom-max-width2">
+              <div class="row align-items-center">
+                <div class="col-auto">&copy; 2025 (주)에이스라이프 &trade; Inc. </div>
+                <div class="col text-end fs-9 me-lg-n2"> <a class="p-2 link-400" href="../"><span class="fab fa-facebook-f" style="width:9px" data-fa-transform="up-1"></span></a><a class="p-2 link-400" href="../"><span class="fab fa-twitter" style="width:14px"></span></a><a class="p-2 link-400" href="../"><span class="fab fa-instagram" style="width:14px"> </span></a><a class="p-2 link-400" href="../"><span class="fab fa-behance" style="width:18px"> </span></a><a class="p-2 link-400" href="../"><span class="fab fa-dribbble" style="width:14px"></span></a></div>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../vendors/popper/popper.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/fontawesome/all.min.js"></script>
+    <script src="../vendors/lodash/lodash.min.js"></script>
+    
+    <script src="../assets/js/theme.js"></script>
+    <script src="../assets/js/productRegistration.js"></script>   
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="../assets/js/individualModification.js"></script> 
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const submitButton = document.querySelector('button[type="submit"]');
+        const modal = new bootstrap.Modal(document.getElementById('approvalModal'));
+
+        submitButton.addEventListener('click', function (e) {
+          e.preventDefault();
+          modal.show();
+        });
+
+        // 요청 보내기 버튼 클릭 처리
+        document.querySelector('#approvalModal .btn-primary').addEventListener('click', function () {
+          const approver = document.getElementById('approverSelect').value;
+          const approverName = approverSelect.options[approverSelect.selectedIndex].textContent;
+          const report = document.getElementById('reportContent').value.trim();
+
+          if (!approver) {
+            alert('결제 요청 대상을 선택해주세요.');
+            return;
+          }
+
+          // 여기에 실제 요청 로직 추가 가능
+          alert(`결제 요청이 ${approverName}에게 전송되었습니다.\n\n보고 내용:\n${report || '내용 없음'}`);
+
+          // 모달 초기화 및 닫기
+          document.getElementById('approverSelect').value = '';
+          document.getElementById('reportContent').value = '';
+          modal.hide();
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,15 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/DigitalAgency
+
+prepend variables
+  - var dir = 'rtl'
+
+prepend styles
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+prepend scripts
+  script(src=`${CWD}vendors/rellax/rellax.js`)
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+
+append content 
+  +DigitalAgency

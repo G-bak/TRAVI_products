@@ -1,0 +1,198 @@
+mixin LandingForSoftware 
+  +Section(container).bg-100.pt-4.pt-md-6.pt-lg-8
+    .row.align-items-center
+      .col-lg-6.mb-5.mb-lg-0
+        video.img-fluid(src=`${CWD}assets/videos/posh-promo.mp4` autoplay loop muted)
+
+      .col-lg-6.ps-xl-5 
+        h2.mb-3.fw-normal  Seamlessly craft beautiful websites
+        p.fs-8.fw-light.mt-2.mb-5.text-700 A multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.
+
+        form(method="POST" onsubmit="return false;")
+          .row 
+            .col-7.col-md-6.pe-1 
+              input.form-control(type="email", name="email", aria-describedby="emailHelp", required  placeholder="Enter email")
+            .col-5.col-md-4.ps-2 
+              button.btn.btn-primary.w-100.d-block(type="submit") Get Started 
+        p.fs-10.mb-0.mt-3.text-700.fw-light By signing up, you agree to the
+          a(href="#!")  Terms of Service 
+
+  +Section(container)
+    .row.align-items-center 
+      .col-lg-6.mb-8 
+        h5.fw-normal.mb-3 Design without writing CSS
+        h3.fw-normal.mb-4 Thousands of CSS Helpers
+        p.fs-8.fw-light.text-700 Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS at all.
+
+      .col-lg-6.mb-8 
+        img.w-100(src=`${CWD}assets/images/software-01.svg`, alt="")
+
+    .row.align-items-center
+      .col-lg-6.mb-8.order-lg-1 
+        h5.fw-normal.mb-3 Pixel Perfect to Every Screen Size
+        h3.fw-normal.mb-4 Prebuilt 174 Layouts
+        p.fs-8.fw-light.text-700 With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.
+
+      .col-lg-6.mb-8 
+        img.w-100(src=`${CWD}assets/images/software-02.svg`, alt="")
+      
+    .row.align-items-center
+      .col-lg-6.mb-8.mb-lg-0 
+        h5.fw-normal.mb-3 Built for Startups
+        h3.fw-normal.mb-4 Well Organised and Documented Code
+        p.fs-8.fw-light.text-700 Posh comes with high-end styling, well indented code and detailed documentation for each elements. Perfectly designed to guide starters.
+      
+      .col-lg-6
+        img.w-100(src=`${CWD}assets/images/software-03.svg`, alt="")
+      
+
+  +Section(container).bg-100.text-center
+    .row.align-items-center.justify-content-center 
+      .col-lg-8.pb-5 
+        img.mb-4(src=`${CWD}assets/images/Bootstrap5+POSH.png`, alt="" width="352")
+
+        h3.my-4.fw-normal 
+          | Boostrap and POSH 
+          br
+          | Made to do more together
+        p.fw-light.fs-8.mb-0.text-700 Built with Bootstrap 5x; Highly Customizable Posh's visual style is simple yet distinct. Specially made for your next project whether it is a restaurant or travel agency site.
+
+  section.py-0.text-center  
+    .container-fluid
+      .row 
+        .col-lg-4 
+          .row 
+            .col-md-6 
+              .row 
+                .col.col-lg-12.py-7.px-5(style="background: #5800C5;")
+                  img(src=`${CWD}assets/images/software-partner-01.svg` alt="" height="46")
+                .col.col-lg-12.py-7.px-5(style="background: #E13A2B;")
+                  img(src=`${CWD}assets/images/software-partner-03.svg`, alt="" height="46")
+
+            .col-md-6.px-5.position-relative  
+              .bg-holder(style=`background-image:url('${CWD}assets/images/software-partner-09.jpg');`)
+              img.my-7(src=`${CWD}assets/images/software-partner-02.svg`, alt="", height="46")
+
+        .col.col-lg-4.py-5.pt-lg-4.pb-2.py-xl-5.px-5(style="background: #FAE8D3;")
+          img(src=`${CWD}assets/images/software-partner-04.svg`, alt="" height="46" width="212")
+          p.mt-4.text-900.fw-light.fs-8 Whether you’re building a welcome mat for your SaaS or a clean, agency portfolio, Posh has your design needs covered.
+          .mt-4.fw-semi-bold Bill O’Donnell
+          p.fs-10.mb-0.text-700 SVP of ThemeWagon
+        
+        .col-lg-4 
+          .row 
+            .col-md-6 
+              .row 
+                .col.col-lg-12.py-7.px-5.position-relative
+                  .bg-holder(style=`background-image:url('${CWD}assets/images/software-partner-10.jpg');`)
+                  img(src=`${CWD}assets/images/software-partner-05.svg` alt="" height="46")
+                .col.col-lg-12.py-7.px-5(style="background: #4A9DEF;")
+                  img(src=`${CWD}assets/images/software-partner-07.svg`, alt="" height="46")
+
+            .col-md-6 
+              .row 
+                .col.col-lg-12.py-7.px-5.bg-200
+                  img(src=`${CWD}assets/images/software-partner-06.svg` alt="" height="46")
+                .col.col-lg-12.py-7.px-5.bg-black
+                  img(src=`${CWD}assets/images/software-partner-08.svg`, alt="" height="46")
+
+  +Section(container).text-center.pt-9
+    .row.justify-content-center.mb-5 
+      .col-lg-8.mb-xl-4 
+        h3.fw-normal Do more with Posh
+        p.fw-light.fs-8.text-700 Lifetime bugfix &amp; updates
+
+    .row 
+      .col-md-6.col-lg-4 
+        .card.border-200.mb-5.mb-lg-0.h-100 
+          .card-header.bg-200.border-bottom-0 
+            h4.text-800.fw-normal.py-2.m-0 Standard 
+          .card-body.pb-3 
+            p.text-600.fw-light Save time with over 250+ carefully styled components designed to showcase your content
+          h2.fw-thin $12.50
+          small.text-600  / user / month, starting at 3 users
+          .card-footer.bg-white.border-top-0.pt-5 
+            a.btn.btn-outline-primary(href="#!")  Try free for 30 days
+            br
+            p.fs-10.mt-2.mb-0 
+              | or 
+              a(href="#!")  Purchase now 
+      
+      .col-md-6.col-lg-4 
+        .card.border-primary.mb-5.mb-lg-0.h-100 
+          .card-header.bg-primary.border-bottom-0 
+            h4.text-white.fw-normal.py-2.m-0 Advanced 
+          .card-body.pb-3 
+            p.text-600.fw-light Simple and straightforward pricing plans that scale perfectly with your business
+          h2.fw-thin $20
+          small.text-600  / user / month, starting at 3 users
+          .card-footer.bg-white.border-top-0.pt-5 
+            a.btn.btn-primary(href="#!")  Try free for 30 days
+            br
+            p.fs-10.mt-2.mb-0 
+              | or 
+              a(href="#!")  Purchase now 
+
+      .col-lg-4 
+        .card.border-200.mb-5.mb-lg-0.h-100 
+          .card-header.bg-200.border-bottom-0 
+            h4.text-800.fw-normal.py-2.m-0 Enterprise 
+          .card-body.pb-3 
+            p.pt-6.text-600.fw-light.pb-3.mb-0 Customizable solutions with individualized support to help admins manage at scale
+          .card-footer.bg-white.border-top-0.pt-6 
+            a.btn.btn-outline-primary.mb-4(href="#!")  Contact us
+            
+
+  +Section(container).text-center
+    .row.align-items-center.justify-content-center 
+      .col-lg-8 
+        h2.mb-0.fw-normal Build Something Brilliant
+        p.fw-light.fs-8.mb-6.text-700 2088 Premium icons - Included FREE with Posh
+        a.btn.btn-outline-primary.rounded-capsule.m-1(href="#!")  Try it Free 
+        a.btn.btn-primary.rounded-capsule.m-1(href="#!")  Subscribe 
+
+        img.mt-7(src=`${CWD}assets/images/software-banner-01.jpg` alt="")  
+
+  +Section(container).bg-100.text-center
+    .row 
+      .col-lg-4.px-6.mb-5.mb-lg-0 
+        img(src=`${CWD}assets/images/software-icon-01.svg` alt="" width="70")
+        h5.fw-normal.my-3 Bootstrap 5x
+        p.mb-0.text-700.fw-light Flexible, moduler websites with the best CSS framework
+        a.btn.btn-link.fw-normal(href="#!") Get started &rarr;
+
+      .col-lg-4.px-6.mb-5.mb-lg-0 
+        img(src=`${CWD}assets/images/software-icon-02.svg` alt="" width="70")
+        h5.fw-normal.my-3  Money back guarantee
+        p.mb-0.text-700.fw-light 100% satisfied with Posh or your money back
+        a.btn.btn-link.fw-normal(href="#!") View pricing &rarr;
+
+      .col-lg-4.px-6.mb-5.mb-lg-0 
+        img(src=`${CWD}assets/images/software-icon-03.svg` alt="" width="70")
+        h5.fw-normal.my-3  Have a question?
+        p.mb-0.text-700.fw-light We are always here to answer with a friendly support
+        a.btn.btn-link.fw-normal(href="#!") Chat now  &rarr;
+
+mixin LandingSoftwareFooter 
+  +Section(container).py-5.fs-10
+    .row 
+      .col-12.col-md-6
+        .text-800.my-2 &copy; Copyright 2024 MailBluster 
+      
+      .col-4.col-md-2 
+        a.link-800.my-2.d-block(href="#!")  About us 
+        a.link-800.my-2.d-block(href="#!")  Blog
+        a.link-800.my-2.d-block(href="#!")  Jobs 
+        a.link-800.my-2.d-block(href="#!")  Contact us
+      
+      .col-4.col-md-2 
+        a.link-800.my-2.d-block(href="#!")  Cookies 
+        a.link-800.my-2.d-block(href="#!")  Privacy
+        a.link-800.my-2.d-block(href="#!")  Terms 
+        a.link-800.my-2.d-block(href="#!")  Copyright 
+      
+      .col-4.col-md-2 
+        a.link-800.my-2.d-block(href="#!")  Referrals 
+        a.link-800.my-2.d-block(href="#!")  Group
+        a.link-800.my-2.d-block(href="#!")  Facebook
+        a.link-800.my-2.d-block(href="#!")  Twitter

@@ -1,0 +1,22 @@
+mixin NavbarDoubleAlternate(config) 
+  section.bg-1100.py-0.text-400.d-none.d-md-block
+    .container 
+      .row.align-items-center 
+        .col-sm-6.text-center.text-sm-start.ms-lg-n2 
+          a.btn.btn-link.btn-sm.px-2.link-300(href="#!")  Buyer Protection 
+          a.btn.btn-link.btn-sm.px-2.link-300(href="#!")
+            span.fw-bolder.fs-9.icon-Headset.pe-1 
+            | Help 
+          a.btn.btn-link.btn-sm.px-2.link-300(href="#!")  +555 4548 4545
+        .col-sm-6.text-center.text-sm-end.pe-lg-2 
+          a.btn.btn-link.btn-sm.px-2.link-300(href="#!")  Sign in / Join 
+          a.btn.btn-link.btn-sm.px-2.link-300(href="#!")
+            span.fw-bolder.fs-9.icon-Talk-Man 
+          a.btn.btn-link.btn-sm.px-2.link-300(href="#!")
+            span.fw-bolder.fs-9.icon-Heart 
+            span.d-inline-block.ps-1 3 
+          a.btn.btn-link.btn-sm.px-2.link-300.pe-md-0(href="#!")
+            span.fw-bolder.fs-9.icon-Add-Cart 
+            span.d-inline-block.ps-1 2 
+
+  +MainNav(config)&attributes(attributes)

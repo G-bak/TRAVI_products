@@ -1,0 +1,89 @@
+mixin Personal
+  +Section({image: `${CWD}assets/images/about-me-portrait.jpg`, className: 'd-none d-lg-block'}, container).p-0 
+    .row.justify-content-end.py-lg-10 
+      .col-lg-7.col-xl-6 
+        img.mt-3.mt-sm-4.mb-3.d-lg-none(src=`${CWD}assets/images/about-me-portrait-sm.jpg` alt="")
+        h1.fs-5.fs-md-4.mb-3.ls-n2 alexis texas
+        p.fs-8.fw-light.fs-8.text-700 I'm a UX/UI Designer from Sydney, Australia.
+        p.pb-4.text-1000.fw-light Turning complex problems into simple, beautiful and intuitive interface designs. Self-taught designer-developer available for hire.
+
+        a.btn.btn-icon.facebook.btn-xs.btn-icon-left.me-2(href="#!")
+          span.btn-brand
+            i.fab.fa-facebook-f(style="font-size: 15px;" data-fa-transform="up-1")
+          | Like 
+
+        a.btn.btn-icon.twitter.btn-xs.btn-icon-left.me-2(href="#!")
+          span.btn-brand
+            span.fab.fa-twitter(style="font-size: 14px;")
+          | Follow
+
+  +Section(container)
+    .row.font-sans-serif.gy-4
+      .col-md-6
+        a(href="#!")
+          .hoverbox
+            img(src=`${CWD}assets/images/portfolio/wide-01.jpg` alt="")
+            .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+              .col-sm-12
+                .p-4
+                  h4.text-white.mb-0 Bootstrap 5 
+                  p Future proof, Redesigned
+
+      .col-md-6
+        a(href="#!")
+          .hoverbox
+            img(src=`${CWD}assets/images/portfolio/wide-02.jpg` alt="")
+            .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+              .col-sm-12
+                .p-4
+                  h4.text-white.mb-0 100+ Layouts
+                  p Covers any of your needs
+
+      .col-md-6
+        a(href="#!")
+          .hoverbox
+            img(src=`${CWD}assets/images/portfolio/wide-03.jpg` alt="" )
+            .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+              .col-sm-12
+                .p-4
+                  h4.text-white.mb-0 10 Demons
+                  p You can create more
+              
+      .col-md-6
+        a(href="#!")
+          .hoverbox
+            img(src=`${CWD}assets/images/portfolio/wide-04.jpg` alt="")
+            .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+              .col-sm-12
+                .p-4
+                  h4.text-white.mb-0 30 Set of Elements
+                  p Everything redesigned 
+
+      .col-md-6.mb-4
+        a(href="#!")
+          .hoverbox
+            img(src=`${CWD}assets/images/portfolio/wide-05.jpg` alt="")
+            .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+              .col-sm-12
+                .p-4
+                  h4.text-white.mb-0 Detailed Documentation
+                  p For extra convenience
+              
+      .col-md-6.mb-4
+        a(href="#!")
+          .hoverbox
+            img(src=`${CWD}assets/images/portfolio/wide-06.jpg` alt="")
+            .hoverbox-content.text-white.text-end.row.align-items-end.background-black-30
+              .col-sm-12
+                .p-4
+                  h4.text-white.mb-0 Dedicated Support
+                  p We got your back
+
+  section.text-center.py-0.bg-100
+    .container-fluid
+      .row.justify-content-center 
+        .col-lg-8.col-xl-5.py-8 
+          h3.mb-3 Do you have a project?
+          p.fw-light.fs-8.text-700 Create a stunning portfolio showcase website; in less than an hour. Easily. Effortlessly.
+          a.btn.btn-primary.mt-3(href="#!") Hire me 
+

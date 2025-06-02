@@ -1,0 +1,20 @@
+extends ../layouts/LayoutShop
+include ../mixins/pages/Shop
+
+prepend styles 
+
+prepend scripts 
+
+append variables 
+  - var footer = false
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image: true,
+    logo: 'posh-logo.png'
+  }).bg-white
+
+append shopContent 
+  +ProductList

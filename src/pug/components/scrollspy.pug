@@ -1,0 +1,20 @@
+extends ../layouts/LayoutComponent
+
+include ../mixins/components/Scrollspy
+
+prepend styles 
+
+prepend scripts
+
+
+append variables
+  - var pageTitle = 'Scrollspy'
+
+append component
+
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/scrollspy/`,
+    name: pageTitle,
+  })
+
+  +ScrollspyExample

@@ -1,0 +1,146 @@
+mixin SolidButtonsExample 
+  each value in colors
+    a.mb-3.me-3.btn(class=`btn-${value}` href="#!") .btn-#{value}
+    = '\n'
+
+mixin OutlineButtonsExample 
+  each value in colors
+    a.mb-3.me-3.btn(class=`btn-outline-${value}` href="#!") .btn-outline-#{value}
+    = '\n'
+mixin InvertedButtonsExample 
+  .p-3.bg-1100
+    = '\n' 
+    a.btn.btn-white.me-3(href="#!") .btn-white
+    = '\n' 
+    a.btn.btn-outline-white(href="#!")  .btn-outline-white 
+
+mixin ButtonSizesExample 
+  a.btn.btn-outline-primary.btn-xs.me-3.mb-3(href="#!") .btn-xs
+  = '\n' 
+  a.btn.btn-outline-primary.btn-sm.me-3.mb-3(href="#!") .btn-sm
+  = '\n'
+  a.btn.btn-outline-primary.me-3.mb-3(href="#!") .btn
+  = '\n'
+  a.btn.btn-outline-primary.btn-lg.mb-3(href="#!") .btn-lg 
+
+mixin ButtonsShape 
+  h4 Buttons Shapes
+  p Customize the shape of a button using 
+    code .btn 
+    | and 
+    code  .btn-capsule 
+  .py-3 
+    a.btn.btn-primary.me-3(href="#!") .btn 
+    a.btn.btn-primary.rounded-capsule(href="#!")  .btn-capsule 
+  pre.mt-4.mb-6 
+    code.language-html. 
+      #{'<a href="#!" class="btn btn-primary">.btn</a>\n <a href="#!" class="btn btn-primary rounded-capsule">.btn-capsule</a>'}
+mixin ButtonsWithIconExample 
+  a.btn.btn-icon.btn-primary.btn-icon-left.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-gitlab 
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.btn-primary.btn-icon-right.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-gitlab 
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.btn-outline-primary.btn-icon-left.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-gitlab  
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.btn-outline-primary.btn-icon-right.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand
+      i.fab.fa-gitlab
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.btn-primary.btn-icon-left.rounded-capsule.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-gitlab 
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.btn-primary.btn-icon-right.rounded-capsule.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-gitlab 
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+
+  a.btn.btn-icon.btn-outline-primary.btn-icon-left.rounded-capsule.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-gitlab 
+    | .btn-icon 
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.btn-outline-primary.btn-icon-right.rounded-capsule.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand
+      i.fab.fa-gitlab 
+    | .btn-icon 
+    = '\n' 
+
+mixin SpecialButtonsExample 
+
+  a.btn.btn-icon.facebook.btn-icon-left.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-facebook-f 
+    | Join facebook
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.twitter.btn-icon-left.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-twitter 
+    | Join Twitter
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.google-plus.btn-icon-left.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-google-plus-g 
+    | Join Google+
+    = '\n' 
+  = '\n' 
+  
+  a.btn.btn-icon.github.btn-icon-left.me-3.mb-3(href="#!")
+    = '\n' 
+    span.btn-brand 
+      i.fab.fa-github 
+    | See Github
+    = '\n' 
+  = '\n' 
+
+mixin VerticalButtonGroupExample 
+  .btn-group.btn-group-vertical(role="group") 
+    button.btn.btn-outline-light  .btn-outline-light 
+    button.btn.btn-outline-light  .btn-outline-light 
+    button.btn.btn-outline-light  .btn-outline-light
+
+mixin ButtonGroupExample 
+  .btn-group(role="group") 
+    button.btn.btn-outline-light  .btn-outline-light 
+    button.btn.btn-outline-light  .btn-outline-light 
+    button.btn.btn-outline-light  .btn-outline-light

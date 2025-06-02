@@ -1,0 +1,107 @@
+mixin SmartSwitch 
+  .mb-6 
+    input#checkbox1.ios-toggle(type="checkbox" name="checkbox1")
+    label.checkbox-label(for="checkbox1" data-off="" data-on="")
+
+mixin StandardInputs 
+  h4.mt-6 Standard Inputs
+  form.mt-5
+    .form-group 
+      label(for="exampleInputName") Name 
+      input#exampleInputName.form-control(type="text" placeholder="Name") 
+
+    .form-group 
+      label(for="exampleInputEmail") Email
+      input#exampleInputEmail.form-control(type="email" placeholder="Email") 
+
+    .form-group 
+      label(for="exampleInputPassword1") Password 
+      input#exampleInputPassword.form-control(type="password" placeholder="Password") 
+
+    .form-group 
+      label(for="expmpleSelect")  Select 
+      select#exampleSelect.form-select(name="exampleSelect")
+        option(value="1") 1
+        option(value="2") 2 
+        option(value="3") 3   
+        option(value="4") 4
+        option(value="5") 5
+    fieldset.mt-4.form-group 
+      legend Radio buttons 
+      .form-check 
+        label.form-check-level
+          input#optionsRadios1.form-check-input(type="radio" name="optionsRadios" value="option1" checked='')
+          | Option one is this and that-be sure to include why it's great 
+
+      .form-check 
+        label.form-check-level
+          input#optionsRadios2.form-check-input(type="radio" name="optionsRadios" value="option2")
+          | Option two can be something else and selecting it will deselect option one
+
+      .form-check.disabled 
+        label.form-check-level
+          input#optionsRadios3.form-check-input(type="radio" name="optionsRadios" value="option3" disabled='')
+          | Option three is disabled 
+
+    .form-check
+      label.form-check-level
+        input.form-check-input(type="checkbox")
+        | Check me out
+
+    .form-group 
+      label(for="exampleTextareaInput")  Textarea
+      textarea#exampleTextareaInput.form-control(rows='8' name="message" placeholder="Write your message...") 
+
+    .form-group 
+      input#file-1.inputfile(type='file' name='file-1[]' data-multiple-caption='{count} files selected' multiple)
+      label.btn.btn-outline-primary.btn-sm(for='file-1')
+        span Choose a file 
+
+mixin InputsWithFeedback
+  h4.mt-6 With feedback 
+  form.mt-4
+    .form-group.has-success 
+      label(for="exampleInputEmail2") Success input
+      input#exampleInputEmail2.form-control(type="email" placeholder="Email") 
+
+    .form-group.has-warning 
+      label(for="exampleInputEmail3") Warning input
+      input#exampleInputEmail3.form-control(type="email" placeholder="Email") 
+
+    .form-group.has-error 
+      label(for="exampleInputEmail4") Error input
+      input#exampleInputEmail4.form-control(type="email" placeholder="Email") 
+
+    .form-group.has-feedback.has-success 
+      label(for="exampleInputEmail5") Success input
+      input#exampleInputEmail5.form-control(type="email" placeholder="Email")
+      span.form-control-feedback.glyphicon.glyphicon-ok 
+
+    .form-group.has-feedback.has-warning 
+      label(for="exampleInputEmail6") Warning input
+      input#exampleInputEmail6.form-control(type="email" placeholder="Email")
+      span.form-control-feedback.glyphicon.glyphicon-warning-sigh 
+
+    .form-group.has-feedback.has-warning 
+      label(for="exampleInputEmail7") Error input
+      input#exampleInputEmail7.form-control(type="email" placeholder="Email")
+      span.form-control-feedback.glyphicon.glyphicon-remove 
+
+mixin InputSizes 
+  h4.mt-6 Sizes 
+  form.mt-4
+    .input-group.mb-3 
+      label(for="exampleInputSize0")  Tiny input 
+      input#exampleInputSize0.form-control.w-100.input-xs(type="text" placeholder=".input-xs")
+
+    .input-group.input-group-sm.mb-3 
+      label(for="exampleInputSize1")  Small input 
+      input#exampleInputSize1.form-control.w-100(type="text" placeholder=".input-sm")
+
+    .input-group.mb-3 
+      label(for="exampleInputSize2")  Normal input 
+      input#exampleInputSize2.form-control.w-100(type="text" placeholder="")
+
+    .input-group.input-group-lg 
+      label(for="exampleInputSize3")  Large input 
+      input#exampleInputSize3.form-control.w-100(type="text" placeholder=".input-lg")

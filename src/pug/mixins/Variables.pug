@@ -1,0 +1,567 @@
+append variables
+  - var theme = `${name}-${version}`;
+  - var bootstrapVersion = '5.3';
+  - var attrsMain = { id: 'top', class: 'main' };
+  - var attrsLayout = { class: '', 'data-layout': 'container' }
+  - var colors = ['primary', 'secondary', 'success', 'info', 'warning', 'danger', 'light', 'dark'];
+  - var grays = [ 1100, 1000, 900, 800, 700, 600, 500, 400, 300, 200, 100 ];
+  - var colorsAll = colors.concat(grays);
+  -
+    var themeColor =  {
+      primary: '#007AFF',
+      secondary: '#292b2c',
+      success: '#4CD964',
+      info: '#5AC8FA',
+      warning: '#FF9500',
+      danger: '#FF3B30',
+      light: '#ffffff',
+      dark: '#0c151a',
+    }
+
+  - var footer = true;
+  - var pathName = (locals.filename || locals.history[0]).split('\\').join('/').split('src/pug/').pop().split('.pug').shift();
+  - var pageTree = pathName.split('/');
+  - var pageName = pathName.split('/').pop();
+  - var CWD = pageTree.slice(1).map(() => '../').join('');
+  - var hasTopNavOnly = false;
+  -
+    var sitemap = [
+      {
+        label: 'homes',
+        pages: [
+          {
+            name:'conference',
+            path: 'homes/conference',
+            pathName: 'homes/conference'
+          },
+          {
+            name:'Digital-Agency',
+            path: 'homes/digital-agency',
+            pathName: 'homes/digital-agency'
+          },
+          {
+            name:'education',
+            path: 'homes/education',
+            pathName: 'homes/education'
+          },
+          {
+            name:'hospital',
+            path: 'homes/hospital',
+            pathName: 'homes/hospital'
+          },
+          {
+            name:'hotel',
+            path: 'homes/hotel',
+            pathName: 'homes/hotel',
+          },
+          {
+            name:'Landing-NOKIA',
+            path: 'homes/landing-nokia',
+            pathName: 'homes/landing-nokia',
+          },
+          {
+            name:'Landing-Software',
+            path: 'homes/landing-software',
+            pathName: 'homes/landing-software'
+          },
+          {
+            name:'Personal',
+            path: 'homes/personal',
+            pathName: 'homes/personal'
+          },
+          {
+            name:'Restaurant',
+            path: 'homes/restaurant',
+            pathName: 'homes/restaurant',
+          },
+          {
+            name:'shop',
+            path: 'homes/shop',
+            pathName: 'homes/shop',
+          },
+          {
+            name:'Travel-Agency',
+            path: 'homes/travel-agency',
+            pathName: 'homes/travel-agency'
+          },
+        ],
+      },
+      {
+        label: 'pages',
+        pages:[
+          {
+            name: 'starter',
+            path: 'pages/starter',
+            pathName: 'pages/starter',
+          },
+          {
+            name: 'RTL',
+            path: 'pages/rtl',
+            pathName: 'pages/rtl',
+          },
+          {
+            name: 'about',
+            pages: [
+              {
+                name: 'About-Company',
+                path: 'pages/about-company',
+                pathName: 'pages/about-company',
+              },
+              {
+                name: 'About-Team',
+                path: 'pages/about-team',
+                pathName: 'pages/about-team',
+              }
+            ]
+          },
+          {
+            name: 'career',
+            pages: [
+              {
+                name: 'careers',
+                path: 'pages/careers',
+                pathName: 'pages/careers',
+              },
+              {
+                name: 'Job-Details',
+                path: 'pages/job-details',
+                pathName: 'pages/job-details',
+              }
+            ]
+          },
+          {
+            name: 'contacts',
+            pages: [
+              {
+                name: 'contact-1',
+                path: 'pages/contact-1',
+                pathName: 'pages/contact-1',
+              },
+              {
+                name: 'contact-2',
+                path: 'pages/contact-2',
+                pathName: 'pages/contact-2',
+              },
+              {
+                name: 'contact-3',
+                path: 'pages/contact-3',
+                pathName: 'pages/contact-3',
+              },
+            ]
+          },
+          {
+            name: 'pricing',
+            pages: [
+              {
+                name: 'pricing-1',
+                path: 'pages/pricing-1',
+                pathName: 'pages/pricing-1',
+              },
+              {
+                name: 'pricing-2',
+                path: 'pages/pricing-2',
+                pathName: 'pages/pricing-2',
+              }
+            ]
+          },
+          {
+            name: 'services',
+            pages: [
+              {
+                name: 'services-1',
+                path: 'pages/services-1',
+                pathName: 'pages/services-1',
+              },
+              {
+                name: 'services-2',
+                path: 'pages/services-2',
+                pathName: 'pages/services-2',
+              },
+              {
+                name: 'services-3',
+                path: 'pages/services-3',
+                pathName: 'pages/services-3',
+              }
+            ]
+          },
+          {
+            name: 'accounts',
+            pages: [
+              {
+                name: 'Log-in-(Simple)',
+                path: 'pages/log-in',
+                pathName: 'pages/log-in',
+              },
+              {
+                name: 'Log-in-(With Social)',
+                path: 'pages/log-in-social',
+                pathName: 'pages/log-in-social',
+              },
+              {
+                name: 'profile',
+                path: 'pages/profile',
+                pathName: 'pages/profile',
+              },
+              {
+                name: 'settings',
+                path: 'pages/settings',
+                pathName: 'pages/settings',
+              },
+              {
+                name: 'Account-Recovery',
+                path: 'pages/recovery',
+                pathName: 'pages/recovery',
+              }
+            ]
+          },
+          {
+            name: 'utility',
+            pages: [
+              {
+                name: '404',
+                path: 'pages/404',
+                pathName: 'pages/404',
+              },
+              {
+                name: '500',
+                path: 'pages/500',
+                pathName: 'pages/500',
+              },
+              {
+                name: 'Maintenance',
+                path: 'pages/maintenance',
+                pathName: 'pages/maintenance',
+              }
+            ]
+          },
+          {
+            name: 'Shop',
+            pages: [
+              {
+                name: 'Products-List',
+                path: 'pages/shop-products-list',
+                pathName: 'pages/shop-products-lists',
+              },
+              {
+                name: 'Products-Grid',
+                path: 'pages/shop-products-grid',
+                pathName: 'pages/shop-products-grid',
+              },
+              {
+                name: 'Product-Details',
+                path: 'pages/shop-product-details',
+                pathName: 'pages/shop-product-details',
+              },
+              {
+                name: 'Cart',
+                path: 'pages/shop-cart',
+                pathName: 'pages/shop-cart',
+              }
+            ]
+          },
+          {
+            name: 'Portfolio',
+            pages: [
+              {
+                name: 'List-Title-Inside',
+                path: 'pages/portfolio-1',
+                pathName: 'pages/portfolio-1',
+              },
+              {
+               name: 'List-Title-Outside',
+                path: 'pages/portfolio-2',
+                pathName: 'pages/portfolio-2',
+              },
+              {
+                name: 'List-Title-Hover',
+                path: 'pages/portfolio-3',
+                pathName: 'pages/portfolio-3',
+              },
+              {
+               name: 'Portfolio-Details',
+                path: 'pages/portfolio-details',
+                pathName: 'pages/portfolio-details',
+              },
+              {
+               name: 'Case-Study',
+                path: 'pages/portfolio-case-study',
+                pathName: 'pages/portfolio-case-study',
+              }
+            ]
+          },
+          {
+            name: 'blog',
+            pages: [
+              {
+                name: 'Blog-list',
+                path: 'pages/blog-list',
+                pathName: 'pages/blog-list',
+              },
+              {
+                name: 'article',
+                path: 'pages/blog-article',
+                pathName: 'pages/blog-article',
+              }
+            ]
+          }
+        ]
+      },
+      {
+        label: 'components',
+        megaMenu: true,
+        pages: [
+          {
+            name: 'accordion',
+            path: 'components/accordion',
+            pathName: 'components/accordion'
+          },
+          {
+            name: 'Alerts',
+            path: 'components/alerts',
+            pathName: 'components/alerts'
+          },
+          {
+            name: 'Backgrounds',
+            path: 'components/backgrounds',
+            pathName: 'components/backgrounds'
+          },
+          {
+            name: 'badge',
+            path: 'components/badge',
+            pathName: 'components/badge'
+          },
+          {
+            name: 'Border-&-Radius',
+            path: 'components/border-&-radius',
+            pathName: 'components/border-&-radius'
+          },
+          {
+            name: 'Buttons',
+            path: 'components/buttons',
+            pathName: 'components/buttons'
+          },
+          {
+            name: 'cards',
+            path: 'components/cards',
+            pathName: 'components/cards'
+          },
+          {
+            name: 'carousel',
+            path: 'components/carousel',
+            pathName: 'components/carousel'
+          },
+          {
+            name: 'colors',
+            path: 'components/colors',
+            pathName: 'components/colors'
+          },
+          {
+            name: 'Dropdown-&-Dropup',
+            path: 'components/dropdowns',
+            pathName: 'components/dropdowns'
+          },
+          {
+            name: 'Filter',
+            path: 'components/filter',
+            pathName: 'components/filter'
+          },
+          {
+            name: 'Form-elements',
+            path: 'components/forms',
+            pathName: 'components/forms'
+          },
+          {
+            name: 'Grid-system',
+            path: 'components/grid',
+            pathName: 'components/grid'
+          },
+          {
+            name: 'Layout-helpers',
+            path: 'components/layout-helpers',
+            pathName: 'components/layout-helpers'
+          },
+          {
+            name: 'Icons',
+            path: 'components/icons',
+            pathName: 'components/icons'
+          },
+          {
+            name: 'Lightbox',
+            path: 'components/lightbox',
+            pathName: 'components/lightbox'
+          },
+          {
+            name: 'Maps',
+            path: 'components/maps',
+            pathName: 'components/maps'
+          },
+          {
+            name: 'Masonry-grid',
+            path: 'components/masonry',
+            pathName: 'components/masonry'
+          },
+          {
+            name: 'Modal-video',
+            path: 'components/modal-video',
+            pathName: 'components/modal-video'
+          },
+          {
+            name: 'Modals',
+            path: 'components/modals',
+            pathName: 'components/modals'
+          },
+          {
+            name: 'Navigations',
+            path: 'components/navigations',
+            pathName: 'components/navigations'
+          },
+          {
+            name: 'Navigation-in-page',
+            path: 'components/navigation-in-page',
+            pathName: 'components/navigation-in-page'
+          },
+          {
+            name: 'smtpjs',
+            path: 'components/smtpjs',
+            pathName: 'components/smtpjs'
+          },
+          {
+            name: 'Parallax',
+            path: 'components/parallax',
+            pathName: 'components/parallax'
+          },
+          {
+            name: 'Scrollspy',
+            path: 'components/scrollspy',
+            pathName: 'components/scrollspy'
+          },
+          {
+            name: 'Swiper',
+            path: 'components/swiper',
+            pathName: 'components/swiper'
+          },
+          {
+            name: 'Spacing',
+            path: 'components/spacing',
+            pathName: 'components/spacing'
+          },
+          {
+            name: 'Tables',
+            path: 'components/tables',
+            pathName: 'components/tables'
+          },
+          {
+            name: 'Tabs',
+            path: 'components/tabs',
+            pathName: 'components/tabs'
+          },
+          {
+            name: 'Tooltips',
+            path: 'components/tooltips',
+            pathName: 'components/tooltips'
+          },
+          {
+            name: 'Typed-Text',
+            path: 'components/typed-text',
+            pathName: 'components/typed-text'
+          },
+          {
+            name: 'Typography',
+            path: 'components/typography',
+            pathName: 'components/typography'
+          }
+        ]
+      },
+      {
+        label: 'docs',
+        pages: [
+          {
+            name:'Getting Started',
+            path: 'docs/getting-started',
+            pathName: 'docs/getting-started'
+          },
+          {
+            name:'File Structure',
+            path: 'docs/file-structure',
+            pathName: 'docs/file-structure'
+          },
+          {
+            name:'customization',
+            path: 'docs/customization',
+            pathName: 'docs/customization'
+          },
+          {
+            name:'gulp',
+            path: 'docs/gulp',
+            pathName: 'docs/gulp'
+          },
+          {
+            name:'RTL',
+            path: 'docs/rtl',
+            pathName: 'docs/rtl',
+          },
+          {
+            name:'plugins',
+            path: 'docs/plugins',
+            pathName: 'docs/plugins',
+          },
+          {
+            name:'changelog',
+            path: 'docs/changelog',
+            pathName: 'docs/changelog'
+          }
+        ],
+      }
+    ];
+
+  - var paths = flatSitemap(sitemap);
+
+  - 
+    var partnersList = [
+      {
+        imageSrc: 'assets/images/partners/partner-3.png'
+      },
+      {
+        imageSrc: 'assets/images/partners/partner-5.png'
+      },
+      {
+        imageSrc: 'assets/images/partners/partner-6.png'
+      },
+      {
+        imageSrc: 'assets/images/partners/partner-7.png'
+      },
+        {
+        imageSrc: 'assets/images/partners/partner-3.png'
+      },
+      {
+        imageSrc: 'assets/images/partners/partner-5.png'
+      },
+      {
+        imageSrc: 'assets/images/partners/partner-6.png'
+      },
+      {
+        imageSrc: 'assets/images/partners/partner-7.png'
+      }
+    ]
+
+  -
+    var sliderImages =[
+      {
+        imageSrc: 'assets/images/s-01.png'
+      },
+      {
+        imageSrc: 'assets/images/s-02.png'
+      },
+      {
+        imageSrc: 'assets/images/s-03.png'
+      },
+      {
+        imageSrc: 'assets/images/s-04.png'
+      },
+      {
+        imageSrc: 'assets/images/s-05.png'
+      },
+      {
+        imageSrc: 'assets/images/s-06.png'
+      },
+    ]

@@ -1,0 +1,26 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/Education
+
+prepend styles 
+
+prepend scripts
+  script(src=`${CWD}vendors/isotope-layout/isotope.pkgd.min.js`) 
+  script(src=`${CWD}vendors/isotope-packery/packery-mode.pkgd.min.js`)
+  script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`) 
+
+
+append variables
+  - var footer = false
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image: true,
+    logo: 'education-logo.svg',
+    width: '250',
+  }).fixed-top.navbar-secondary.start-0.top-0
+
+append content
+  +Education 
+  +EducationFooter

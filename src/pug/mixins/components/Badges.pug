@@ -1,0 +1,14 @@
+mixin DefaultBadgesExample
+  .badge.badge-default Default
+  each value in colors
+    if (value === 'light') || (value === 'dark')
+      - return 
+    .badge(class=`text-bg-${value}`)  #{(value.charAt(0).toUpperCase() + value.slice(1))}
+
+
+mixin PillBadgesExample
+  .badge.badge-default.rounded-pill Default
+  each value in colors
+    if (value === 'light') || (value === 'dark')
+      - return 
+    .badge.rounded-pill(class=`text-bg-${value}`) #{(value.charAt(0).toUpperCase() + value.slice(1))}

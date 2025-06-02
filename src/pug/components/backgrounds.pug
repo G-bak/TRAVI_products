@@ -1,0 +1,39 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Backgrounds
+
+prepend styles 
+
+prepend scripts
+  script(src=`${CWD}vendors/rellax/rellax.js`)
+
+append variables
+  - var pageTitle = 'Backgrounds'
+
+append component 
+  
+  +ComponentCard({
+    title: 'Background Image',
+    prismClass: 'mt-5'
+  }).mb-3
+    +BackgroundImageDemo
+    
+  +ParallaxBackgrounds
+
+  +ComponentCard({
+    title: 'Video Background',
+    prismClass: 'mt-5'
+  }).mt-5
+    +BackgroundVideoDemo
+
+  +ComponentCard({
+    title: 'Youtube Video',
+    prismClass: 'mt-4'
+  }).mt-5
+    +BackgroundYoutubeVideoDemo
+
+  +ComponentCard({
+    title: 'Shades of overlay',
+    description: `Use following classes with <code>.overlay</code> class for different shades.`,
+    prismClass: 'mt-4'
+  }).mt-5
+    +ShadesOverlayDemo

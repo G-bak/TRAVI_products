@@ -1,0 +1,21 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/Restaurant
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+  script(src!=`https://maps.googleapis.com/maps/api/js?key=${APIGmap}&loading=async&callback=initMap`) 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    logo: 'logo-restaurant.png',
+    width: '50'
+  }).bg-1100.navbar-dark
+
+append content 
+  +Restaurant

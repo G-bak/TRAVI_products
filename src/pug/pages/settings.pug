@@ -1,0 +1,19 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Profile
+
+prepend styles 
+
+prepend scripts 
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`) 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:false,
+    name: "POSH",
+    color: "text-100"
+  }).bg-1100.navbar-dark
+
+append content
+  +Settings

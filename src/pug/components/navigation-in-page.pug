@@ -1,0 +1,17 @@
+extends ../layouts/LayoutComponent
+
+include ../mixins/components/Navigations
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Navigation In Page'
+
+append component 
+  p Posh includes a smooth scrolling plugin which allows you to animate the page's scrolling to elements within the page. The markup snippet below demonstrates: 
+  a(href="#example-section") Scroll to the #example-section below
+
+  +NavigationExample
+  +ScrollSpyItem

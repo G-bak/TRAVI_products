@@ -1,0 +1,10 @@
+extends layouts/LayoutTheme
+include mixins/homes/Default
+
+prepend scripts
+  script(src=`${CWD}vendors/imagesloaded/imagesloaded.pkgd.js`) 
+  script(src=`${CWD}vendors/typed.js/typed.umd.js`)
+  script(src=`${CWD}vendors/isotope-layout/isotope.pkgd.min.js`) 
+  script(src=`${CWD}vendors/isotope-packery/packery-mode.pkgd.min.js`)
+append content 
+  +Default

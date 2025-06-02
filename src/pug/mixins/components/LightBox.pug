@@ -1,0 +1,88 @@
+mixin LightboxImageDemo     
+  .row.text-center.mt-5
+    .col-sm-4
+      = '\n'
+      a(href='#!' data-caption='caption' data-bigpicture!={
+          imgSrc:`${CWD}assets/images/portraits/square/02.jpg`
+        })
+        = '\n'
+        img.img-thumbnail(src=`${CWD}assets/images/portraits/square/02.jpg` alt='' )
+        = '\n'
+    .col-sm-4
+      = '\n'
+      a.btn.btn-primary(href='#!' data-bigpicture!={
+        imgSrc:`${CWD}assets/images/portfolio/02.jpg`
+      } data-caption='caption')
+        = '\n' 
+        | LightBox
+        = '\n'
+
+mixin LightboxGalleryDemo
+
+  .row.mt-5#image_gallery 
+    .col-sm-4.mb-4
+      = '\n'
+      a(href='#!' data-caption='caption' data-bigpicture!={
+        gallery: '#image_gallery',
+      } data-bp= `${CWD}assets/images/portfolio/01.jpg` )
+        = '\n'
+        img.rounded.img-fluid(src=`${CWD}assets/images/portfolio/01.jpg` alt='') 
+        = '\n' 
+    .col-sm-4.mb-4
+      = '\n'
+      a(href='#!'  data-caption='caption' data-bigpicture!={
+        gallery: '#image_gallery'
+      }  data-bp=`${CWD}assets/images/portfolio/02.jpg`)
+        = '\n'
+        img.rounded.img-fluid(src=`${CWD}assets/images/portfolio/02.jpg` alt='' )
+        = '\n'  
+    .col-sm-4.mb-4
+      = '\n'
+      a(href='#!' data-caption='caption' data-bigpicture!={
+        gallery: '#image_gallery',
+      } data-bp=`${CWD}assets/images/portfolio/03.jpg`)
+        = '\n'
+        img.rounded.img-fluid(src=`${CWD}assets/images/portfolio/03.jpg` alt='')
+        = '\n'   
+    .col-sm-4.mb-4
+      = '\n'
+      a(href='#!' data-caption='caption' data-bigpicture!={
+        gallery: '#image_gallery',
+      } data-bp=`${CWD}assets/images/portfolio/04.jpg`)
+        = '\n'
+        img.rounded.img-fluid(src=`${CWD}assets/images/portfolio/04.jpg` alt='' )
+        = '\n'   
+    .col-sm-4.mb-4
+      = '\n'
+      a(href='#!' data-caption='caption' data-bigpicture!={
+        gallery: '#image_gallery',
+      } data-bp=`${CWD}assets/images/portfolio/05.jpg`)
+        = '\n'
+        img.rounded.img-fluid(src=`${CWD}assets/images/portfolio/05.jpg` alt='' ) 
+        = '\n'  
+    .col-sm-4.mb-4
+      = '\n'
+      a(href='#!' data-caption='caption' data-bigpicture!={
+        gallery: '#image_gallery',
+      } data-bp=`${CWD}assets/images/portfolio/06.jpg`)
+        = '\n'
+        img.rounded.img-fluid(src=`${CWD}assets/images/portfolio/06.jpg` alt='' )
+        = '\n'   
+   
+    
+      
+    
+mixin VideoModalDemo
+  .row.gx-3
+    .col-auto
+      = '\n'
+      button.btn.btn-primary(data-bigpicture!={
+        ytSrc: 'c8aFcHFu8QM',
+      }) YouTube
+      = '\n'
+    .col-auto
+      = '\n'
+      button.btn.btn-primary(data-bigpicture!={
+        vimeoSrc: '58558497',
+      }) Vimeo
+      = '\n'

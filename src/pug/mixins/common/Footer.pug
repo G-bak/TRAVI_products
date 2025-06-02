@@ -1,0 +1,20 @@
+mixin Footer(attrs)
+  footer.bg-1100.text-400.fs-10.fw-semi-bold.py-3&attributes(attributes)= attrs 
+    .container
+      .row.align-items-center 
+        .col-auto &copy; 2024 POSH &trade; Inc. 
+        .col.text-end.fs-9.me-lg-n2 
+          a.p-2.link-400(href=`${CWD}`)
+            span.fab.fa-facebook-f(style="width:9px" data-fa-transform="up-1")
+
+          a.p-2.link-400(href=`${CWD}`)
+            span.fab.fa-twitter(style="width:14px")
+          
+          a.p-2.link-400(href=`${CWD}`)
+            span.fab.fa-instagram(style="width:14px") 
+
+          a.p-2.link-400(href=`${CWD}`)
+            span.fab.fa-behance(style="width:18px") 
+
+          a.p-2.link-400(href=`${CWD}`)
+            span.fab.fa-dribbble(style="width:14px")

@@ -1,0 +1,155 @@
+
+/*-----------------------------------------------
+|   Theme Checkbox
+-----------------------------------------------*/
+.form-check {
+  @each $color,
+  $value in $theme-colors {
+    &-input {
+      &-#{$color} {
+        border-color: $value !important;
+
+        &:focus {
+          box-shadow: 0 0 $input-btn-focus-blur $input-btn-focus-width rgba($value, $input-btn-focus-color-opacity);
+        }
+
+        &:checked {
+          background-color: $value !important;
+        }
+        &.posh-dual-switch {
+          background-color: $value !important;
+        }
+      }
+      &.posh-dual-switch {
+        background-color: $primary;
+      }
+    }
+  }
+}
+
+.form-check {
+  label{
+    margin-bottom: 0;
+  }
+}
+
+// Floating Labels
+.form-floating>label {
+  line-height: 1.625rem;
+}
+
+
+option:disabled {
+  color: var(--#{$prefix}gray-400);
+}
+
+.form-group{
+  margin-bottom: map-get($spacers, 3);
+}
+.form-control, .form-select {
+  padding: .8rem;
+  border-color: var(--#{$prefix}gray-300);
+  border-radius: var(--#{$prefix}border-radius-sm);
+  background-color: var(--#{$prefix}gray-100);
+  box-shadow: none;
+}
+
+.form-control:focus, .form-select:focus{
+  background-color: $white;
+  border-color: var(--#{$prefix}primary);
+  box-shadow: none;
+}
+
+
+.has-success {
+  @include input-feedback-variant(map-get($theme-colors, 'success'));
+}
+
+.has-warning {
+  @include input-feedback-variant(map-get($theme-colors, 'warning'));
+}
+
+.has-error {
+  @include input-feedback-variant(map-get($theme-colors, 'danger'));
+}
+
+// Input type file
+
+input[type='file']{ display: none; }
+.inputfile + label{
+  svg{
+      fill: currentColor;
+      vertical-align: middle;
+      margin-right: 8px;
+  }
+}
+
+
+
+.ios-toggle{
+  &, &:active{
+      height:0;
+      width:0;
+      opacity: 0;
+  }
+  &:checked + .checkbox-label{
+      box-shadow:inset 0 0 0 20px map-get($theme-colors, 'success'), 0 0 0 1px map-get($theme-colors, 'success');
+      &:before{
+          left:calc(100% - 32px);
+          box-shadow:0 0 0 1px transparent, -3px 0px 3px rgba(0,0,0,.1);
+      }
+      &:after{
+          content:attr(data-on);
+          left:70px;
+          width:32px;
+      }
+  }
+}
+
+.checkbox-label{
+  display: block;
+  position: relative;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  line-height: 16px;
+  width: 70px;
+  height: 32px;
+  border-radius: 3.125rem;
+  background-color: $gray-100;
+  cursor:pointer;
+  box-shadow: inset 0 0 0 0px map-get($theme-colors, "success"), 0 0 0 1px $gray-300;
+  transition: box-shadow 0.2s ease-in-out;
+
+  &:before{
+      content: '';
+      display: block;
+      position: absolute;
+      height: 32px;
+      width: 32px;
+      top: 0px;
+      left: 0px;
+      right: auto;
+      background-color: white;
+      border-radius:  3.123rem;
+      box-shadow: 3px 0 3px rgba(0,0,0,.1), 0 0 0 1px $gray-300;
+      transition:  all 0.2s ease-in-out;
+  }
+  &:after{
+      content: attr(data-off);
+      display: block;
+      position: absolute;
+      top: 0;
+      left: -300px;
+      padding: 10px;
+      height: 100%;
+      width: 300px;
+      text-align: right;
+      color: $gray-1000;
+      white-space: nowrap;
+  }
+  &.radius-square{
+      border-radius: var(--#{$prefix}border-radius-sm);
+      &:before{ border-radius: var(--#{$prefix}border-radius-sm); }
+  }
+}

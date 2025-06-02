@@ -1,0 +1,255 @@
+mixin MasonryCard(item)
+  .col-lg-6.col-xl-4.isotope-item.mb-3
+      .card.h-100.border
+        a(href="#!")
+          img.w-100(src=item.image, alt="")
+        .card-body.bg-white 
+          a(href="#!").link-1000 
+            h5.fs-8.fw-semi-bold.text-1000  #{item.title} 
+          p.card-text.text-800.fw-light!=item.description 
+        .card-footer.bg-white.border-top
+          .d-flex.align-items-center 
+            img.me-3.rounded-circle(src=item.footerImage, alt="Generic placeholder image" style="max-width: 50px")
+            div
+              a(href='#!').link-1100
+                h6.mb-0.text-1100 #{item.name} 
+              span.fs-10.text-700 May 23 &middot; 6 min read
+
+mixin RecentBlogs 
+  -
+    var cardItems = [
+      {
+        image: `${CWD}assets/images/blog-10.jpg`,
+        title: 'Building Blocks: Shaping the future of Web Design',
+        description: `Shaping the future of <a href="#!"> #WebDesign </a> though building uncountable layouts with Posh`,
+        footerImage: `${CWD}assets/images/portraits/square/01.jpg`,
+        name: "M Khan"
+      },
+      {
+        image: `${CWD}assets/images/blog-08.jpg`,
+        title: 'The Most Forward Thinking Template',
+        description: `The Posh is the most <a href="#!"> #forward_thinking </a> template ever in the market.`,
+        footerImage: `${CWD}assets/images/portraits/square/01.jpg`,
+        name: "Mike"
+      },
+      {
+        image: `${CWD}assets/images/blog-02.jpg`,
+        title: '25 Amazing Facts You Definitely Didn’t Know',
+        description: `The Slack message was <a href="#!"> #genuine </a> and brief, “congrats on 20 years!” My name had apparently been listed on…`,
+        footerImage: `${CWD}assets/images/portraits/square/04.jpg`,
+        name: "Leo"
+      },
+      {
+        image: `${CWD}assets/images/blog-07.jpg`,
+        title: '13 ways to get rid of website loading time',
+        description: `Hello, I’m Jisa, from the Next Web`,
+        footerImage: `${CWD}assets/images/portraits/square/03.jpg`,
+        name: "Jisa"
+      },
+      {
+        image: `${CWD}assets/images/blog-03.jpg`,
+        title: 'Moving people: Why Fund Matters',
+        description: `There was generous <a href="#!"> #globalfund </a> and still there are scarcity`,
+        footerImage: `${CWD}assets/images/portraits/square/03.jpg`,
+        name: "Jack"
+      },
+      {
+        image: `${CWD}assets/images/blog-06.jpg`,
+        title: '6 secrets you should know about website traffic',
+        description: `Recently Mashable posted 6 <a href="#!"> #secrets </a> on website traffic`,
+        footerImage: `${CWD}assets/images/portraits/square/02.jpg`,
+        name: "Mashable"
+      },
+      {
+        image: `${CWD}assets/images/blog-04.jpg`,
+        title: 'How has social media shaped contemporary design?',
+        description: `Hello, I’m Joseph, Green Chameleon’s newly-appointed Content Strategist - that's me in the... <a href="#!"> #congrats </a> and brief, “congrats on 20 years!” My name had apparently been listed on…`,
+        footerImage: `${CWD}assets/images/portraits/square/04.jpg`,
+        name: "Michael"
+      },
+      {
+        image: `${CWD}assets/images/blog-09.jpg`,
+        title: 'Career Monogamy: The Awkward Tech Sin of Longevity',
+        description: `The Slack message was  <a href="#!"> #genuine </a> and brief, “congrats on 20 years!” My name had apparently been listed on…`,
+        footerImage: `${CWD}assets/images/portraits/square/03.jpg`,
+        name: "Ross"
+      },
+      {
+        image: `${CWD}assets/images/blog-05.jpg`,
+        title: 'An Introduction to GSAP – Part 1: Basics',
+        description: `There was time when <a href="#!"> #newyork </a> has the biggest traffic jam`,
+        footerImage: `${CWD}assets/images/portraits/square/02.jpg`,
+        name: "Randy"
+      },
+      {
+        image: `${CWD}assets/images/blog-01.jpg`,
+        title: 'Building Blocks: Shaping the future of Web Design',
+        description: `Hello, I’m Joseph, Green Chameleon’s newly-appointed Content Strategist - that's me in the... <a href="#!"> #congrats </a> and brief, “congrats on 20 years!” My name had apparently been listed on…`,
+        footerImage: `${CWD}assets/images/portraits/square/01.jpg`,
+        name: "Taylor"
+      },
+    ]
+
+  +Section({image: `${CWD}assets/images/education-banner.jpg`, className: 'overlay overlay-2'}, container)
+    .row.align-items-center.text-center.text-white 
+      .col-12 
+        h1.fs-6.fs-md-5.text-white Recent Blogs 
+        p A multiverse template for all your needs 
+        hr.short.mx-auto
+   
+  +Section(container).bg-100
+    .row.gx-3(data-isotope!={
+      layout: 'packery'
+    })
+      each cardItem in cardItems
+        +MasonryCard(cardItem)
+
+    nav.mt-5.blog-pagination(aria-label="Page Navigation")
+      ul.pagination.justify-content-center 
+        li.page-item 
+          a.page-link(href="#!" aria-label="Previous") 
+            span(aria-hidden="true")  &laquo;
+        li.page-item
+          a.page-link(href="#!")  1
+        li.page-item.active
+          a.page-link(href="#!")  2
+        li.page-item
+          a.page-link(href="#!")  3
+        li.page-item
+          a.page-link(href="#!")  4
+        li.page-item 
+          a.page-link(href="#!" aria-label='Next')
+            span(aria-hidden="true")  &raquo;
+  +Section(container).text-center
+    .row.justify-content-center
+      .col-md-8.col-lg-6 
+        h4.text-black.mb-2 Inbox Fresh 
+        p.text-900 Join our mailing list to receive spontaneous newsletters full of lovely treats for eyeballs. We never spam. Ever.
+        form.mt-5.row 
+          .col-md-6   
+            input.form-control.mb-3(type="text" placeholder="First Name")
+
+          .col-md-6   
+            input.form-control.mb-3(type="text" placeholder="Last Name")
+
+          .col-12   
+            input.form-control.mb-3(type="email" placeholder="Email")
+          .col-12 
+            input.btn.btn-primary.text-uppercase(type="submit" value="Submit")
+            
+             
+
+
+
+
+mixin Article 
+  +Section(container)
+    .row.justify-content-center 
+      .col-lg-10.col-xl-8 
+        h1.fs-6.fs-md-5.text-capitalize The missing advice i needed when starting my career
+        p.fs-9.mb-0 By
+          a(href="#!")  Alice Merriweather 
+        hr.text-300
+        .row.mb-5 
+          .col-4.d-flex.align-items-center 
+            img.me-2(src=`${CWD}assets/images/icons/icon-time.svg`, alt="" width='22')
+            | July 25th, 2017
+          
+          .col-4.d-flex.align-items-center 
+            span.fas.fa-bookmark.me-2.text-900(style="font-size: 20px;")
+            a(href="#!") Career
+            | ,
+            a(href="#!")  Tools 
+          
+          .col-4.d-flex.align-items-center 
+            span.fas.fa-comment.me-2.text-900(style="font-size: 20px;") 
+            a(href="#!") 17 Comments
+        img.mb-4.rounded-1(src=`${CWD}assets/images/blog-featured-image.jpg`, alt="")
+        p.lead.text-700 Do you ever wish you had a time machine? I certainly do, but not for the usual reasons. I want a time machine so I can go back and have a frank conversation with my younger self. I’ll let you in on a bit of a secret: My younger self was an idiot
+        p I have been working on the web for over 22 years now, and I feel like I wasted so many of those years. If only I could go back and share a few hard truths with myself at the start of my career. Unfortunately, I cannot, but I can share that advice with you.
+        blockquote.blockquote.my-5
+          p.fs-7.lh-2.text-800.fst-italic.font-sans-serif If you want to get laid, go to college. If you want an education, go to the library.”
+          footer.blockquote-footer Frank Zappa
+        p Admittedly, you are almost certainly not as idiotic as I was. But hopefully, there will be something in this advice that inspires you. Speaking of inspiration, that leads me nicely into my first piece of wisdom!
+        p Providing elements in two separate layers which are larger than the displayed (i.e. masked) size creates the opportunity for interesting visual treatments and animations. Exactly what effects may be applied and when is still something of an open question; it is up to device and launcher makers to decide. Here are some simple examples you could imagine: parallax or pulsing by independently translating or scaling each layer before applying the mask.
+        img.img-thumbnail.float-start.me-4.mb-4.w-50(src=`${CWD}assets/images/portfolio/wide-04.jpg`, alt="")
+        p I confess that, for many years, I was a bit of a job’s worth. I was a designer, and I spent much of my working life complaining because other people weren’t doing their jobs properly. Clients failed to deliver copy, developers didn’t implement my designs correctly, and project managers were always putting unrealistic constraints on me.
+        p To be fair to my younger self, these were all real problems. But I did nothing but moan about them. I made no effort to help my colleagues fix these issues. I never questioned why the client was failing to deliver content or why the project manager seemed so unreasonable? I didn’t bother to understand the constraints they faced.
+        p When I did eventually wake up and start paying attention, I discovered a bigger world. I found out just how interconnected digital and the user experience are, and how many things beyond the screen influence the experience.
+        .mt-4 
+          a.btn.btn-icon.btn-xs.facebook.btn-icon-left.me-2(href="#!")
+            span.btn-brand
+              i.fab.fa-facebook-f 
+            | Share
+          
+          a.btn.btn-icon.btn-xs.google-plus.btn-icon-left.me-2(href="#!")
+            span.btn-brand
+              i.fab.fa-google-plus-g
+            | Plus
+          
+          a.btn.btn-icon.btn-xs.twitter.btn-icon-left(href="#!")
+            span.btn-brand
+              i.fab.fa-twitter 
+            | tweet
+
+        .row.justify-content-center.align-items-center.text-center.text-md-start.py-4.my-6.border-top.border-bottom.border-300
+          .col-8.col-md-3
+            a(href="#!" data-bigpicture!={
+              imgSrc:`${CWD}assets/images/portraits/square/03.jpg`
+            }) 
+              img.img-thumbnail(src=`${CWD}assets/images/portraits/square/03.jpg`, alt="")
+          .col-md-9.mt-3.mt-md-0 
+            h5.mb-2 Alice Merriweather
+            p.text-800 Alice is the author of The User Experience Revolution and a leader in digital strategy with over 20 years experience. Through 
+              a(href="#!")  consultancy, 
+              |  speaking, writing, training and mentoring he passionately promotes digital best practice.
+            
+        h4 17 Comments 
+        ul.no-style.ps-0 
+          li.d-flex.align-items-start.bg-200.p-4 
+            img.img-thumbnail.me-3(src=`${CWD}assets/images/portraits/square/01.jpg`, alt="" width='60')
+            div 
+              h5.mb-0.fs-9 Anne Brady 
+              small.text-600.fw-semi-bold
+                span 10th May 2016
+                a.ms-2(href="#!") Reply 
+              p.mt-3.fw-light.pb-4.border-bottom.border-300 I confess that, for many years, I was a bit of a job’s worth. I was a designer, and I spent much of my working life complaining because other people weren’t doing their jobs properly.
+              ul.no-style.ps-0.mt-4 
+                li.d-flex.align-items-start.bg-200
+                  img.img-thumbnail.me-3(src=`${CWD}assets/images/portraits/square/02.jpg`, alt="" width='60')
+                  div 
+                    h5.mb-0.fs-9 Jacob Sims 
+                    small.text-600.fw-semi-bold
+                      span 10th May 2016
+                      a.ms-2(href="#!") Reply 
+                    p.mt-3.fw-light Providing elements in two separate layers which are larger than the displayed (i.e. masked) size creates the opportunity for interesting visual treatments and animations.
+          
+          li.d-flex.align-items-start.bg-100.p-4 
+            img.img-thumbnail.me-3(src=`${CWD}assets/images/portraits/square/03.jpg`, alt="" width='60')
+            div 
+              h5.mb-0.fs-9 Alice Merriweather 
+              small.text-600.fw-semi-bold
+                span 11th May 2016
+                a.ms-2(href="#!") Reply 
+              p.mt-3.fw-light To be fair to my younger self, these were all real problems. But I did nothing but moan about them. I made no effort to help my colleagues fix these issues.
+
+          li.d-flex.align-items-start.bg-200.p-4 
+            img.img-thumbnail.me-3(src=`${CWD}assets/images/portraits/square/04.jpg`, alt="" width='60')
+            div 
+              h5.mb-0.fs-9 Lura Smith 
+              small.text-600.fw-semi-bold
+                span 11th May 2016
+                a.ms-2(href="#!") Reply 
+              p.mt-3.fw-light When I did eventually wake up and start paying attention, I discovered a bigger world. I found out just how interconnected digital and the user experience are, and how many things beyond the screen influence the experience.
+        
+        h5.mt-6 Leave a comment 
+        form.mt-4.row 
+          .col-md-6 
+            input.form-control.mb-3(type="text" placeholder='Name')
+          .col-md-6 
+            input.form-control.mb-3(type="email" placeholder="Email")
+          .col-12 
+            textarea#comment.form-control.mb-3(name="comment" rows=8 placeholder="Comment")
+          .col-12
+            input.btn.btn-primary.text-uppercase(type="submit", value="Post comment") 
+        

@@ -1,0 +1,19 @@
+/*-----------------------------------------------
+|   Card
+-----------------------------------------------*/
+
+.pricing {
+  @include media-breakpoint-up(sm){
+    .card-group {
+      .card:not(:last-child) {
+        margin-right: 15px;
+      }
+
+      .card + .card {
+        margin-left: 15px;
+        border-left: 1px;
+        border-color: var(--#{$prefix}primary);
+      }
+    }
+  }
+}

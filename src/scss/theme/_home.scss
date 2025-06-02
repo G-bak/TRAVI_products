@@ -1,0 +1,43 @@
+.short{
+  width: 4.20873rem;
+}
+.background-black-30{
+  background-color: rgba($black, 0.3);
+}
+.color-oxford{
+  color: #002147;
+}
+
+.link-oxford{
+  color: #002147;
+  @include hover-focus{
+    color: #002147;
+  }
+}
+
+.background-oxford{
+  background-color: #002147;
+}
+
+.shop-slider-card {
+  background-color: rgba($white, 0.9);
+  outline:  4px solid rgba($white, 0.9) !important;
+  outline-offset: 6px;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.badge-default {
+  background-color: #636c72;
+}
+
+.perpendicular{
+  position: absolute;
+  bottom: 0;
+  transform-origin: left;
+  transform: rotate(-90deg);
+  line-height: 0;
+}

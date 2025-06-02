@@ -1,0 +1,44 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Dropdowns
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Dropdown & Dropup'
+
+append component 
+
+  h4 Bootstrap 5 dropdown and dropup 
+  p 
+    | Use any button to trigger a dropdown menu by placing it within a 
+    code  .btn-group
+    | and providing the proper menu markup 
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/dropdowns/`,
+    name: pageTitle,
+  })
+  +ComponentCard({
+    subTitle: 'Single Button Dropdown',
+    prismClass: 'mt-5'
+  }).mt-5
+    +SingleDropdown
+
+  +ComponentCard({
+    subTitle: 'Split Button Dropdown',
+    prismClass: 'mt-5'
+  }).mt-5
+    +SplitDropdown
+
+  +ComponentCard({
+    subTitle: 'Single Button Dropdup',
+    prismClass: 'mt-5'
+  }).mt-5
+    +SingleDropup
+  
+  +ComponentCard({
+    subTitle: 'Single Button Dropdup',
+    prismClass: 'mt-5'
+  }).mt-5
+    +SplitDropup

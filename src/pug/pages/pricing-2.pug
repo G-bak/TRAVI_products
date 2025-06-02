@@ -1,0 +1,21 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Pricing-2
+
+prepend styles 
+
+prepend scripts 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:false,
+    name: "POSH",
+    color: "text-100"
+  }).bg-1100.navbar-dark
+
+append content 
+  +Cards
+  +Highlight
+  +FAQSection
+  +Organizers

@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="ko">
+
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- ===============================================-->
+    <!--    Document Title-->
+    <!-- ===============================================-->
+    <title>내 결제</title>
+
+
+    <!-- ===============================================-->
+    <!--    Favicons-->
+    <!-- ===============================================-->
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/images/favicons/favicon2.ico">
+    <!-- <link rel="icon" type="image/png" sizes="32x32" href="../assets/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/images/favicons/favicon-16x16.png"> -->
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/images/favicons/favicon2.ico">
+    <!-- <link rel="manifest" href="../assets/images/favicons/manifest.json">
+    <meta name="msapplication-TileImage" content="../assets/images/favicons/mstile-150x150.png"> -->
+    <meta name="theme-color" content="#ffffff">
+
+
+    <!-- ===============================================-->
+    <!--    Stylesheets-->
+    <!-- ===============================================-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet">
+    <link href="../assets/fonts/iconsmind/iconsmind.css" rel="stylesheet">
+    <link href="../vendors/hamburgers/hamburgers.css" rel="stylesheet">
+    <link href="../assets/css/theme.css" rel="stylesheet" />
+    <link href="../assets/css/user.css" rel="stylesheet" />
+    <link href="../assets/css/custom.css" rel="stylesheet" />
+
+  </head>
+
+
+  <body>
+
+    <!-- ===============================================-->
+    <!--    Main Content-->
+    <!-- ===============================================-->
+    <main class="main" id="top">
+      <div data-layout="container">
+        <div class="content">
+          <nav class="navbar navbar-top navbar-expand-lg bg-1100 navbar-dark">
+            <div class="container px-lg-0 custom-max-width"><a class="navbar-brand" href="../index.html">TRAVI</a>
+              <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarStandard" aria-controls="navbarStandard" aria-expanded="false" aria-label="Toggle navigation" data-hamburger-icon="data-hamburger-icon"><span class="hamburger hamburger--emphatic"><span class="hamburger-box"> <span class="hamburger-inner"></span></span></span></button>
+              <div class="collapse navbar-collapse w-100" id="navbarStandard">
+                <ul class="navbar-nav navbar-nav-top justify-content-end flex-1 me-lg-n2" data-top-nav-dropdowns="data-top-nav-dropdowns">
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">사양표<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">일체형 비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">디지털 양변기
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/bidet-inquiry.html">
+                          <div class="dropdown-item-wrapper">커피머신
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">등록<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/bidet-registration.html">
+                          <div class="dropdown-item-wrapper">비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/all-in-one-bidet-registration.html">
+                          <div class="dropdown-item-wrapper">일체형 비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/digital-toilet-registration.html">
+                          <div class="dropdown-item-wrapper">디지털 양변기
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/coffee-machine-registration.html">
+                          <div class="dropdown-item-wrapper">커피머신
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">수정<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>개별 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/individual-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>일괄 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/batch-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>그룹 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/group-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>                      
+                      <li class="dropdown"><a class="dropdown-item dropdown-toggle" id="about" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">
+                          <div class="dropdown-item-wrapper"><span>가격 수정</span><span class="fas fa-chevron-right dropdown-indicator-icon d-none d-lg-block"> </span><span class="fas fa-chevron-down dropdown-indicator-icon d-lg-none"> </span></div>
+                        </a>
+                        <ul class="dropdown-menu">
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">일체형 비데
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">디지털 양변기
+                              </div>
+                            </a>
+                          </li>
+                          <li> <a class="dropdown-item" href="../pages/price-modification.html">
+                              <div class="dropdown-item-wrapper">커피머신
+                              </div>
+                            </a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">모델 비교<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">일체형 비데
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">디지털 양변기
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/model-comparison.html">
+                          <div class="dropdown-item-wrapper">커피머신
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item dropdown"> <a class="nav-link dropdown-toggle" href="#!" role="button" data-bs-toggle="dropdown" data-bs-auto-close="outside" aria-haspopup="true" aria-expanded="false">최재빈님<span class="fas fa-chevron-down dropdown-toggle-icon"></span></a>
+                    <ul class="dropdown-menu navbar-dropdown-caret">
+                      <li> <a class="dropdown-item" href="../pages/my-payment.html">
+                          <div class="dropdown-item-wrapper">내 결제
+                          </div>
+                        </a>
+                      </li>
+                      <li> <a class="dropdown-item" href="../pages/payment-history.html">
+                          <div class="dropdown-item-wrapper">결제 이력
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </li>
+                  <a class="nav-link px-2" href="#"><i class="fas fa-sign-out-alt me-1"></i> 로그아웃</a>
+                </ul>
+              </div>
+            </div>
+          </nav>
+
+          <!-- ============================================-->
+          <!-- <section> begin ============================-->
+          <section class="pb-5">
+
+            <div class="container px-lg-0 custom-max-width">
+              <!-- <div class="row">
+                <div class="col-md-12 text-center">
+                  <h2>비데 사양표</h2>
+                  <p class="text-700 fs-8 fw-light font-sans-serif">트레비(TREVI)의 전 제품 라인업에 대한 상세 사양을 한눈에 확인해보세요.  </p>
+                  <hr class="short text-400 mb-7 mt-4 mx-auto" />
+                </div>
+              </div> -->
+
+              <div class="row mb-5">
+                <div class="col">
+                  <nav class="mb-3" style="--posh-breadcrumb-divider: '»'" aria-label="breadcrumb">
+                    <ol class="breadcrumb">
+                      <li class="breadcrumb-item text-primary">Home</li>
+                      <li class="breadcrumb-item text-primary">MyPage</li>
+                      <li class="breadcrumb-item active" aria-current="page">My Payment</li>
+                    </ol>
+                  </nav>
+
+                  <!-- 타이틀 + 검색창 좌우 배치 -->
+                  <div class="d-flex justify-content-between align-items-center flex-column flex-md-row">
+                    <h1 class="fs-5 fw-normal mb-3 mb-md-0">내 결제</h1>
+                    <div class="input-group" style="max-width: 300px;">
+                      <input  class="form-control" type="text" placeholder="Search" id="searchInput"/>
+                    </div>
+                  </div>
+
+                  <hr class="text-300 mt-4" />
+                </div>
+              </div>
+
+              <div class="table-responsive mb-5" style="max-height: 588px; overflow: auto;">
+                <table class="table table-striped table-bordered mb-0">
+                  <thead>
+                    <tr>
+                      <th style="white-space: nowrap;">#</th>
+                      <th style="min-width: 230px;">요청 시각</th>
+                      <th style="min-width: 150px;">보고자</th>
+                      <th style="min-width: 150px;">결재자</th>
+                      <th>내용</th>
+                      <th style="min-width: 100px;">결제</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>2025-05-01 09:42</td>
+                      <td>김영희</td>
+                      <td>이상훈</td>
+                      <td>4월 지출 내역 보고</td>
+                      <td><span class="badge text-bg-success text-white cursor-default btn-sm py-1 px-3">승인</span></td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>2025-05-03 13:15</td>
+                      <td>박철수</td>
+                      <td>정은지</td>
+                      <td>신규 인턴 채용 요청</td>
+                      <td><button class="badge text-bg-primary cursor-pointer text-white btn-sm py-1 px-3 border-none">결제</button></td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>2025-05-04 08:27</td>
+                      <td>이민호</td>
+                      <td>김태형</td>
+                      <td>해외 출장 계획 승인 요청</td>
+                      <td><button class="badge text-bg-danger text-white cursor-pointer btn-sm py-1 px-3 border-none">반려</button></td>
+                    </tr>
+                    <tr>
+                      <td>4</td>
+                      <td>2025-05-06 15:50</td>
+                      <td>한지민</td>
+                      <td>최재빈</td>
+                      <td>프로젝트 진행 상황 보고</td>
+                      <td><span class="badge text-bg-warning text-white cursor-default btn-sm py-1 px-3">진행중</span></td>
+                    </tr>
+                    <tr>
+                      <td>5</td>
+                      <td>2025-05-07 10:12</td>
+                      <td>조민수</td>
+                      <td>장하늘</td>
+                      <td>예산 조정 요청</td>
+                      <td><span class="badge text-bg-success text-white cursor-default btn-sm py-1 px-3">승인</span></td>
+                    </tr>
+                    <tr>
+                      <td>6</td>
+                      <td>2025-05-08 11:34</td>
+                      <td>신유진</td>
+                      <td>이상훈</td>
+                      <td>연차 사용 계획 보고</td>
+                      <td><span class="badge text-bg-success text-white cursor-default btn-sm py-1 px-3">승인</span></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              
+            </div>
+            <!-- end of .container-->
+
+            <!-- 결제 처리 모달 -->
+            <div class="modal fade" id="paymentDecisionModal" tabindex="-1" aria-labelledby="paymentDecisionModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-lg">
+                <div class="modal-content shadow-lg border-0 rounded-4">
+                  <div class="modal-header bg-light border-bottom-0 rounded-top-4">
+                    <h5 class="modal-title fw-bold" id="paymentDecisionModalLabel">결제 요청 상세</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                  </div>
+
+                  <div class="modal-body px-4 py-4">
+                    <!-- 요청 정보 -->
+                    <div class="mb-4 p-3 border bg-white shadow-sm">
+                      <div class="row mb-2">
+                        <div class="col-4 text-muted small">요청자</div>
+                        <div id="requesterName" class="col-8 fw-semibold">홍길동</div>
+                      </div>
+                      <div class="row mb-2">
+                        <div class="col-4 text-muted small">요청 일시</div>
+                        <div id="requestDate" class="col-8">2025-06-02 15:46</div>
+                      </div>
+                      <div class="row">
+                        <div class="col-4 text-muted small">요청 내용</div>
+                        <div id="requestContent" class="col-8">신제품 등록 승인 요청</div>
+                      </div>
+                    </div>
+
+                    <!-- 제품 상세 -->
+                    <div class="mb-2">
+                      <h6 class="fw-bold mb-3">제품 상세</h6>
+                      <div class="bg-light p-3 border" style="font-size: 0.925rem;">
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">제품명</div>
+                          <div class="text-dark fw-semibold">ALB-3600</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">전압</div>
+                          <div class="text-dark fw-semibold">220V</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1 align-items-center">
+                          <div class="text-muted">이미지</div>
+                          <div class="text-primary text-decoration-underline fw-semibold" style="cursor:pointer" onclick="BigPicture({ el: this, imgSrc: '/static/images/test-bidet.jpg' })">
+                            test-bidet.jpg
+                          </div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">사이즈</div>
+                          <div class="text-dark fw-semibold">420 x 550 x 150 mm</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">무선 리모컨</div>
+                          <div>–</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">3way 노즐</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">노즐 튜브 살균</div>
+                          <div>–</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">비데 무브 기능</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">세정 무브 기능</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">터보 세정</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">마사지 모드</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">어린이 모드</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">노즐 위치 조절</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">수압 조절</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">온수 온도 조절</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">소프트 오픈/클로즈</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">건조 기능</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">자사 양변기 호환성</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">온열 변좌</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">컨트롤러 타입</div>
+                          <div>Tact</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">LED 무드등</div>
+                          <div>–</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">노즐 자가세척</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">노즐 재질</div>
+                          <div>Full Stainless</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">탱크 타입</div>
+                          <div>Storage Type</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">컨트롤러 방수 등급</div>
+                          <div>IPX4</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">본체 방수 등급</div>
+                          <div>IPX4</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">리모컨 방수 등급</div>
+                          <div>–</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">착좌 센서</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">절전 모드</div>
+                          <div>✓</div>
+                        </div>
+                        <div class="d-flex justify-content-between border-bottom py-1">
+                          <div class="text-muted">소비자가</div>
+                          <div>₩99,000</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- 반려 사유 -->
+                    <div class="mb-4 d-none" id="rejectionReasonWrapper">
+                      <label class="form-label text-danger fw-semibold">반려 사유 입력</label>
+                      <textarea class="form-control mb-2" rows="3" placeholder="반려 사유를 입력하세요"></textarea>
+                      <button class="btn btn-outline-danger w-100">반려 확정</button>
+                    </div>
+
+                    <!-- 전달 영역 -->
+                    <div class="mb-4 d-none" id="forwardApprovalWrapper">
+                      <label class="form-label fw-semibold text-primary">보고 내용</label>
+                      <textarea class="form-control mb-3" rows="2" placeholder="보고 내용을 입력하세요"></textarea>
+                      <label class="form-label fw-semibold text-primary">결재자 선택</label>
+                      <div class="d-flex gap-2">
+                        <select class="form-select w-50">
+                          <option value="" disabled selected>결재자를 선택하세요</option>
+                          <option value="u1">김부장</option>
+                          <option value="u2">이이사</option>
+                        </select>
+                        <button class="btn btn-outline-primary w-50">요청 보내기</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="modal-footer bg-light border-top-0 rounded-bottom-4">
+                    <button type="button" id="confirmRejectBtn" class="btn btn-danger px-4" onclick="document.getElementById('rejectionReasonWrapper').classList.toggle('d-none')">반려</button>
+                    <button type="button" id="sendForwardBtn" class="btn btn-primary px-4" onclick="document.getElementById('forwardApprovalWrapper').classList.toggle('d-none')">다른 결재자에게 전달</button>
+                    <button type="button" class="btn btn-success text-white px-4">최종 승인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 반려 사유 모달 -->
+            <div class="modal fade" id="rejectionModal" tabindex="-1" aria-labelledby="rejectionModalLabel" aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="rejectionModalLabel">반려 사유</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="닫기"></button>
+                  </div>
+                  <div class="modal-body">
+                    <p id="rejectionReason" class="mb-0 text-secondary"></p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </section>
+          <!-- <section> close ============================-->
+          <!-- ============================================-->
+
+          <footer class="bg-1100 text-400 fs-10 fw-semi-bold py-3" style="position: fixed; bottom: 0; right: 0; left: 0;">
+            <div class="container px-lg-0 custom-max-width">
+              <div class="row align-items-center">
+                <div class="col-auto">&copy; 2025 (주)에이스라이프 &trade; Inc. </div>
+                <div class="col text-end fs-9 me-lg-n2"> <a class="p-2 link-400" href="../"><span class="fab fa-facebook-f" style="width:9px" data-fa-transform="up-1"></span></a><a class="p-2 link-400" href="../"><span class="fab fa-twitter" style="width:14px"></span></a><a class="p-2 link-400" href="../"><span class="fab fa-instagram" style="width:14px"> </span></a><a class="p-2 link-400" href="../"><span class="fab fa-behance" style="width:18px"> </span></a><a class="p-2 link-400" href="../"><span class="fab fa-dribbble" style="width:14px"></span></a></div>
+              </div>
+            </div>
+          </footer>
+
+        </div>
+      </div>
+    </main>
+    <!-- ===============================================-->
+    <!--    End of Main Content-->
+    <!-- ===============================================-->
+
+
+
+
+    <!-- ===============================================-->
+    <!--    JavaScripts-->
+    <!-- ===============================================-->
+    <script src="../vendors/popper/popper.min.js"></script>
+    <script src="../vendors/bootstrap/bootstrap.min.js"></script>
+    <script src="../vendors/is/is.min.js"></script>
+    <script src="../vendors/fontawesome/all.min.js"></script>
+    <script src="../vendors/lodash/lodash.min.js"></script>
+    <script src="../assets/js/theme.js"></script>
+    <script>
+      // 각 반려 항목의 사유를 여기에 설정
+      const rejectionReasons = {
+        1: "예산 초과로 인해 반려되었습니다.",
+        3: "내용 미비로 반려되었습니다.",
+        5: "결재 기준 미충족으로 반려되었습니다."
+      };
+
+      document.addEventListener("DOMContentLoaded", () => {
+        const modal = new bootstrap.Modal(document.getElementById('rejectionModal'));
+        const reasonElement = document.getElementById('rejectionReason');
+
+        document.querySelectorAll("table tbody tr").forEach(row => {
+          const btn = row.querySelector("button");
+
+          if (btn && btn.textContent.trim() === "반려") {
+            btn.classList.remove("btn-outline-warning");
+            btn.classList.add("btn-outline-danger");
+
+            btn.addEventListener("click", () => {
+              const rowIndex = row.querySelector("td").textContent.trim();
+              const message = rejectionReasons[rowIndex] || "반려 사유가 등록되지 않았습니다.";
+              reasonElement.textContent = message;
+              modal.show();
+            });
+          }
+        });
+      });
+    </script>
+
+    <script>
+      // 모달 객체를 올바르게 생성
+      const approvalModal = new bootstrap.Modal(document.getElementById('paymentDecisionModal'));
+
+      // 버튼 참조
+      const rejectBtn = document.getElementById('rejectBtn');
+      const forwardBtn = document.getElementById('forwardBtn');
+      const approveBtn = document.getElementById('approveBtn');
+      const rejectionReasonWrapper = document.getElementById('rejectionReasonWrapper');
+      const forwardApprovalWrapper = document.getElementById('forwardApprovalWrapper');
+
+      document.querySelectorAll('button').forEach(button => {
+        if (button.textContent.trim() === '결제') {
+          button.addEventListener('click', function () {
+            const row = this.closest('tr');
+            const cells = row.querySelectorAll('td');
+
+            // 모달에 데이터 삽입
+            document.getElementById('requesterName').textContent = cells[2].textContent;
+            document.getElementById('requestDate').textContent = cells[1].textContent;
+            document.getElementById('requestContent').textContent = cells[4].textContent;
+
+            // 초기화
+            rejectionReasonWrapper.classList.add('d-none');
+            forwardApprovalWrapper.classList.add('d-none');
+
+            approvalModal.show();
+          });
+        }
+      });
+
+      rejectBtn.addEventListener('click', () => {
+        rejectionReasonWrapper.classList.toggle('d-none');
+        forwardApprovalWrapper.classList.add('d-none');
+      });
+
+      forwardBtn.addEventListener('click', () => {
+        forwardApprovalWrapper.classList.toggle('d-none');
+        rejectionReasonWrapper.classList.add('d-none');
+      });
+
+      approveBtn.addEventListener('click', () => {
+        alert('최종 승인 처리되었습니다.');
+        approvalModal.hide();
+      });
+
+      document.getElementById('sendForwardBtn').addEventListener('click', () => {
+        const selected = document.getElementById('approverSelect').value;
+        const additionalComment = document.getElementById('additionalComment').value.trim();
+
+        if (!selected) {
+          alert('결재자를 선택해주세요.');
+          return;
+        }
+
+        let message = `결재 요청이 ${selected}님에게 전달되었습니다.`;
+        if (additionalComment) {
+          message += `\n\n보고 내용:\n${additionalComment}`;
+        }
+
+        alert(message);
+
+        // 초기화 후 모달 닫기
+        document.getElementById('additionalComment').value = '';
+        approvalModal.hide();
+      });
+
+    </script>
+
+    <script>
+      // 이미 있는 modal 관련 JS 코드와 연결됨
+      document.getElementById('confirmRejectBtn').addEventListener('click', () => {
+        const reason = document.getElementById('rejectionInput').value.trim();
+        if (!reason) {
+          alert("반려 사유를 입력해주세요.");
+          return;
+        }
+
+        // 실제 반려 처리 로직이 여기에 들어가야 함 (예: 서버 전송 등)
+        alert(`반려 처리되었습니다.\n사유: ${reason}`);
+        document.getElementById('rejectionInput').value = "";
+        rejectionReasonWrapper.classList.add('d-none');
+        bootstrap.Modal.getInstance(document.getElementById('paymentDecisionModal')).hide();
+      });
+
+      document.getElementById("searchInput").addEventListener("input", function () {
+        const keyword = this.value.trim().toLowerCase();
+        const rows = document.querySelectorAll("table tbody tr");
+
+        rows.forEach(row => {
+          const text = row.innerText.toLowerCase();
+          row.style.display = text.includes(keyword) ? "" : "none";
+        });
+      });
+    </script>
+
+
+  </body>
+
+</html>

@@ -1,0 +1,14 @@
+mixin NavbarDoubleStandard(config) 
+  section.bg-1000.py-2.text-400.d-none.d-lg-block.fw-semi-bold
+    .container 
+      .row.align-items-center 
+        .col-md-10.align-self-center 
+          p.mb-md-0.fs-10 3752 Las Vegas Boulevard South, Las Vegas, NV 89158 USA &nbsp;|&nbsp;
+            a.link-400(href='tel:+17025908888') +1 (702) 590 8888
+              |  &nbsp;|
+            a.link-400.text-uppercase.ps-2.ms-1(href='#map')
+              span.fas.fa-map-marker-alt.me-2.text-400(style="width: 8px")
+              | Maps &amp; Directions
+        .col.text-end 
+          a.btn.btn-outline-warning.btn-xs(href="#book") Book My Stay
+  +MainNav(config)&attributes(attributes)

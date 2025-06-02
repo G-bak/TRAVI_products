@@ -1,0 +1,19 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Contacts
+
+prepend styles 
+
+prepend scripts 
+  script(src!=`https://maps.googleapis.com/maps/api/js?key=${APIGmap}&loading=async&callback=initMap`) 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    width: '70',
+    logo: 'posh-logo-white.png'
+  }).bg-1100.navbar-dark
+
+append content
+  +ContactTwo

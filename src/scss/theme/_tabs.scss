@@ -1,0 +1,44 @@
+.tabs{
+  display: flex;
+  flex-direction: column;
+  @include navigation-bar();
+  overflow: hidden;
+
+  .tab-contents{ 
+      margin-top: 30px;
+      position: relative;
+      .tab-content{
+          backface-visibility: hidden;
+          &:not(.active){
+              position: absolute;
+              left: 0;
+              top: 0;
+              pointer-events: none;
+              opacity: 1;
+              animation: fadeOutRight .25s ease forwards;
+          } 
+          
+          &.active{
+              animation: fadeInLeft .5s ease forwards;
+          }
+      }
+  }
+}
+
+
+.home-conference {
+    .tabs {
+        .nav-bar{
+            .nav-bar-item{
+                display: inline-flex;
+                justify-content: center;
+            }
+            .nav-bar-item.active{
+                color : var(--#{$prefix}danger);
+            }
+            .indicator {
+                background-color: var(--#{$prefix}danger);
+            }
+        }
+    }
+}

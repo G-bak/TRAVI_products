@@ -1,0 +1,21 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Forms
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Form elements'
+
+append component
+  h4 Smart Switch 
+  +SmartSwitch
+  h4 Bootstrap 5 Form Elements 
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/forms/layout/`,
+    name: pageTitle,
+  })
+  +StandardInputs
+  +InputsWithFeedback
+  +InputSizes

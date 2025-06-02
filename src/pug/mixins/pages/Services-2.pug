@@ -1,0 +1,41 @@
+mixin Intro 
+  +Section(container).pb-0
+    .row.justify-content-center 
+      .col-lg-10.col-xl-9.text-center 
+        h1.fs-6.mb-4.fw-normal Embracing the Future
+        p.text-500.lead.mb-6 A multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.
+
+mixin ServiceCardOne
+  +Section(container).py-3
+    .position-relative  
+      +Background({image: `${CWD}assets/images/digital-agency-header.jpg`, className: 'overlay overlay-1'})
+      .row.px-lg-6.py-8  
+        .col-lg-8.col-xl-5
+          h4.text-white 1000's of CSS Helpers 
+          p.lead.text-white Customize colors, buttons, typography, gaps, spaces and everything for every single screen sizes individually without writing any CSS at all.
+
+mixin ServiceCardTwo
+  +Section(container).py-3
+    .position-relative 
+      +Background({image: `${CWD}assets/images/careers-header.jpg`, className: 'overlay overlay-1'})
+      .row.px-lg-6.py-8
+        .col-lg-8.col-xl-5 
+          h4.text-white Prebuilt 100+ Layouts 
+          p.lead.text-white With enormous built in layouts, rigorously tested and optimized for laptops, phones, tabs and every other devices; Posh empowers you to design sites in a more flexible and multitudinous way.
+      
+mixin ServiceCardThree
+  +Section(container).py-3
+    .position-relative 
+      +Background({image: `${CWD}assets/images/education-01.jpg`, className: 'overlay overlay-1'}) 
+      .row.px-lg-6.py-8
+        .col-lg-8.col-xl-5
+          h4.text-white Documented Code
+          p.lead.text-white Posh comes with high-end styling, well indented code and detailed documentation for each elements. Perfectly designed to guide starters.
+
+mixin PurchasePoshNow 
+  +Section(container)
+    .row.text-center.justify-content-center 
+      .col-xl-7 
+        h3.mb-2.fw-normal Purchase Posh now
+        p.lead.text-700.mb-5 Each purchase comes with a six months priority support and lifetime updates.
+        a.btn.btn-primary(href="#!")  Try Posh

@@ -1,0 +1,132 @@
+mixin TravelAgency 
+  +Section({image:`${CWD}assets/images/tarvel-header.jpg`, className: 'overlay'}, container).p-0.text-center
+    .row.justify-content-center
+      .col-md-8.align-self-center.py-11 
+        h1.fs-6.fs-md-5.mb-5.fw-light.text-white 
+          | Jump into 
+          span.fw-semi-bold Ireland 
+        a.video-modal.d-block.pb-2(href='#!' data-bigPicture!={ytSrc:'c8aFcHFu8QM'})
+          img(src=`${CWD}assets/images/icons/icon-play.svg`, alt="" width=80)
+
+        h6.fs-9.lh-2.m-0.text-white Live in the Now
+
+      .col-12.align-self-bottom 
+        .bg-1100.text-center.lead.text-300.fst-italic.py-4.fs-7.font-sans-serif Explore our warm welcoming island and become part of it
+
+
+  section.py-0
+    .container
+      .row.g-0 
+        a.link-100.col-md-6.pt-11.px-4(href="#!").position-relative
+          +Background({image:`${CWD}assets/images/travel-01.jpg`,  className: 'overlay overlay-gradient'})
+          span.badge.badge-default.mb-2.text-uppercase.py-2.px-3.ls-2 Wild Atlantic Way 
+          h4.mb-0.pb-4.text-100 A wild and rugged journey
+        
+        a.link-100.col-md-6.pt-11.px-4(href="#!").position-relative
+          +Background({image:`${CWD}assets/images/travel-02.jpg`,  className: 'overlay overlay-gradient'})
+          span.badge.badge-default.mb-2.text-uppercase.py-2.px-3.ls-2 Northern Ireland
+          h4.mb-0.pb-4.text-100 Get ready for an adventure
+
+        a.link-100.col-md-6.pt-11.px-4(href="#!").position-relative
+          +Background({image:`${CWD}assets/images/travel-04.jpg`,  className: 'overlay overlay-gradient'})
+          span.badge.badge-default.mb-2.text-uppercase.py-2.px-3.ls-2 Dublin
+          h4.mb-0.pb-4.text-100 Experience the unexpected
+
+        a.link-100.col-md-6.pt-11.px-4(href="#!").position-relative
+          +Background({image:`${CWD}assets/images/travel-03.jpg`,  className: 'overlay overlay-gradient'})
+          span.badge.badge-default.mb-2.text-uppercase.py-2.px-3.ls-2 Ireland’s Ancient East
+          h4.mb-0.pb-4.text-100 Centuries of ancient stories
+
+        .col-12.mt-5.text-center 
+          a.btn.btn-link.fs-9(href="#!")
+            | View All &xrarr;
+  
+  +Section(container).py-8.text-center
+    .row 
+      .col-6.col-md-3.mb-5.mb-md-0 
+        span.icon-Mail-3.fs-3.text-800 
+        h5.mt-3 Future Updates 
+        p.text-700  Directly to your inbox
+
+      .col-6.col-md-3.mb-5.mb-md-0 
+        span.icon-Air-Balloon.fs-3.text-800 
+        h5.mt-3 Modular Codes
+        p.text-700  Use any section everywhere
+      
+      .col-6.col-md-3.mb-5.mb-md-0 
+        span.icon-Bacteria.fs-3.text-800 
+        h5.mt-3 Easy Documentation
+        p.text-700  For effortless customization
+      
+      .col-6.col-md-3.mb-5.mb-md-0 
+        span.icon-Fingerprint-2.fs-3.text-800 
+        h5.mt-3 Dedicated Support
+        p.text-700  Whenever you need it
+
+  +Section({image: `${CWD}assets/images/generic-01.jpg`, className: 'overlay', attrs:{'data-rellax-speed':'-5', 'data-parallax': 'data-parallax'}}, container).has-parallax.py-11
+    .row.align-items-center
+      .col-md-6.col-lg-5
+        h5.mb-3.text-white Explore Posh 
+        p.fw-light.fs-8.fst-italic.text-white.font-sans-serif From a simple hyperlink to the contact form, Posh is packed with so many elements and features to do more.
+
+        a.btn.btn-link.ps-0.fs-9.text-white Start exploring &xrarr;
+
+  +Section(container).py-8
+    .row
+      .col-sm-6.col-md-4 
+        .card.border-200.h-100.mb-5.mb-md-0 
+          a(href="#!")
+            img.card-img-top(src=`${CWD}assets/images/blog-02.jpg`, alt="")
+          .card-body.flex-1.p-4 
+            a.link-black(href="#!")
+              h6.mb-2.fs-8.fw-semi-bold.fs-10 Luxury Apartment - Tribeca 
+            p.fs-10.text-700 4 Nights &middot; 2 Guests
+          .card-footer.pt-0.border-top-0
+            a.fs-10.fw-semi-bold(href="#!")  View Experience
+      
+      .col-sm-6.col-md-4 
+        .card.border-200.h-100.mb-5.mb-md-0 
+          a(href="#!")
+            img.card-img-top(src=`${CWD}assets/images/blog-05.jpg`, alt="")
+          .card-body.flex-1.p-4 
+            a.link-black(href="#!")
+              h6.mb-2.fs-8.fw-semi-bold.fs-10 Hyatt Zilara Cancun Escape
+            p.fs-10.text-700 3 Nights &middot; 2 - 7 Guests
+          .card-footer.pt-0.border-top-0
+            a.fs-10.fw-semi-bold(href="#!")  View Experience
+          
+      .col-sm-6.col-md-4 
+        .card.border-200.h-100 
+          a(href="#!")
+            img.card-img-top(src=`${CWD}assets/images/blog-10.jpg`, alt="")
+          .card-body.flex-1.p-4 
+            a.link-black(href="#!")
+              h6.mb-2.fs-8.fw-semi-bold.fs-10 Wailea Beach Resort
+            p.fs-10.text-700 4 Nights &middot; 10 Guests
+          .card-footer.pt-0.border-top-0
+            a.fs-10.fw-semi-bold(href="#!")  View Experience
+
+  +Section(container).py-8.bg-100.text-center.overflow-hidden
+    h3.fw-light.text-1100.mb-0 Create Travel Website 
+      span.typed-text.fw-semi-bold(data-typed-text!=['effortlessly.', 'stunningly.'])
+    p.fw-light.fs-8.text-700 Make unique design for travel websites from 174 premade layouts
+    form.text-900.row.mt-5
+      .col-md-6.col-lg-3.px-lg-1
+        .form-group 
+          input.form-control.mb-2.me-sm-2.mb-sm-0.w-100.px-5.fw-semi-bold.bg-white(type="text" placeholder="Destination")
+      .col-md-6.col-lg-3.px-lg-1
+        .form-group 
+          input.form-control.mb-2.me-sm-2.mb-sm-0.w-100.px-5.fw-semi-bold.bg-white(type="text" placeholder="Location")
+        
+      .col-md-6.col-lg-3.ps-lg-1.pe-lg-3 
+        .form-group 
+          select#categories.form-select.fs-10.fw-semi-bold.px-5.bg-white(name="categories")
+            option(value="")  Any Package 
+            option(value="honeymoon") Honeymoon
+            option(value="family")  Family 
+            option(value="Exotic")  Exotic 
+            option(value="adult") Adult only  
+      
+      .col-md-6.col-lg-3.ps-lg-5 
+        button.btn.btn-primary.w-100(type="submit") Submit 
+  hr.text-1100.m-0

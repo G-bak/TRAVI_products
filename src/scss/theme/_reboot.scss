@@ -1,0 +1,194 @@
+/*-----------------------------------------------
+|   Reboot
+-----------------------------------------------*/
+::placeholder {
+  opacity: 1;
+  color: var(--#{$prefix}gray-400);
+}
+
+::selection {
+  background-color: var(--#{$prefix}primary);
+  color: $white;
+}
+
+[id]{
+  scroll-margin-top: calc($top-nav-height + 1.5rem);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+pre,
+code {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+section {
+  position: relative;
+  padding-top: map_get($spacers, 6);
+  padding-bottom: map_get($spacers, 6);
+
+  @include media-breakpoint-up(md) {
+    padding-top: map_get($spacers, 8);
+    padding-bottom: map_get($spacers, 8);
+  }
+}
+
+small {
+  font-size: map-get($font-sizes, 10);
+}
+.small, small{
+  font-weight: 400;
+}
+
+//setting up font family for bootstrap components
+input,
+button,
+select,
+optgroup,
+textarea,
+label,
+.alert,
+.badge,
+.blockquote-footer,
+.btn,
+.navbar,
+.pagination,
+.valid-feedback,
+.invalid-feedback {
+  font-family: var(--#{$prefix}font-base);
+}
+
+pre {
+  margin: 0;
+  transform: translate3d(0, 0, 0);
+}
+
+strong {
+  font-weight: $font-weight-semi-bold;
+}
+
+label {
+  font-size: map_get($font-sizes, 10);
+  font-weight: $form-label-font-weight;
+  margin-bottom: $form-label-margin-bottom;
+  letter-spacing: 0.02em;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-size: $font-size-sm;
+}
+
+[dir="rtl"]{
+  pre, code, kbd, samp{
+    direction: rtl
+  }
+}
+
+[data-bs-theme="dark"] {
+  .d-dark-none {
+    display: none;
+  }
+}
+
+html:not([data-bs-theme="dark"]) {
+  .d-light-none {
+    display: none;
+  }
+}
+img{
+  max-width: 100%;
+}
+
+
+th{
+  font-size: map-get($font-sizes, 10 ); 
+}
+
+legend {
+  font-size: map-get($font-sizes, 10);
+  font-weight: $font-weight-semi-bold;
+}
+
+.form-check-level{
+  margin-bottom: 0;
+}
+/*-----------------------------------------------
+|   Headers
+-----------------------------------------------*/
+
+
+.h4, h4{
+  margin-bottom: 1.333rem;
+}
+
+h1, .h1 {
+  line-height: 1;
+}
+
+// font family
+
+@font-face {
+  font-family: 'Droid';
+  src: url('../fonts/droid-serif/DroidSerif-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'Droid';
+  src: url('../fonts/droid-serif/DroidSerif.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'iconsmind';
+	src:url('../fonts/iconsmind/iconsmind.eot?#iefix-rdmvgc') format('embedded-opentype');
+	src:url('../fonts/iconsmind/iconsmind.woff') format('woff'),
+		url('../fonts/iconsmind/iconsmind.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+	font-family: 'iconsmind';
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+[class^="icon-"],[class*=" icon-"] {
+  display: inline-block
+}
+ol,
+ul {
+  padding-left: 2.5rem;
+}
+
+.no-style{
+  list-style: none;
+}
+
+.shop-breadcrumb {
+  .breadcrumb-item {
+    & + .breadcrumb-item {
+      padding-left: 3px;
+      &::before {
+        padding-right: 3px;
+      }
+    }
+  }
+}

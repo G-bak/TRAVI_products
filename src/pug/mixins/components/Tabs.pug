@@ -1,0 +1,96 @@
+mixin CommonTabContents 
+    .tab-contents&attributes(attributes) 
+      .tab-content.active 
+        p.lead.text-1100 Duis ac facilisis mauris. Pellentesque leo tortor, maximus sed gravida dapibus, suscipit non nisi. Duis ultrices diam a maximus imperdiet. Nam eu purus a erat tristique ornare. Donec condimentum tristique diam eu congue. 
+        
+      .tab-content 
+        p.lead.text-1100 Nullam sed tempus mauris, vitae pretium nibh. Nam pretium diam id massa mollis pretium. Aenean lacus massa, tristique id mauris ac, sollicitudin auctor neque. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Nam luctus, sapien ligula finibus turpis.
+      
+      .tab-content 
+        p.lead.text-1100 Vestibulum convallis diam id nibh tempus, ac scelerisque nulla congue. Cras laoreet nunc nibh, ac tristique orci rutrum quis. Sed eu tellus pharetra, scelerisque nulla in, vehicula libero. Curabitur interdum nec metus ante sed luctus.
+        
+
+mixin SmartTabExample
+  .tabs.mt-4(data-tabs) 
+    .nav-bar.nav-bar-center
+      .nav-bar-item.active 
+        span.icon-Home-4.fs-7
+        br
+        | Home
+      
+      .nav-bar-item
+        span.icon-Talk-Man.fs-7
+        br
+        | Profile
+      
+      .nav-bar-item
+        span.icon-Security-Settings.fs-7
+        br
+        | Settings 
+    
+    +CommonTabContents
+
+mixin LeftAlignTabExample 
+  .tabs.mt-4(data-tabs) 
+    .nav-bar
+      .nav-bar-item.active  Home
+      
+      .nav-bar-item Profile
+      
+      .nav-bar-item Settings 
+    
+    +CommonTabContents
+
+mixin CenterAlighTabExample 
+  h5.mt-5.text-center Center Align
+  p.text-center 
+    | Add class 
+    code .nav-bar-center 
+    | to 
+    code .nav-bar 
+    | for tabs position and 
+    code .text-center 
+    | to 
+    code  .tab-contents 
+    | for content position.
+
+  .tabs.mt-4(data-tabs) 
+    .nav-bar.nav-bar-center
+      .nav-bar-item.active  Home
+      
+      .nav-bar-item Profile
+      
+      .nav-bar-item Settings 
+    
+    +CommonTabContents().text-center
+  
+  pre.mt-5 
+    code.language-html. 
+      #{'<div class="tabs" data-tabs="data-tabs">\n\t<div class="nav-bar nav-bar-center">\n\t...\n\t</div>\n\t<div class="tab-contents text-center">\n\t...\n\t</div>\n</div>'}
+
+mixin RightAlighTabExample 
+  h5.mt-5.text-end  Right Align
+  p.text-end 
+    | Add class 
+    code .nav-bar-end 
+    | to 
+    code .nav-bar 
+    | for tabs position and 
+    code .text-end 
+    | to 
+    code  .tab-contents 
+    | for content position.
+
+  .tabs.mt-4(data-tabs) 
+    .nav-bar.nav-bar-end
+      .nav-bar-item.active  Home
+      
+      .nav-bar-item Profile
+      
+      .nav-bar-item Settings 
+    
+    +CommonTabContents().text-end
+  
+  pre.mt-5 
+    code.language-html. 
+      #{'<div class="tabs" data-tabs="data-tabs">\n\t<div class="nav-bar nav-bar-end">\n\t...\n\t</div>\n\t<div class="tab-contents text-end">\n\t...\n\t</div>\n</div>'}

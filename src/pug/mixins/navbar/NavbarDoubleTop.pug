@@ -1,0 +1,19 @@
+mixin NavbarDoubleTop(config) 
+  section.bg-100.py-2 
+    .container 
+      .row 
+        .col 
+          a(href="#!").btn.btn-link.btn-xs.link-800.pe-4.ps-0  Careers
+          a(href="#!").btn.btn-link.btn-xs.link-800.pe-4.ps-0  Contact Us
+          a(href="#!").btn.btn-link.btn-xs.link-800.ps-0  Medical Staff 
+        .col-auto.text-lg-end.me-lg-n1.px-0.pe-lg-1 
+          a(href="#!").btn.btn-link.btn-xs.link-800
+            span.fas.fa-comments(style="margin-right: 2px; font-size: 10px;")  
+            span  Live chat
+          a(href="#!").btn.btn-link.btn-xs.link-800
+            span.fas.fa-phone-volume.fs-10(style="margin-right: 2px;")
+            span  1-888-VIRTUA-3
+          a(href="#!").btn.btn-link.btn-xs.link-danger
+            span.fas.fa-ambulance(style="transform:scaleX(-1); font-size:10px; margin-right: 2px;") 
+            span  Emergency 24/7
+  +MainNav(config,attributes)

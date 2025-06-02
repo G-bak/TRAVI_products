@@ -1,0 +1,29 @@
+extends Layout
+include ../mixins/navbar/MainNav
+include ../mixins/navbar/NavbarDoubleTop
+include ../mixins/navbar/NavbarDoubleStandard
+include ../mixins/navbar/NavbarDoubleAlternate
+include ../mixins/common/Logo
+include ../mixins/common/Footer
+include ../mixins/layouts/LayoutContent
+include ../mixins/Variables
+
+append headScripts
+
+prepend styles
+  link(rel='preconnect' href='https://fonts.gstatic.com')
+  link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet")
+  link(href=`${CWD}assets/fonts/iconsmind/iconsmind.css` rel="stylesheet")
+  link(href=`${CWD}vendors/hamburgers/hamburgers.css` rel="stylesheet")
+
+  
+
+prepend scripts
+  script(src=`${CWD}vendors/fontawesome/all.min.js`)
+  script(src=`${CWD}vendors/lodash/lodash.min.js`)
+  script(src=`https://polyfill.io/v3/polyfill.min.js?features=window.scroll`)
+
+append afterMainContent
+  
+block mainContent
+  +LayoutContent

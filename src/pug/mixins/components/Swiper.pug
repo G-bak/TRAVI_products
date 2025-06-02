@@ -1,0 +1,86 @@
+mixin SwiperCarousel
+  +ComponentCard({
+    prismClass: 'mt-4'
+    }).mb-3
+      .row
+        .col-lg-12.mb-4.mb-lg-0
+          .swiper-theme-container.swiper-slider(data-swiper-theme-container)
+            .swiper(data-swiper!={
+              autoplay: true,
+              spaceBetween: 30,
+              loop: true,
+              loopedSlides: 5,
+              slideToClickedSlide: true,
+              slidesPerView: 1,
+              breakpoints: {
+                0: {
+                  slidesPerView: 1
+                },
+                768: {
+                  slidesPerView: 2
+                }
+              },
+            })
+              .swiper-wrapper
+                each items in sliderImages
+                  .swiper-slide
+                    = '\n'
+                    img(src=`${CWD}${items.imageSrc}` alt="").w-100.h-100
+                    = '\n'
+              .swiper-pagination   
+              .swiper-nav
+                .swiper-button-next.swiper-button-white
+                .swiper-button-prev.swiper-button-white 
+mixin SwiperWithoutThumbnail 
+  .row
+    .col-lg-12.mb-4.mb-lg-0
+      .swiper-theme-container.swiper-slider(data-swiper-theme-container)
+        .swiper(data-swiper!={
+          autoplay: true,
+          spaceBetween: 5,
+          loop: true,
+          loopedSlides: 5,
+          slideToClickedSlide: true,
+        })
+          .swiper-wrapper
+            each items in sliderImages
+              .swiper-slide
+                = '\n'
+                img(src=`${CWD}${items.imageSrc}` alt="").w-100.h-100 
+                = '\n'
+          .swiper-nav
+            .swiper-button-next.swiper-button-white
+            .swiper-button-prev.swiper-button-white 
+
+mixin SwiperWithThumbnail
+  .row
+    .col-lg-12.mb-4.mb-lg-0
+      .swiper-theme-container.swiper-slider(data-swiper-theme-container)
+        .swiper(data-swiper!={
+          spaceBetween: 5,
+          loop: true,
+          loopedSlides: 5,
+          thumb: {
+            spaceBetween: 5,
+            slidesPerView: 5,
+            loop: true,
+            freeMode: true,
+            grabCursor: true,
+            loopedSlides: 5, 
+            centeredSlides: true,
+            slideToClickedSlide: true,
+            watchSlidesVisibility: true,
+            watchSlidesProgress: true,
+          },
+          slideToClickedSlide: true,
+        })
+          .swiper-wrapper
+            each items in sliderImages
+              .swiper-slide
+                = '\n'
+                img(src=`${CWD}${items.imageSrc}` alt="").w-100.h-100
+                = '\n'
+
+          .swiper-nav
+            .swiper-button-next
+            .swiper-button-prev

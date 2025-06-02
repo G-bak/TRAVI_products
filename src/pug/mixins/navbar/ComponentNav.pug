@@ -1,0 +1,18 @@
+mixin ComponentsNav
+  nav.sticky-top.pt-5.ps-5
+    h6.mb-3.fs-9  Jump into
+    ul#nav-elements.components-nav.list-unstyled.fs-10.lh-5.ps-0 
+      each item, index in sitemap
+        if item.label === 'components'
+          each page in item.pages
+            - var title = page.name
+            - var href = `${CWD}${page.path}.html`
+            
+            if title.toLowerCase().split('-').join(' ').indexOf(pageTitle.toLowerCase()) !== -1
+              li 
+                a.link-primary.fw-semi-bold(href=href)
+                  +cleanText(title) 
+            else 
+              li 
+                a.link-700(href=href)
+                  +cleanText(title) 

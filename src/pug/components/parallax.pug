@@ -1,0 +1,39 @@
+extends ../layouts/LayoutComponent
+
+include ../mixins/components/Navigations
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Parallax'
+
+append component 
+  p 
+    | Add 
+    code  data-parallax 
+    | and
+    code  .data-rellax-speed 
+    | to make a parallax object. 
+
+  pre.language-html.mt-4
+    code.language-html. 
+      #{'<h1 data-rellax-speed="-20" data-parallax="data-parallax">Parallax</h1>'}
+
+  p.mt-3 
+    code data-rellax-speed 
+    | can be positive or negative 
+    code number 
+    | .
+
+  +ComponentCard({
+    prismTitle: 'JavaScript',
+  }).my-5
+    script(src=`${CWD}vendors/rellax/rellax.js`)
+  
+  p 
+    | For 
+    strong  parallax backgrounds 
+    a(href=`${CWD}components/backgrounds.html#parallaxBackgrounds`)  See here 
+      span.me-1 &xrarr;

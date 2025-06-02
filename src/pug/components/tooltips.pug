@@ -1,0 +1,20 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Tooltips
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Tooltips'
+
+append component
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/components/tooltips/`,
+    name: pageTitle,
+  })
+
+  +ComponentCard({
+    prismClass: 'mt-5'
+  }).mt-5
+    +TooltipExample

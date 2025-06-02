@@ -1,0 +1,37 @@
+/* -------------------------------------------------------------------------- */
+/*                                  Accordion                                 */
+/* -------------------------------------------------------------------------- */
+
+
+
+.accordion-button{
+  font-size: map-get($font-sizes, 10);
+  font-weight: var(--#{$prefix}font-weight-semi-bold);
+  line-height: $line-height-xl;
+  letter-spacing: 0.01em;
+  &:not(.collapsed){
+    box-shadow: none;
+    &::before{
+      background-image: var(--#{$prefix}accordion-btn-active-icon);
+      transform: var(--#{$prefix}accordion-btn-icon-transform);
+    }
+  }
+
+  &::after{
+    display: none;
+  }
+  &::before {
+    flex-shrink: 0;
+    width: var(--#{$prefix}accordion-btn-icon-width);
+    height: var(--#{$prefix}accordion-btn-icon-width);
+    margin-right: 1.3em;
+    margin-left: .2rem;
+    content: "";
+    background-image: var(--#{$prefix}accordion-btn-icon);
+    background-repeat: no-repeat;
+    background-size: var(--#{$prefix}accordion-btn-icon-width);
+    @include transition(var(--#{$prefix}accordion-btn-icon-transition));
+  }
+
+
+}

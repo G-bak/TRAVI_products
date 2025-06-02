@@ -1,0 +1,21 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/DigitalAgency
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+prepend scripts
+  script(src=`${CWD}vendors/rellax/rellax.js`)
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    width: '70',
+    logo: 'posh-logo-white.png'
+  }).bg-1100.navbar-dark
+
+append content 
+  +DigitalAgency

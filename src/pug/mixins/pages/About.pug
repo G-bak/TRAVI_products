@@ -1,0 +1,276 @@
+mixin MakerInfo({image, name, designation})
+
+  .col-sm-6.col-md-4.col-lg-3.p-4 
+    img(src=`${CWD}assets/images/portraits/${image}` alt=`${name}`).img-fluid.rounded-circle.px-5
+    h5.fs-9.mt-3.mb-1
+      a.link-1100(href="#!")= name 
+    .text-uppercase.fs-10.text-600= designation
+
+mixin Makers 
+  -
+    var makerList = [
+      {
+        image: 'portrait-01.jpg',
+        name: 'Taylor Otwell',
+        designation: 'Creator of Laravel'
+      },
+      {
+        image: 'portrait-02.jpg',
+        name: 'Jeffrey Way',
+        designation: 'Founder of Laracasts'
+      },
+      {
+        image: 'portrait-03.jpg',
+        name: 'Michele Hansen',
+        designation: 'Developer / Surfer'
+      },
+      {
+        image: 'portrait-04.jpg',
+        name: 'Evan You',
+        designation: 'Creator of Vue.js'
+      },
+      {
+        image: 'portrait-05.jpg',
+        name: 'Laura Elizabeth',
+        designation: 'Partner at Tighten'
+      },
+      {
+        image: 'portrait-06.jpg',
+        name: 'Nils Adermann',
+        designation: 'Co-Creator of Composer'
+      },
+      {
+        image: 'portrait-07.jpg',
+        name: 'Justin Jackson',
+        designation: 'Maker'
+      },
+      {
+        image: 'portrait-08.jpg',
+        name: 'Freek Van der Herten',
+        designation: 'Developer at Spatie'
+      },
+      {
+        image: 'portrait-09.jpg',
+        name: 'Sean Larkin',
+        designation: 'Webpack Core Team'
+      },
+      {
+        image: 'portrait-10.jpg',
+        name: 'Adam Wathan',
+        designation: 'UI / UX Designer'
+      },
+      {
+        image: 'portrait-11.jpg',
+        name: 'Tom Schlick',
+        designation: 'Sr. Engineer at RunMyBusiness'
+      },
+      {
+        image: 'portrait-12.jpg',
+        name: 'Maxime Locqueville',
+        designation: 'Lead Engineer at VideoBlocks'
+      }
+    ]
+  
+  +Section(container).text-center.bg-100
+    .row.justify-content-center 
+      .col-lg-8 
+        h3.text-1100.mb-4 Meet the makers 
+        p.text-800.fw-light.fs-8 Whether you're building a landing page for your mobile app or an elegant, corporate website, Posh has layouts that cover your needs.
+        hr.short.mb-8.text-400.mt-4.mx-auto
+
+    .row 
+      each item in makerList 
+        +MakerInfo(item)
+
+
+mixin MainContent
+  +Section({image:`${CWD}assets/images/about-company.jpg`, className: 'overlay overlay-2'}, container).p-0.text-white
+    .row.min-vh-50.align-items-center.py-5 
+      .col-md-8.col-lg-5 
+        h1.fs-6.fs-md-5.mb-3.text-white About Posh 
+        p.fw-light.fs-8 Responsive in design | Elegant in Style One Perfect Template for Anything
+  
+  +Section(container)
+    .row 
+      .col-lg-2.d-none.d-lg-block
+        .perpendicular 
+          h2.text-300.fs-3.text-uppercase.lh-0(style="transform: translateY(36px);") Our Story 
+      .col-12.d-lg-none
+        h2.mb-5 Our Story 
+      
+      .col-lg-6 
+        h5.mb-4 &#8212; Story Behind Posh
+        p.fw-light.fs-8.mb-5.text-700 For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates.
+
+        h5.mb-4 &#8212; Mission &amp; Vision
+        p.mb-5.mb-lg-0.text-700 Posh has the vision to be the trend setter among the existing templates in the market. It intends to help people do more and leave lasting, meaningful experiences for their clients and their audiences. The mission was to make it real. The core team worked very hard for last three years to make it happen. They believed in their abilities and created Posh as the right tool for your future.
+
+      .col-lg-4.ps-lg-5 
+        h5.mb-0 &#8212; Founded in
+        .fs-4.mb-5.fw-thin 2017
+
+        h5.mb-3 &#8212; Offices in
+        p.fs-6.text-500.lh-1.mb-5.fw-light Bristol &amp; London
+
+        h5.mb-3 &#8212; Services
+        p.fs-8.fw-light.text-700  Branding, Packaging, Websites, E-Commerce &amp; Marketing
+
+  +Makers
+
+  +Section(container)
+    .row
+      .col-12.text-center
+        h3 Latest News 
+        p.text-700.fw-light.fs-8 The latest news, thoughts and updates from the team.
+        hr.short.text-400.mb-7.mt-4.mx-auto
+    .row.row-cols-1.row-cols-lg-3
+      .col.mb-5.mb-lg-0 
+        .card.h-100
+          a(href="#!")
+             img.card-img-top(src=`${CWD}assets/images/careers-1.jpg`, alt="")
+          
+          .card-body
+            a(href='#!').link-1100
+              h5.fs-8.fw-semi-bold Career Monogamy: The Awkward Tech Sin of
+            p.card-text.text-800.fw-light Posh is the Best Template in the market you can find. Built with Bootstrap 5 and all other state of the earth cutting edge frontend technologies. 
+          .card-footer.border-top-0
+            .d-flex.align-items-center
+              img.d-flex.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/02.jpg`, alt='Generic placeholder image', style='max-width: 50px;')
+              .lh-1
+                a(href='#!').link-1100
+                  h6.mb-0 Mike Ross
+                  span.fs-10.text-700 May 23 &middot; 6 min read
+      .col.mb-5.mb-lg-0
+        .card.h-100
+          a(href='#!').overflow-hidden
+            img.card-img-top(src=`${CWD}assets/images/careers-header.jpg`, alt='Card image cap')
+          .card-body
+            a(href='#!').link-1100
+              h5.fs-8.fw-semi-bold Functionality vs Emotions in Mobile Interface
+            p.card-text.text-800.fw-light It is packed with tremendous amount of well designed elements and detailed documentation of each of them. 
+
+          .card-footer.border-top-0
+            .d-flex.align-items-center
+              img.d-flex.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/03.jpg`, alt='Generic placeholder image', style='max-width: 50px;')
+              .lh-1
+                a(href='#!').link-1100
+                  h6.mb-0 Alice Merriweather
+                  span.fs-10.text-700 May 23 &middot; 15 min read
+      .col
+        .card.h-100
+          a(href='#!').overflow-hidden
+            img.card-img-top(src=`${CWD}assets/images/careers-2.jpg`, alt='Card image cap')
+
+          .card-body
+            a(href='#!').link-1100
+              h5.fs-8.fw-semi-bold How has social media shaped contemporary design?
+            p.card-text.text-800.fw-light A  multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.
+          .card-footer.border-top-0
+            .d-flex.align-items-center
+              img.d-flex.me-3.rounded-circle(src=`${CWD}assets/images/portraits/square/04.jpg`, alt='Generic placeholder image', style='max-width: 50px;')
+              .lh-1
+                a(href='#!').link-1100
+                  h6.mb-0 Selena Rouse
+                  span.fs-10.text-700 May 23 &middot; 4 min read
+
+  +Section({image: `${CWD}assets/images/team-officespace.jpg`, className: 'overlay overlay-1'}, false).py-0.text-center
+    .container-fluid 
+      .row.justify-content-center 
+        .col-lg-8.col-xl-6.py-8 
+          h3.mb-3.text-white We're always looking for talent
+          p.fw-light.fs-8.text-white Got what it takes to work with us? Great! Send us a link to your resume or portfolio to become part of our tribe.
+          a.btn.btn-primary.mt-3(href="#!") See Job Openings
+
+
+
+mixin AboutTeamMember(member,index)
+  .col-sm-6.mb-7 
+    .row(class=`${index % 2 === 0 ? 'pe-xl-4': 'ps-xl-4'}`)
+      .col-lg-5 
+        img.mb-3.w-100(src=member.image, alt="")
+      .col 
+        h5.mb-3=  member.name 
+        h6.mb-4.ls-2.fw-normal= member.designation 
+        p.fw-light.text-500=  member.description 
+
+        if member.icon 
+          a.link-1100(href="#!")
+            span.me-1(class=member.icon style="font-size:19px")
+            span.fw-thin= member.link
+
+mixin AboutTeam 
+  -
+    var teamMembers = [
+      {
+        image: `${CWD}assets/images/portraits/225x313/4.jpg`,
+        name: 'ANTHONY CASALENA',
+        designation: `FOUNDER & CEO`,
+        description: `Anthony Casalena is the Founder and CEO of Squarespace, which he started from his dorm room in 2003. During the company’s early years, Anthony acted as the sole engineer, designer, and support representative for the entire Squarespace platform.`,
+        icon: 'fab fa-twitter',
+        link: '@acasalena'
+      },
+      {
+        image: `${CWD}assets/images/portraits/225x313/2.jpg`,
+        name: 'NICOLE ANASENES',
+        designation: `CFO & COO`,
+        description: `Nicole brings to Squarespace 20 years of experience building new businesses and transforming legacy business models. Most recently, she served as Chief Financial Officer at Infor, one of the largest providers of enterprise applications in the world. Prior to Infor, Nicole spent 17 years in various.`,
+      },
+      {
+        image: `${CWD}assets/images/portraits/225x313/1.jpg`,
+        name: 'MICHELE HANSEN',
+        designation: `SVP, ENGINEERING`,
+        description: `Michele Hansen, SVP of Engineering, oversees Squarespace’s vast engineering organization which drives the core programming for the company. Before joining Squarespace, Michele served in senior leadership roles.`,
+      },
+      {
+        image: `${CWD}assets/images/portraits/225x313/3.jpg`,
+        name: 'ANDREW BARTHOLOMEW',
+        designation: `SVP, STRATEGY`,
+        description: `As the leader of Squarespace’s Strategy division, Andrew is responsible for developing the analytical frameworks that shape the company’s business. Since joining Squarespace, he has grown the division into a team that covers everything from business strategy and customer insights to analytics and data science.`,
+        icon: 'fab fa-twitter',
+        link: '@acasalena'
+      },
+      {
+        image: `${CWD}assets/images/portraits/225x313/6.jpg`,
+        name: 'RAPHAEL FONTES',
+        designation: `VP, CUSTOMER OPERATIONS`,
+        description: `Rapha leads Squarespace Ireland and oversees the company’s global Customer Operations teams that support millions of Squarespace users. Prior to this role, Raphael spent eight years at Google developing and managing different operations teams in Brazil, Argentina, Poland and Ireland.`,
+      },
+      {
+        image: `${CWD}assets/images/portraits/225x313/5.jpg`,
+        name: 'ALICE MERRIWEATHER',
+        designation: `CMO`,
+        description: `As the Chief Marketing Officer of Squarespace, Alice leads the company’s world-class marketing and PR teams as CMO at Foursquare where she successfully repositioned the company’s brand to accelerate growth in both the consumer and enterprise location intelligence businesses.`,
+        icon: 'fab fa-twitter',
+        link: '@acasalena'
+      }
+    ]
+
+  +Section(container).pb-6
+    .row 
+      each teamMember, index in teamMembers 
+        +AboutTeamMember(teamMember, index)
+
+mixin AboutTeamMainContent
+  +Section({image:`${CWD}assets/images/about-team-header.jpg`, className: 'overlay overlay-1'}, container).p-0
+    .row
+      .col-md-8.py-10 
+        h6.text-uppercase.text-white Our Team
+        h1.fs-5.text-white Powered By People
+  
+  +AboutTeam
+
+  +Section({image: `${CWD}assets/images/team-officespace.jpg`, className: 'overlay overlay-1'},false).py-0
+    .container-fluid
+      .row.align-items-center.justify-content-center.min-vh-50 
+        .col-6.col-lg-5.col-xl-4.text-center
+          h3.fs-6.text-white.mb-2 Consultants for Strategy
+          h5.text-white.fs-9.lh-3.fw-normal Expert advisors developing tailored strategies for achieving business goals, driving growth, and maximizing efficiency.
+  
+  section.text-center.py-0
+    .container-fluid
+      .row.justify-content-center 
+        .col-lg-8.col-xl-6.py-8 
+          h3.mb-3 We're always looking for talent
+          p.fw-light.fs-8.text-700 Got what it takes to work with us? Great! Send us a link to your resume or portfolio to become part of our tribe.
+
+          a.btn.btn-primary.mt-3(href="#!") See Job Openings

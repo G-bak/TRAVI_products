@@ -1,0 +1,26 @@
+mixin FourZeroFour 
+  +Section(container).py-0
+    .row.justify-content-center.align-items-center.text-center.min-vh-100
+      .col 
+        h1.mb-0 404
+        p.lead Ooops, something went wrong... 
+        a.btn.btn-info.mt-3(href=`${CWD}`)  Take Me Home 
+
+
+mixin FiveZeroZero
+  section.py-0
+    .container-fluid
+      .row.justify-content-center.align-items-center.text-center.min-vh-100
+        .col-lg-6.col-xl-5.px-0 
+          h1.mb-0 500
+          p.lead Internal Server Error
+          p.lead  An unexpected error seems to have occurred. Why not try refreshing your page? Or you can contact us if the problem persists.
+
+mixin Maintenance 
+  section.py-0 
+    +Background({image: `${CWD}assets/images/about-team-header.jpg`, className: 'overlay overlay-0'})
+    .container-fluid 
+      .row.align-items-center.text-center.min-vh-100 
+        .col
+          span.d-block.text-white.display-1.icon-Gears 
+          h4.mt-4.fw-normal.text-white Posh is getting a makeover

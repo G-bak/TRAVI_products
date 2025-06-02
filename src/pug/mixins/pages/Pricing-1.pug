@@ -1,0 +1,174 @@
+mixin CardsWithLists 
+  +Section(container).text-center
+    .row.justify-content-center.mb-6
+      .col-lg-8
+        h3.fw-normal Do more with Posh
+        p.fs-8.fw-light Crafted with advance thinking to help you do more
+
+    .row 
+      .col-md-6.col-lg-4 
+        .card.border-200.mb-5.mb-lg-0.h-100 
+          .card-header.bg-200.border-bottom-0 
+            h4.text-800.fw-normal.py-2.m-0 Standard 
+          .card-body.pb-3 
+            p.text-600.fw-light Save time with over 250+ carefully styled components designed to showcase your content
+          h2.fw-thin $12.50
+          small.text-600  / user / month, starting at 3 users
+          .card-footer.bg-white.border-top-0.pt-5 
+            a.btn.btn-outline-primary(href="#!")  Try free for 30 days
+            br
+            p.fs-10.mt-2.mb-0 
+              | or 
+              a(href="#!")  Purchase now
+          ul.style-check.text-start.mt-5.lh-8.fs-10.text-800.d-lg-none.ms-4 
+            li Bootstrap 5
+            li 7 Days Money Back Guarantee
+            li 6 Months Support
+            li Responsive
+            li Retina Ready
+            li 100+ Layouts
+            li 10 Demos
+            li 250+ Styled components
+            li All browsers compatible
+            li Detailed Documentation
+            li Dedicated Support
+            li Future Updates
+            li W3C Validated
+            li Modular Sections 
+
+      .col-md-6.col-lg-4 
+        .card.border-primary.mb-5.mb-lg-0.h-100 
+          .card-header.bg-primary.border-bottom-0 
+            h4.text-white.fw-normal.py-2.m-0 Advanced 
+          .card-body.pb-3 
+            p.text-600.fw-light Simple and straightforward pricing plans that scale perfectly with your business
+          h2.fw-thin $20
+          small.text-600  / user / month, starting at 3 users
+          .card-footer.bg-white.border-top-0.pt-5 
+            a.btn.btn-primary(href="#!")  Try free for 30 days
+            br
+            p.fs-10.mt-2.mb-0 
+              | or 
+              a(href="#!")  Purchase now 
+          ul.style-check.text-start.mt-5.lh-8.fs-10.text-800.d-lg-none.ms-4 
+            li 
+              strong Everything in Standard
+            li Bootstrap 5
+            li 7 Days Money Back Guarantee
+            li 6 Months Support
+            li Responsive
+            li Retina Ready
+            li 100+ Layouts
+            li 10 Demos
+            li 250+ Styled components
+            li All browsers compatible
+            li Detailed Documentation
+            li Dedicated Support
+            li Future Updates
+
+      .col-md-12.col-lg-4 
+        .card.border-200.mb-5.mb-lg-0.h-100 
+          .card-header.bg-200.border-bottom-0 
+            h4.text-800.fw-normal.py-2.m-0 Enterprise 
+          .card-body.pb-3 
+            p.pt-6.text-600.fw-light.pb-3.mb-0 Customizable solutions with individualized support to help admins manage at scale
+          .card-footer.bg-white.border-top-0.pt-6 
+            a.btn.btn-outline-primary.mb-4(href="#!")  Contact us
+
+          ul.style-check.text-start.mt-5.lh-8.fs-10.text-800.d-lg-none.ms-4 
+            li 
+              strong Everything in Advanced
+            li Bootstrap 5
+            li 7 Days Money Back Guarantee
+            li 6 Months Support
+            li Responsive
+            li Retina Ready
+            li 100+ Layouts
+            li 10 Demos
+            li 250+ Styled components
+
+    .row.d-none.d-lg-flex
+      .col-lg-4
+        ul.style-check.text-start.mt-5.lh-8 
+          li Bootstrap 5
+          li 7 Days Money Back Guarantee
+          li 6 Months Support
+          li Responsive
+          li Retina Ready
+          li 100+ Layouts
+          li 10 Demos
+          li 250+ Styled components
+          li All browsers compatible
+          li Detailed Documentation
+          li Dedicated Support
+          li Future Updates
+          li W3C Validated
+          li Modular Sections
+
+      .col-lg-4
+        ul.style-check.text-start.mt-5.lh-8 
+          li 
+            strong Everything in Standard
+          li Bootstrap 5
+          li 7 Days Money Back Guarantee
+          li 6 Months Support
+          li Responsive
+          li Retina Ready
+          li 100+ Layouts
+          li 10 Demos
+          li 250+ Styled components
+          li All browsers compatible
+          li Detailed Documentation
+          li Dedicated Support
+          li Future Updates
+      .col-lg-4
+        ul.style-check.text-start.mt-5.lh-8 
+          li 
+            strong Everything in Advanced
+          li Bootstrap 5
+          li 7 Days Money Back Guarantee
+          li 6 Months Support
+          li Responsive
+          li Retina Ready
+          li 100+ Layouts
+          li 10 Demos
+          li 250+ Styled components
+
+mixin AccordionSection 
+  +Section(container).bg-100
+    .row.justify-content-center 
+      .col-lg-10 
+        h4.fw-light.mb-5.text-center  Frequently asked questions
+        #faqAccordion.accordion
+          .accordion-item 
+            h5#faqHeadingOne.accordion-header
+              button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faqOne" aria-expanded="true" aria-controls="faqOne") Can I remove the credit link?
+            #faqOne.accordion-collapse.collapse(aria-labelledby="faqHeadingOne" data-bs-parent="#faqAccordion")
+              .accordion-body 
+                p Yes, you can remove the footer credit link. And add your own copyright text, credit link and other text.
+
+          .accordion-item 
+            h5#faqHeadingTwo.accordion-header
+              button.accordion-button(type="button" data-bs-toggle="collapse" data-bs-target="#faqTwo" aria-expanded="true" aria-controls="faqTwo") How long I get support?
+            #faqTwo.accordion-collapse.collapse.show(aria-labelledby="faqHeadingTwo" data-bs-parent="#faqAccordion")
+              .accordion-body 
+                p If you purchase the single license, you will get 6 months free support. If you purchase developer license the support period is 1 year. For the extended license, you will get lifetime support.
+          
+          .accordion-item 
+            h5#faqHeadingThree.accordion-header
+              button.accordion-button.collapsed(type="button" data-bs-toggle="collapse" data-bs-target="#faqThree" aria-expanded="true" aria-controls="faqThree") What is your refund policy?
+            #faqThree.accordion-collapse.collapse(aria-labelledby="faqHeadingThree" data-bs-parent="#faqAccordion")
+              .accordion-body 
+                p We assure you with the satisfaction money back guarantee. 
+                p If you don't like the template, you will get money back within 7 days. Just let us know.
+
+
+mixin Banner 
+  +Section({image:`${CWD}assets/images/pricing-1.jpg`, className: 'overlay overlay-1'}, container).text-center
+    .row.justify-content-center 
+      .col-lg-8.col-xl-5 
+        h4.fw-light.text-white.mb-4 The best design tool for your future web design 
+        a.btn.btn-primary(href="#!")  Purchase Posh 
+        p.pt-3.pb-0.text-white or 
+          a.text-white(href="#!") View Live Demo 
+          

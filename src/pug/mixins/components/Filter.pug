@@ -1,0 +1,49 @@
+mixin Filters 
+  .row.justify-content-center.mb-4 
+    .col-7.col-sm-4
+      select#filter.filter.form-select.form-select-lg(name="" data-filter-NAV)  
+        option.isotope-nav.active(value="*" data-filter="*" selected)  All Categories 
+        option.isotope-nav(value=".digital" data-filter=".digital")  Digital 
+        option.isotope-nav(value=".animation" data-filter=".animation")  Animation
+        option.isotope-nav(value=".print" data-filter=".print") Print 
+  
+  
+  .row.g-4(data-isotope!={
+    layoutMode: 'packery'
+  } )
+    .col-sm-4.isotope-item.animation 
+      a(href='#!' data-title='caption' data-bigPicture!={
+        imgSrc: `${CWD}assets/images/portfolio/01.jpg`
+      })
+        img.rounded-1(src=`${CWD}assets/images/portfolio/01.jpg`, alt="")
+    
+    .col-sm-4.isotope-item.digital
+      a(href='#!' data-title='caption' data-bigPicture!={
+        imgSrc: `${CWD}assets/images/portfolio/02.jpg`
+      })
+        img.rounded-1(src=`${CWD}assets/images/portfolio/02.jpg`, alt="")
+    
+    .col-sm-4.isotope-item.print 
+      a(href='#!' data-title='caption' data-bigPicture!={
+        imgSrc: `${CWD}assets/images/portfolio/03.jpg`
+      })
+        img.rounded-1(src=`${CWD}assets/images/portfolio/03.jpg`, alt="")
+
+    .col-sm-4.isotope-item.animation 
+      a(href='#!' data-title='caption' data-bigPicture!={
+        imgSrc: `${CWD}assets/images/portfolio/04.jpg`
+      })
+        img.rounded-1(src=`${CWD}assets/images/portfolio/04.jpg`, alt="")
+    
+    .col-sm-4.isotope-item.digital
+      a(href='#!' data-title='caption' data-bigPicture!={
+        imgSrc: `${CWD}assets/images/portfolio/05.jpg`
+      })
+        img.rounded-1(src=`${CWD}assets/images/portfolio/05.jpg`, alt="")
+    
+    .col-sm-4.isotope-item.print 
+      a(href='#!' data-title='caption' data-bigPicture!={
+        imgSrc: `${CWD}assets/images/portfolio/06.jpg`
+      })
+        img.rounded-1(src=`${CWD}assets/images/portfolio/06.jpg`, alt="")
+

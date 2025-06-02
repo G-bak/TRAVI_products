@@ -1,0 +1,13 @@
+include Mixins
+
+mixin MainNav(config)
+  nav.navbar.navbar-top.navbar-expand-lg&attributes(attributes)
+    .container
+      +NavbarBrand({ image: config.image, logo: config.logo, width: config.width, name: config.name, color:config.color})
+      button.navbar-toggler.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#navbarStandard' aria-controls='navbarStandard' aria-expanded='false' aria-label='Toggle navigation' data-hamburger-icon)
+        span.hamburger.hamburger--emphatic
+          span.hamburger-box 
+            span.hamburger-inner
+      #navbarStandard.collapse.navbar-collapse.w-100
+        +navbarTopMenus({combo:false})
+

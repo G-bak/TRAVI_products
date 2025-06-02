@@ -1,0 +1,188 @@
+/*-----------------------------------------------
+|   Button
+-----------------------------------------------*/
+
+
+/*-----------------------------------------------
+|   Posh buttons
+-----------------------------------------------*/
+$theme-posh-btn-colors: (
+  "primary": var(--#{$prefix}primary),
+  "success": var(--#{$prefix}success),
+  "info": var(--#{$prefix}info),
+  "warning": var(--#{$prefix}warning),
+  "danger": var(--#{$prefix}danger),
+);
+
+@each $color,
+$value in $theme-posh-btn-colors {
+  .btn-posh-#{$color} {
+    @include posh-button-variant($color);
+  }
+}
+
+.btn-tertiary {
+  @extend .btn-light;
+}
+
+.btn-white {
+  color: var(--#{$prefix}gray-1100);
+  background-color: $white;
+  border-color: $white;
+
+  @include hover-focus{
+    background-color: #e6e6e6;
+    border-color: #e0e0e0;
+  }
+}
+
+
+/*-----------------------------------------------
+|   Brand Buttons                               |
+-----------------------------------------------*/
+
+.facebook {
+  @include brand-icon-variant($facebook);
+}
+
+.twitter {
+  @include brand-icon-variant($twitter);
+}
+.google-plus{
+  @include brand-icon-variant($google-plus);
+}
+
+.github{
+  @include brand-icon-variant($github);
+}
+/*-----------------------------------------------
+|   Outline Buttons
+-----------------------------------------------*/
+[class*='btn-outline-'] {
+  --#{$prefix}btn-box-shadow: none;
+}
+.btn-outline-primary { @include button-outline-variant(map-get($theme-colors, primary)); }
+.btn-outline-info { @include button-outline-variant(map-get($theme-colors, info)); }
+.btn-outline-success { @include button-outline-variant(map-get($theme-colors, success)); }
+.btn-outline-warning { @include button-outline-variant(map-get($theme-colors, warning)); }
+.btn-outline-danger { @include button-outline-variant(map-get($theme-colors, danger)); }
+.btn-outline-white { 
+    @include button-outline-variant($white);
+    &:hover, &:active, &:focus, &:active:focus { color: $gray-1100 }
+}
+
+
+
+
+.btn {
+  --#{$prefix}btn-border-width: var(--#{$prefix}border-width);
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  text-align: center;
+}
+
+.btn-xs {
+  --#{$prefix}btn-padding-x: 0.8rem;
+  --#{$prefix}btn-padding-y: 0.2rem;
+}
+
+.btn-link {
+  --#{$prefix}btn-font-weight: #{$font-weight-semi-bold};
+  --#{$prefix}btn-active-color: var(--#{$prefix}link-hover-color);
+
+}
+
+// disabled btn box shadow
+.btn {
+  &:disabled {
+    @include box-shadow(var(--#{$prefix}btn-box-shadow));
+  }
+}
+
+//form ask button
+
+.btn-oxford{
+  color: var(--#{$prefix}gray-1200);
+  background-color: $white;
+  border-color: #ccc;
+
+  @include hover-focus{
+    background-color: #e6e6e6;
+    border-color: #adadad;
+  }
+}
+
+
+// Icon Button Variant
+
+.btn-icon{
+  $padding-x: 0.8rem;
+  $padding-y: 2.5rem;
+  $rounded-capsule: 3.125rem;
+
+  @include icon-button-variant($padding-x, $padding-y, 2.6rem);
+  position: relative;
+
+  .btn-brand {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: rgba($black, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &.btn-icon-left {.btn-brand {left: 0;}}
+  &.btn-icon-right{
+    .btn-brand {
+      right: 0;
+      left: auto;
+    }
+  }
+  &.rounded-capsule {
+    &.btn-icon-left {.btn-brand { border-radius: $rounded-capsule 0 0 $rounded-capsule;}}
+    &.btn-icon-right {.btn-brand { border-radius: 0 $rounded-capsule $rounded-capsule 0;}}
+  }
+  &.btn-xs{
+    @include icon-button-variant(0.2rem, 0.8rem, 2rem);
+  }
+  &.btn-sm{
+    @include icon-button-variant(0.4rem, 1.2rem, 2.5rem);
+  }
+  &.btn-lg{
+    @include icon-button-variant(1.2rem, 5rem, 4rem);
+  }
+  &[class*='btn-outline-']{
+    .btn-brand {
+      border-right-width: 1px;
+      border-right-style: solid;
+      background-color: transparent;
+    }
+    &.btn-icon-right{
+      .btn-brand{ 
+        border-left-width: 1px;
+        border-left-style: solid;
+        border-right: none;
+      }
+    }
+    @include hover-focus{
+      .btn-brand{
+        background-color: rgba($black, 0.1);
+      }
+    }
+  }
+}
+
+
+.btn-light, .btn-outline-light { 
+  color: var(--#{$prefix}gray-1200);
+  border-color: #ccc;
+  background-color: $white;
+}
+.btn-outline-light:hover, .btn-light:hover{
+  color: var(--#{$prefix}gray-1200);
+  background-color: #e6e6e6;
+  border-color: #adadad;
+}

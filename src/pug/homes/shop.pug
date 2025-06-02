@@ -1,0 +1,26 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/Shop
+include ../mixins/pages/Shop
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+
+
+append variables
+  - var footer = false
+
+block navbarTop
+  +NavbarDoubleAlternate({
+    toggleID: 'navbarStandard',
+    links: true,
+    image: true,
+    logo: 'shop/shop-logo.jpg',
+    width: '200',
+  }).bg-white.navbar-double.sticky-top.top-0.start-0
+
+append content
+  +ShopMainSection
+  +ShopCommonSection

@@ -1,0 +1,24 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/Conference
+
+
+prepend styles 
+
+prepend scripts
+  script(src!=`https://maps.googleapis.com/maps/api/js?key=${APIGmap}&loading=async&callback=initMap`) 
+  script(src=`${CWD}vendors/bigpicture/BigPicture.js`) 
+
+block navbarTop
+ 
+
+append content 
+  +Navbar
+  +HeroSection
+  +Banner
+  +Speakers
+  +Schedule
+  +VideoSection
+  +Sponsors
+  +Venue
+  +Hotels
+  hr.my-0.text-1200

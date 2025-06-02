@@ -1,0 +1,26 @@
+extends ../layouts/LayoutTheme
+
+prepend styles 
+
+prepend scripts 
+
+append variables
+  - var footer = false
+  
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:true,
+    width: '80',
+    logo: 'posh-logo.png'
+  }).bg-white
+
+append content
+  hr.text-300.mt-0
+
+  +Section(container)
+    .row 
+      .col.text-center.py-6 
+        h1.lh-1 Edit Me! 
+        p.fw-light.fs-8 Create Something Beautiful.

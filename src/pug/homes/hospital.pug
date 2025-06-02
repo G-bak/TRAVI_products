@@ -1,0 +1,25 @@
+extends ../layouts/LayoutTheme
+include ../mixins/homes/Hospital
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`) 
+
+
+append variables
+  - var footer = false
+
+block navbarTop
+  +NavbarDoubleTop({
+    toggleID: 'navbarStandard',
+    links: true,
+    image: true,
+    logo: 'hospital-logo.png',
+    width: '100',
+  })
+
+append content
+  +Hospital 
+  +HospitalFooter

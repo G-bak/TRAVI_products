@@ -1,0 +1,50 @@
+extends ../layouts/LayoutComponent
+include ../mixins/components/Borders
+
+prepend styles 
+
+prepend scripts
+
+append variables
+  - var pageTitle = 'Border & Radius'
+
+append component 
+
+  +BootstrapComponentLink({
+    link: `https://getbootstrap.com/docs/${bootstrapVersion}/utilities/borders/`,
+    name: pageTitle,
+  })
+
+  +BorderDoc
+
+  +ComponentInvertedCard({
+    description:'Classes for adding borders',
+    descriptionClass:'fw-semi-bold',
+    anchor:true
+  }).mt-5.border-component
+    +BorderAdditive
+    = '\n'
+
+  +ComponentInvertedCard({
+    description:'Classes for removing borders',
+    descriptionClass:'fw-semi-bold',
+    anchor:true
+  }).mt-5.border-component
+    +BorderSubtractive
+    = '\n'
+
+  +ComponentInvertedCard({
+    description:'Classes for dashed borders',
+    descriptionClass:'fw-semi-bold',
+    anchor:true
+  }).mt-5.border-component
+    +BorderStyle
+    = '\n'
+  hr.mb-5
+
+  +ComponentInvertedCard({
+    title:'Radius',
+    anchor:true
+  }).mt-5.border-component
+    +BorderRadius
+    = '\n'

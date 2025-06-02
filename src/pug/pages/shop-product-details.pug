@@ -1,0 +1,19 @@
+extends ../layouts/LayoutTheme
+include ../mixins/pages/Shop
+
+prepend styles 
+  link(rel="stylesheet", href=`${CWD}vendors/swiper/swiper-bundle.min.css`)
+prepend scripts
+  script(src=`${CWD}vendors/swiper/swiper-bundle.min.js`)
+
+block navbarTop
+  +MainNav({
+    toggleID: 'navbarStandard',
+    links: true,
+    image:false,
+    name: "POSH",
+    color: "text-1100"
+  }).bg-white
+
+append content
+  +ProductDetails

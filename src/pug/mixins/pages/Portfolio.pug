@@ -1,0 +1,367 @@
+mixin FilterMenu 
+  .row.justify-content-center.my-6 
+    .col-7.col-sm-4.col-md-3
+      select#filter.form-select.form-select-lg.text-1100(name="filter" data-filter-NAV)  
+        option.isotope-nav.active(value="*" data-filter="*" selected)  Viewing all
+        option.isotope-nav(value=".digital" data-filter=".digital")  Digital 
+        option.isotope-nav(value=".animation" data-filter=".animation")  Animation
+        option.isotope-nav(value=".print" data-filter=".print") Print 
+
+mixin PortfolioOne 
+  +Section(container).text-center
+    h1.fs-5 Showcase your talents 
+    p.lead.text-700 Posh empowers you to show what you are capable of.
+
+    hr.short.text-500.mx-auto
+    +FilterMenu
+    .row.text-start(data-isotope!={
+      layoutMode: 'packery'
+    })
+      .col-lg-6.isotope-item.animation
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4.position-relative 
+            +Background({image: `${CWD}assets/images/s-01.png`, className: 'overlay'})
+            .pt-11.ps-4.pb-3 
+              h5.mt-3.text-white Website for Sarah and Mike 
+              p Website  
+
+      .col-lg-6.isotope-item.digital
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4.position-relative 
+            +Background({image: `${CWD}assets/images/s-02.png`, className: 'overlay'})
+            .pt-11.ps-4.pb-3  
+              h5.mt-3.text-white Wildlife videography of the North 
+              p Digital 
+
+      .col-lg-6.isotope-item.print
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4.position-relative 
+            +Background({image: `${CWD}assets/images/s-03.png`, className: 'overlay'})
+            .pt-11.ps-4.pb-3  
+              h5.mt-3.text-white Design of the coolest interior furniture 
+              p Animation  
+
+      .col-lg-6.isotope-item.animation
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4.position-relative 
+            +Background({image: `${CWD}assets/images/s-04.png`, className: 'overlay'})
+            .pt-11.ps-4.pb-3  
+              h5.mt-3.text-white Tale of a natural bridge 
+              p Design 
+
+      .col-lg-6.isotope-item.print
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4.position-relative 
+            +Background({image: `${CWD}assets/images/s-05.png`, className: 'overlay'})
+            .pt-11.ps-4.pb-3  
+              h5.mt-3.text-white The horse race 
+              p Photography  
+
+      .col-lg-6.isotope-item.digital
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4.position-relative 
+            +Background({image: `${CWD}assets/images/s-06.png`, className: 'overlay'})
+            .pt-11.ps-4.pb-3  
+              h5.mt-3.text-white Grizzly Bear
+              p Animation
+
+mixin PortfolioTwo 
+  +Section(container).text-center
+    h1.fs-5 Discover Posh 
+    p.lead.text-700 Showcase for your all latest works
+
+    hr.short.text-500.mx-auto
+    +FilterMenu
+    .row.text-start(data-isotope!={
+      layoutMode: 'packery'
+    })
+      .col-lg-6.mb-6.isotope-item.animation
+        a(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox 
+            img.rounded-1(src=`${CWD}assets/images/s-01.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.background-semi-transparent.text-center.row.text-white 
+              .col 
+                span.icon-Add.fs-7  
+        h5.mt-3.mb-1 
+          a.link-1100(href=`${CWD}pages/portfolio-details.html`)  Website for Sarah and Mike 
+        p.text-700 Animation 
+      
+      .col-lg-6.mb-6.isotope-item.digital
+        a(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox 
+            img.rounded-1(src=`${CWD}assets/images/s-02.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.background-semi-transparent.text-center.row.text-white 
+              .col 
+                span.icon-Add.fs-7  
+        h5.mt-3.mb-1 
+          a.link-1100(href=`${CWD}pages/portfolio-details.html`)  Wildlife videography of the North 
+        p.text-700 Design 
+      
+      .col-lg-6.mb-6.isotope-item.print
+        a(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox 
+            img.rounded-1(src=`${CWD}assets/images/s-03.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.background-semi-transparent.text-center.row.text-white 
+              .col 
+                span.icon-Add.fs-7  
+        h5.mt-3.mb-1 
+          a.link-1100(href=`${CWD}pages/portfolio-details.html`)  Design of the coolest interior furniture
+        p.text-700 Videography 
+      
+      .col-lg-6.mb-6.isotope-item.animation
+        a(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox 
+            img.rounded-1(src=`${CWD}assets/images/s-04.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.background-semi-transparent.text-center.row.text-white 
+              .col 
+                span.icon-Add.fs-7  
+        h5.mt-3.mb-1 
+          a.link-1100(href=`${CWD}pages/portfolio-details.html`) Tale of a natural bridge 
+        p.text-700 Photography 
+
+      .col-lg-6.mb-6.isotope-item.print
+        a(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox 
+            img.rounded-1(src=`${CWD}assets/images/s-05.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.background-semi-transparent.text-center.row.text-white 
+              .col 
+                span.icon-Add.fs-7  
+        h5.mt-3.mb-1 
+          a.link-1100(href=`${CWD}pages/portfolio-details.html`)  The horse race 
+        p.text-700 Website 
+      
+      .col-lg-6.mb-6.isotope-item.digital
+        a(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox 
+            img.rounded-1(src=`${CWD}assets/images/s-06.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.background-semi-transparent.text-center.row.text-white 
+              .col 
+                span.icon-Add.fs-7  
+        h5.mt-3.mb-1 
+          a.link-1100(href=`${CWD}pages/portfolio-details.html`)  Grizzly Bear 
+        p.text-700 Animation 
+      
+mixin PortfolioThree
+  +Section(container).text-center
+    h1.fs-5 See Our Works 
+    p.lead.text-700 Posh helps you showcase your best works.
+
+    hr.short.text-500.mx-auto
+    +FilterMenu
+    .row.text-start(data-isotope!={
+      layoutMode: 'packery'
+    })
+      .col-lg-6.isotope-item.animation
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4 
+            img.rounded-1(src=`${CWD}assets/images/s-01.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.bg-1100.row.text-center 
+              .col
+                p.mb-2.d-inline-block Website 
+                br
+                h5.text-white.d-inline-block.mt-0 Website for Sarah and Mike 
+                br
+                .btn.btn-outline-white.btn-xs.mt-4 View Details
+      
+      .col-lg-6.isotope-item.digital
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4 
+            img.rounded-1(src=`${CWD}assets/images/s-02.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.bg-1100.row.text-center 
+              .col
+                p.mb-2.d-inline-block Design 
+                br
+                h5.text-white.d-inline-block.mt-0 Wildlife videography of the North
+                br
+                .btn.btn-outline-white.btn-xs.mt-4 View Details 
+      .col-lg-6.isotope-item.print
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4 
+            img.rounded-1(src=`${CWD}assets/images/s-03.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.bg-1100.row.text-center 
+              .col
+                p.mb-2.d-inline-block Animation 
+                br
+                h5.text-white.d-inline-block.mt-0 Design of the coolest interior furniture
+                br
+                .btn.btn-outline-white.btn-xs.mt-4 View Details 
+      
+      .col-lg-6.isotope-item.animation
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4 
+            img.rounded-1(src=`${CWD}assets/images/s-04.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.bg-1100.row.text-center
+              .col
+                p.mb-2.d-inline-block Website 
+                br
+                h5.text-white.d-inline-block.mt-0 Tale of natural bridge
+                br
+                .btn.btn-outline-white.btn-xs.mt-4 View Details
+
+      .col-lg-6.isotope-item.print
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4 
+            img.rounded-1(src=`${CWD}assets/images/s-05.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.bg-1100.row.text-center 
+              .col
+                p.mb-2.d-inline-block Photography 
+                br
+                h5.text-white.d-inline-block.mt-0 The horse 
+                br
+                .btn.btn-outline-white.btn-xs.mt-4 View Details 
+      
+      .col-lg-6.isotope-item.digital
+        a.text-white(href=`${CWD}pages/portfolio-details.html`)
+          .hoverbox.mb-4 
+            img.rounded-1(src=`${CWD}assets/images/s-06.png` alt="")
+            .hoverbox-content.d-flex.justify-content-center.align-items-center.bg-1100.row.text-center
+              .col
+                p.mb-2.d-inline-block Animation
+                br
+                h5.text-white.d-inline-block.mt-0 Grizzly Bear
+                br
+                .btn.btn-outline-white.btn-xs.mt-4 View Details
+      
+
+mixin PortfolioDetails 
+  +Section(container)
+    .row 
+      .col-xl-8 
+        h1.fs-6.fs-md-5.mb-4 The Details 
+        p.lead.text-700 Released in 2017 with a vision to renovate the web design; Posh Today is a global trend setter in beautiful design and modern user experience.
+    .row.mt-5 
+      .col 
+        img(src=`${CWD}assets/images/careers-header.jpg`, alt="")
+
+    .row.mt-8 
+      .col-md-6.col-lg-4 
+        h5 Client: 
+        p.text-700.fw-light ThemeWagon Inc.
+
+        h6.mt-4 Project Link: 
+        a(href="#!")  https://themewagon.com/
+
+        h5.mt-6 Services: 
+        ul.bullet-inside.ps-0.text-700.fw-light 
+          li Branding 
+          li Print Collateral 
+          li Web Design 
+          li Digital Strategy 
+
+      .col-md-6.col-lg-7.mt-5.mt-md-0 
+        h4 Brief 
+        hr.short.text-400
+        p.fw-light.text-800 From a simple hyperlink to the contact form, Posh is packed with so many elements and features to do more.
+        p.fw-light.text-800 It's important to launch a startup or personal website quickly. Posh will allow you to make a cool site in no time. And you don't have to bargain with off-shore freelancers or virtual workers anyway; even if you don't know coding. 
+
+
+mixin PortfolioCaseStudy 
+  +Section({image: `${CWD}assets/images/case-study-banner.jpg`, className: 'overlay overlay-2', attrs:{'data-rellax-speed':'-5', 'data-parallax': 'data-parallax'}}, container).has-parallax.py-0
+    .row.align-items-end.vh-100
+      .col-12.pb-5 
+        h1.fw-normal.fs-6.fs-sm-5.text-white Transforming the way you create 
+        p.lead.text-white Posh is the new trend for superior UX &amp; elegant web design
+  +Section(container)
+    .row.align-items-center 
+      .col-md-6 
+        img(src=`${CWD}assets/images/generic-02.jpg`, alt="")
+      .col-md-6 
+        .p-3.p-lg-6 
+          h1.fw-normal  43%
+          p.fw-light 
+            | brighter than 
+            br
+            | previous model 
+          
+          h1.fw-normal 
+            | 1
+            span.fs-6 billion 
+          p.fw-light colors 
+          hr.short.my-5.text-1100
+          h3.fw-normal.mb-4 You get a bigger piece with Posh.
+          p.fw-light.text-700 There are numerous templates on the web. Many of them can't and won't solve your problem, because of their generic and backward thinking. With Posh, the most forward-thinking website template so far you get the bigger pie of web design world. It can solve your problem now and will solve your problem in the future. 
+
+  +Section({image: `${CWD}assets/images/careers-header.jpg`, className: 'vh-100 text-center',attrs:{'data-rellax-speed':'-5', 'data-parallax': 'data-parallax'}}, false).has-parallax.py-11
+    .m-11
+
+  +Section(container).text-center
+    .row.align-items-center.justify-content-center 
+      .col-lg-10 
+        h3.fw-normal Create Remarkable Websites Seamlessly 
+        p.lead.text-700 A multiverse template with modularity at core that gives you the power to make sites in no time with minimum coding.
+        .row.mt-7 
+          .col-md-6.mb-4 
+            .border.border-300.p-4 
+              h5.fs-4.text-900.fw-light 1.
+              h5.mb-2.text-1100.fw-normal Why Posh 
+              p.text-700.fw-light The one single reason of choosing Posh is that it's future proof, built with Bootstrap 5. And the possibilities are limitless.
+          
+          .col-md-6.mb-4 
+            .border.border-300.p-4 
+              h5.fs-4.text-900.fw-light 2.
+              h5.mb-2.text-1100.fw-normal Leave your footprints
+              p.text-700.fw-light Posh intends to help people do more and leave lasting, meaningful experiences for their clients and their audiences.
+              
+          .col-md-6.mb-4 
+            .border.border-300.p-4 
+              h5.fs-4.text-900.fw-light 3.
+              h5.mb-2.text-1100.fw-normal Cover your needs
+              p.text-700.fw-light Whether you're building a landing page for your mobile app or an elegant, corporate website, Posh has layouts that cover your needs.
+              
+          .col-md-6.mb-4 
+            .border.border-300.p-4 
+              h5.fs-4.text-900.fw-light 4.
+              h5.mb-2.text-1100.fw-normal Built with Bootstrap 5
+              p.text-700.fw-light The mighty Bootstrap 5 is yet to come, it already become the talk of the town of the web design world. And posh is built with it.
+              
+  +Section({image: `${CWD}assets/images/header-02.jpg`, className: 'overlay'}, false).py-0
+    .container-fluid 
+      .row 
+        .col.text-center.py-8.order-lg-1.d-flex.align-items-center.justify-content-center 
+          a.mb-3.d-inline-block(href="#!" data-bigpicture!={ytSrc: 'khySM1YBQvA',} data-start='67' data-end='899')
+            img(src=`${CWD}assets/images/icons/icon-play.svg`, alt="" width="80")
+        .col-lg-6.bg-1100.px-3.px-lg-8.py-11 
+          h4.fw-normal.text-white A new brand is created, it's Posh 
+          p.lead.text-300 It's important to launch a startup or personal website quickly. Posh will allow you to make a cool site in no time. And you don't have to bargain with off-shore freelancers or virtual workers anyway; even if you don't know coding.
+
+  +Section(container)
+    .row 
+      .col-md-4 
+        h4.fw-normal.mb-2 Problem 
+        p.text-700.fw-light Most templates can't solve the real problem of the people - making an effortless website. Posh identifies this problem before start building.
+
+      .col-md-4 
+        h4.fw-normal.mb-2 Ideation
+        p.text-700.fw-light The problem was discussed, analyzed and rethought by the experienced developers who have a knack for creating awesome stuff in the past.
+        
+      .col-md-4 
+        h4.fw-normal.mb-2 Solution
+        p.text-700.fw-light And Posh is released with the dynamic thinking, making your life painless and much easy. Do what you are good at with the extra time you earn with Posh.
+      
+  +Section({image: `${CWD}assets/images/s-07.jpg`, className: 'vh-100 text-center',attrs:{'data-rellax-speed':'-5', 'data-parallax': 'data-parallax'}}, false).has-parallax.py-11
+    .m-11
+  +Section(container).bg-100
+    .row.justify-content-center 
+      .col-lg-6 
+        .p-3.pt-11.h-100.position-relative.z-0 
+          +Background({image: `${CWD}assets/images/s-04.png`, className: 'overlay'})
+          .row.h-100.align-items-end 
+            .col.ps-4 
+              a.text-white(href="#!") 
+                h5.mb-0.mt-4.text-white  Wildlife Photography 
+              p.fs-10.d-inline-block.text-white Experience the spirit of Amazon  
+      .col-lg-6 
+        .p-3.pt-11.h-100.position-relative.z-0 
+          +Background({image: `${CWD}assets/images/s-05.png`, className: 'overlay'})
+          .row.h-100.align-items-end 
+            .col.pe-4.text-end
+              a.text-white(href="#!")  
+                h5.mb-0.mt-4.text-white  Sarah &amp; Mike - Wedding Website
+              p.fs-10.d-inline-block.text-white The tale of a great love story   
+
+  +Section(container).bg-white
+    .row.justify-content-center.text-center 
+      .col-lg-8 
+        h4.fw-normal Ready to start your project?
+        p.lead.text-700.mb-5 Each purchase of Posh comes with six months free support — and a lifetime of free updates.
+        a.btn.btn-primary.text-uppercase.ls-2(href="#!") Purchase on themewagon 

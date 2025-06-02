@@ -1,0 +1,45 @@
+mixin SimpleLoginForm 
+  section.py-0 
+    .container-fluid 
+      .row.align-items-center.text-center.justify-content-center.min-vh-100
+        .col-sm-6.col-md-5.col-lg-4.col-xl-3 
+          h3.fw-light.mb-5 Log in 
+          form 
+            input.form-control.mb-3(type="email" placeholder="Email")
+            input.form-control.mb-3(type="password" placeholder="Password")
+            .row.align-items-center 
+              .col.text-start 
+                a.fs-10.d-inline-block(href="#!")  Forgot your password?
+              .col.text-end 
+                button.btn.btn-primary.w-100(type="button") Log in 
+          hr.text-300.mt-6
+          .fs-10 Need an account? 
+            a(href="#!") Sign up.
+          hr.text-300       
+
+mixin LoginWithSocial 
+  section.py-0 
+    .container-fluid 
+      .row.align-items-center.text-center.justify-content-center.min-vh-100
+        .col-sm-6.col-md-5.col-lg-4.col-xl-3 
+          h3.fw-light.mb-5 Log in 
+          a.btn.btn-icon.w-100.d-block.facebook.btn-icon-left.me-2
+            span.btn-brand 
+              i.fab.fa-facebook-f(style="font-size:18px;" data-fa-transform="grow-1 up-1")
+            | Log in with facebook
+          a.btn.btn-icon.w-100.d-block.google-plus.btn-icon-left.mt-2
+            span.btn-brand 
+              i.fab.fa-google-plus-g( data-fa-transform="grow-1 up-1")
+            | Log in with google 
+          p.lead.my-3 or 
+          form 
+            input.form-control.mb-3(type="email" placeholder="Email")
+            input.form-control.mb-3(type="password" placeholder="Password")
+            .row.align-items-center 
+              .col.text-start 
+                a.fs-10.d-inline-block(href="#!")  Forgot your password?
+              .col.text-end 
+                button.btn.btn-primary.w-100(type="button") Log in 
+          hr.text-300.mt-6
+          .fs-10.mt-4 Need an account? 
+            a(href="#!") Sign up.

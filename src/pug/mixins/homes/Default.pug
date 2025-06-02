@@ -1,0 +1,263 @@
+mixin Default 
+  +Section(container).py-0
+    .row.min-vh-lg-100.align-items-end.overflow-hidden 
+      .col.text-center.pt-8
+        h6.ls-2.mb-5.text-uppercase Introducing POSH
+        h2.fw-light
+          | Create 
+          span.text-primary 
+            br.d-sm-none
+            span.fw-normal.typed-text(data-typed-text!=["beautiful","gorgeous","outstanding","remarkable","stunning"])
+            span.typed-cursor 
+            br.d-sm-none
+          span.text-nowrap   websites
+        p.mt-1.fs-8.text-700.fw-light  Anything you can design, you can design better. 
+        a.btn.btn-primary.btn-sm.mt-5.ls-1(href="#home-demos") Explore demos
+        .fs-10.mt-2 
+          span.text-600 or 
+          a(href="https://themewagon.com/themes/posh")  Purchase POSH &xrarr;
+        img.mt-5.mt-sm-3.mt-md-0.w-100(src=`${CWD}assets/images/showcase-01.jpg` alt="showcase")
+
+  +Section(container)#home-demos.text-center.bg-1100.py-6.py-xl-9
+    .row.justify-content-center 
+      .col-lg-10.col-xl-9.text-500
+        .fs-7.fw-light 
+          | No matter the task, the new POSH is up to it — and even more. See for yourself — all the pre-made demos, inspired by world's finest websites, are  
+          span.fw-semi-bold.text-white  made with POSH. 
+          | And this is only a tip of the iceberg of what you will get.
+        hr.short.mt-6.mb-5.mx-auto.text-500
+
+  section.bg-1100.pt-0.text-center.sortable(data-sortable) 
+    .container-fluid
+      .row.sortable-container(data-isotope!={
+        layoutMode: 'packery'
+      })
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/landing-nokia.html`)
+            h6.fs-9.mb-3.text-300 Landing NOKIA 
+              span.mt-2.fs-10.text-400.fw-normal.d-block  (Nokia 5)
+            img(src=`${CWD}assets/images/screenshots/home-landing-nokia.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/digital-agency.html`)
+            h6.fs-9.mb-3.text-300 Digital Agency
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (Technext, Green Chameleon)
+            img(src=`${CWD}assets/images/screenshots/home-digital-agency.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/travel-agency.html`)
+            h6.fs-9.mb-3.text-300 Travel Agency 
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (ireland.com)
+            img(src=`${CWD}assets/images/screenshots/home-travel-agency.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/conference.html`)
+            h6.fs-9.mb-3.text-300 Conference
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (Chain React)
+            img(src=`${CWD}assets/images/screenshots/home-conference.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/education.html`)
+            h6.fs-9.mb-3.text-300 Education
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (American University, Stanford)
+            img(src=`${CWD}assets/images/screenshots/home-education.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/hospital.html`)
+            h6.fs-9.mb-3.text-300 Hospital
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (Northwestern Medicine, Columbus Regional Health)
+            img(src=`${CWD}assets/images/screenshots/home-hospital.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/hotel.html`)
+            h6.fs-9.mb-3.text-300 Hotel
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (The Peninsula, Trump Hotels)
+            img(src=`${CWD}assets/images/screenshots/home-hotel.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/landing-software.html`)
+            h6.fs-9.mb-3.text-300 Landing Software
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (Skype, Dropbox)
+            img(src=`${CWD}assets/images/screenshots/home-landing-software-b5.png` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/personal.html`)
+            h6.fs-9.mb-3.text-300  Personal
+            img(src=`${CWD}assets/images/screenshots/home-personal.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/restaurant.html`)
+            h6.fs-9.mb-3.text-300 Restaurant
+              span.d-block.mt-2.fs-10.text-400.fw-normal  (The Smoke Haus, Yung Kee)
+            img(src=`${CWD}assets/images/screenshots/home-restaurant.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}homes/shop.html`)
+            h6.fs-9.mb-3.text-300 Shop
+              span.d-bloc.mt-2.fs-10.text-400.fw-normal  (Aliexpress, Sammy Dress)
+            img(src=`${CWD}assets/images/screenshots/home-shop.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/about-company.html`)
+            h6.fs-9.mb-3.text-300 About Company
+            img(src=`${CWD}assets/images/screenshots/page-about-company.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/about-team.html`)
+            h6.fs-9.mb-3.text-300 About Team
+            img(src=`${CWD}assets/images/screenshots/page-about-team.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/careers.html`)
+            h6.fs-9.mb-3.text-300 Careers
+            img(src=`${CWD}assets/images/screenshots/page-careers.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/contact-1.html`)
+            h6.fs-9.mb-3.text-300 Contact 1
+            img(src=`${CWD}assets/images/screenshots/page-contact-1.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/contact-2.html`)
+            h6.fs-9.mb-3.text-300 Contact 2
+            img(src=`${CWD}assets/images/screenshots/page-contact-2.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/contact-3.html`)
+            h6.fs-9.mb-3.text-300 Contact 3
+            img(src=`${CWD}assets/images/screenshots/page-contact-3.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/pricing-1.html`)
+            h6.fs-9.mb-3.text-300 Pricing 1
+            img(src=`${CWD}assets/images/screenshots/page-pricing-1.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/pricing-2.html`)
+            h6.fs-9.mb-3.text-300 Pricing 2
+            img(src=`${CWD}assets/images/screenshots/page-pricing-2.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/services-1.html`)
+            h6.fs-9.mb-3.text-300  Services 1
+            img(src=`${CWD}assets/images/screenshots/page-services-1.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/services-2.html`)
+            h6.fs-9.mb-3.text-300 Services 2
+            img(src=`${CWD}assets/images/screenshots/page-services-2.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/services-3.html`)
+            h6.fs-9.mb-3.text-300 Services 3
+            img(src=`${CWD}assets/images/screenshots/page-services-3.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/log-in.html`)
+            h6.fs-9.mb-3.text-300 Log in (Simple)
+            img(src=`${CWD}assets/images/screenshots/page-log-in.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/log-in-social.html`)
+            h6.fs-9.mb-3.text-300 Log in (With Social)
+            img(src=`${CWD}assets/images/screenshots/page-log-in-social.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/profile.html`)
+            h6.fs-9.mb-3.text-300 Profile
+            img(src=`${CWD}assets/images/screenshots/page-profile.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/settings.html`)
+            h6.fs-9.mb-3.text-300 Settings
+            img(src=`${CWD}assets/images/screenshots/page-settings.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/recovery.html`)
+            h6.fs-9.mb-3.text-300 Account Recovery
+            img(src=`${CWD}assets/images/screenshots/page-recovery.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/maintenance.html`)
+            h6.fs-9.mb-3.text-300 Maintenance
+            img(src=`${CWD}assets/images/screenshots/page-maintenance.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/shop-products-list.html`)
+            h6.fs-9.mb-3.text-300 Products List
+            img(src=`${CWD}assets/images/screenshots/shop-products-list.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/shop-products-grid.html`)
+            h6.fs-9.mb-3.text-300 Products Grid
+            img(src=`${CWD}assets/images/screenshots/shop-products-grid.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/shop-product-details.html`)
+            h6.fs-9.mb-3.text-300 Product Details
+            img(src=`${CWD}assets/images/screenshots/shop-product-details.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/shop-cart.html`)
+            h6.fs-9.mb-3.text-300  Cart
+            img(src=`${CWD}assets/images/screenshots/shop-cart.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/portfolio-1.html`)
+            h6.fs-9.mb-3.text-300 List Title inside
+            img(src=`${CWD}assets/images/screenshots/portfolio-1.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/portfolio-2.html`)
+            h6.fs-9.mb-3.text-300 List Title Outside
+            img(src=`${CWD}assets/images/screenshots/portfolio-2.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/portfolio-3.html'`)
+            h6.fs-9.mb-3.text-300 List Title hover
+            img(src=`${CWD}assets/images/screenshots/portfolio-3.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/portfolio-details.html`)
+            h6.fs-9.mb-3.text-300 Portfolio Details
+            img(src=`${CWD}assets/images/screenshots/portfolio-details.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/blog-list.html`)
+            h6.fs-9.mb-3.text-300 Blog list
+            img(src=`${CWD}assets/images/screenshots/blog-list.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/blog-article.html`)
+            h6.fs-9.mb-3.text-300 Article
+            img(src=`${CWD}assets/images/screenshots/blog-article.jpg` alt="Generic placeholder image")
+
+        .col-6.col-md-4.mb-5.isotope-item
+          a.link-300(href=`${CWD}pages/portfolio-case-study.html`)
+            h6.fs-9.mb-3.text-300 Case Study
+            img(src=`${CWD}assets/images/screenshots/portfolio-case-study.jpg` alt="Generic placeholder image")
+  
+  +Section(container).pb-0.lh-3.ls-n1.fw-normal
+    .row 
+      .col-lg-6.px-5.py-3
+        hr.text-danger
+        .fs-6 Optimized for every screen size down to a single pixel.
+      
+      .col-lg-6.px-5.py-3
+        hr.text-danger
+        .fs-6 The most modular layout system on the planet.
+
+      .col-lg-6.px-5.py-3
+        hr.text-danger
+        .fs-6 More powerful than most HTML5 templates.
+
+      .col-lg-6.px-5.py-3
+        hr.text-danger
+        .fs-6 Bootstrap 5 takes POSH to a whole new level.
+  
+  +Section(container).text-center.py-0
+    .row.justify-content-center 
+      .col-lg-8.col-xl-8.py-8 
+        hr.short.text-500.mb-6.mx-auto
+        p.fs-8.text-1100.fw-light Want to see the magic? Start creating with POSH
+        a.btn.btn-outline-primary.mt-3.ls-sm(href="https://themewagon.com/themes/posh/") Purchase now

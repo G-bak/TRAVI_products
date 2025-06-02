@@ -1,0 +1,156 @@
+mixin LandingForNokia 
+  +Section({image: `${CWD}assets/images/nokia-header.jpg`, className: 'overlay'}, container).p-0
+    .row.vh-lg-100 
+      .col-md-6.align-self-center.py-8
+        h4.mb-3.text-white Nokia 5
+        h1.fs-5.fs-sm-4.text-white  Balanced for work and play
+      
+      .col-lg-4.offset-lg-2.d-none.d-lg-block
+        img.mt-8(src=`${CWD}assets/images/nokia-5.png` alt="")
+  
+  +Section(container)
+    .row 
+      .col-lg-6 
+        h2.lh-f2 The trend of future web &amp; mobile experience
+
+        ul.fs-8.ps-0.mt-4.text-800.lh-3.fw-light.bullet-inside 
+          li Seamless integration with Bootstrap 5&reg;
+          li 100+ Layouts with enormous features
+          li Detailed documentation for extra convenience
+
+        p.mt-4.fs-8.fw-light &euro;
+          span.fs-5 189
+
+        span.fs-10.text-1100.me-3 Get notified when updates are available.
+        a.btn.btn-outline-primary(href="#!")  Sign up 
+
+        p.fs-10.text-700.mt-5 These sections are built for the landing page of Nokia 5
+          br
+          | depending on your needs, you can customize and make it your own.
+
+  +Section(container).bg-200.py-8
+    .row.align-items-center
+      .col-lg-4
+        h5  The design
+        h3  Quality you can feel in every detail
+        p.my-5.fw-light.fs-8.text-800 We designed Posh with our hallmark attention to detail. The smooth, minimalist design is made with the mighty bootstrap 5; the next big thing that will revolutionize the way people create a website.
+
+        a.btn.btn-outline-primary.mb-5.mb-lg-0(href="#!") Watch the product video
+
+      .col-lg-8.ps-lg-6 
+        img(src=`${CWD}assets/images/nokia-01.png`, alt="").w-100
+
+    .row.mt-8 
+      .col-lg-4.ps-lg-6.order-lg-1 
+        h3 Beautifully seamless craftsmanship
+        p.my-5.fw-light.fs-8.text-800 Posh has a totally clean, well-documented codes without any error or bugs in a line; which has been maintained from the very begining to the end. Together the beautiful design and the W3C validated code will give you more power and freedom to create amazing websites.
+
+      .col-lg-8 
+        img.mb-5.mb-lg-0.w-100(src=`${CWD}assets/images/nokia-02.png`, alt="")
+        
+  +Section(container)
+    .row.text-center.justify-content-center 
+      .col-lg-9 
+        h2.mb-4 Embracing the Future
+        p.fw-light.fs-8.text-800 For years, ThemeWagon templates have stood for beautiful design and excellent quality. Posh is more than all that; it's built to take on the future - with rethink coding structures, great feel and ideal balance of performance &amp; elegance. What's the best, Posh will stay error free &amp; up to date with the excellent customer support and regular updates.
+
+  section.py-0
+    img.w-100(src=`${CWD}assets/images/nokia-banner-01.jpg`, alt="")
+
+  +Section(container)
+    .row.justify-content-center
+      .col-lg-9 
+        img.w-100(src=`${CWD}assets/images/nokia-banner-02.jpg`, alt="")
+    .row.text-center.justify-content-center 
+      .col-lg-6 
+        h4.mt-4.mb-2 Fit into all screen sizes
+        p.fw-light.fs-8.text-800 Posh fits smoothly in all the screen sizes including desktops, laptops, tablets, iPads and more.
+
+    .row.justify-content-center.mt-6
+      .col-lg-9 
+        img.w-100(src=`${CWD}assets/images/nokia-banner-03.jpg`, alt="")
+    .row.text-center.justify-content-center 
+      .col-lg-6 
+        h4.mt-4.mb-2 Make better layouts at ease
+        p.fw-light.fs-8.text-800 We just upgraded you as a web designer, thanks to the possibilities of making infinite layouts with Posh in uncomplicated and fluent ways. That's a fancy way of saying that you can make great websites. 
+
+  +Section(container).bg-100
+    .row 
+      .col.text-center 
+        h5.mb-1 The details 
+        h2 Posh 
+    
+    .row.align-items-center.mt-6 
+      .col-lg-4 
+        h4 Outside 
+        ul.ps-0.text-800.fw-light 
+          li.mb-2 100+ Beautiful Layouts 
+          li.mb-2 30+ Different Set of Elements
+          li.mb-2 Redesigned Bootstrap 5 Elements
+          li.mb-2 10 Niche Demos
+          li.mb-2 Elegant &amp; Modern Design
+
+      .col-lg-4.px-lg-5
+        .swiper-theme-container.nokia-slider(data-swiper-theme-container)
+          .swiper(data-swiper!={
+            spaceBetween: 30,
+            loop:true,
+            autoplay: {
+              delay: 5000,
+              disableOnInterection: true,
+            },
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true
+            }
+          })
+            .swiper-wrapper 
+              .swiper-slide
+                img(src=`${CWD}assets/images/nokia-5-blue.png` alt="").img-fluid.my-6.my-lg-0
+              .swiper-slide
+                img(src=`${CWD}assets/images/nokia-5-silver.png` alt="").img-fluid.my-6.my-lg-0
+              .swiper-slide
+                img(src=`${CWD}assets/images/nokia-5-black.png` alt="").img-fluid.my-6.my-lg-0
+              .swiper-slide
+                img(src=`${CWD}assets/images/nokia-5-copper.png` alt="").img-fluid.my-6.my-lg-0
+          .swiper-pagination
+      .col-lg-4 
+        h4 Inside
+        ul.ps-0.text-800.fw-light 
+          li.mb-2 Inteded &amp; documented code
+          li.mb-2 BEM naming convention
+          li.mb-2 Atomic CSS &amp; Pug file
+          li.mb-2 SASS Included
+          li.mb-2 Working Contact Form
+
+    .row 
+      .col-12.text-center.mt-6 
+        a.btn.btn-outline-primary(href="#!")  See full specs 
+
+  +Section(container)
+    .text-center
+      h5 Still looking?
+      h3 Find the perfect demos for you 
+      
+    .row.mt-6 
+      .col-lg-4.mb-6 
+        a(href="#!").link-1100
+          img(src=`${CWD}assets/images/nokia-03.jpg`, alt="")
+          h4.mb-2.mt-4.text-1100 Travel Agency 
+          p.fs-8.fw-light.d-inline-block.text-800 Make a beautiful travel agency website with the appropriate sections and elements.
+      
+      .col-lg-4.mb-6 
+        a(href="#!").link-1100
+          img(src=`${CWD}assets/images/nokia-04.jpg`, alt="")
+          h4.mb-2.mt-4.text-1100 Digital Agency 
+          p.fs-8.fw-light.d-inline-block.text-800 Create an elegant website for your startup, business or, corporate agency.
+
+      .col-lg-4.mb-6 
+        a(href="#!").link-1100
+          img(src=`${CWD}assets/images/nokia-05.jpg`, alt="")
+          h4.mb-2.mt-4.text-1100 Landing Pages 
+          p.fs-8.fw-light.d-inline-block.text-800 From Nokia to Apple &amp; product to apps; build all types of landing pages with Posh.
+
+    .row 
+      .col-12.text-center 
+        a.btn.btn-outline-primary(href="#!")  See All Phones 
